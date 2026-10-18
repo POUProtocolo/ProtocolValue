@@ -1,0 +1,10 @@
+GITHUB BILINGUAL DEPLOYMENT GUIDE — 2026-10-18
+
+1. Review this package and compare changes with the existing repository before merging.
+2. Copy the package contents to the repository root, preserving docs/evidence/*.json.
+3. Commit and push through an authorized GitHub session; no remote publication was performed here.
+4. Open README.md and docs/README.pt-BR.md to check all cross-language links.
+5. Confirm that technical identifiers and evidentiary approval states are unchanged.
+6. The website is NOT modified by this package. The existing EN/PT site archive can remain unchanged.
+
+No live RPC re-verification or site/contract audit was performed.
