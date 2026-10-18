@@ -1,0 +1,9 @@
+GITHUB DEPLOYMENT GUIDE — 2026-10-18
+
+1. Review README.md, METHODOLOGY.md, DATA_VERIFICATION.md, SECURITY.md, GRIDINSOFT_REVIEW.md, and docs/evidence/*.
+2. Merge into https://github.com/POUProtocolo/ProtocolValue via an authorized GitHub session. These files are proposed updates; they are NOT uploaded automatically.
+3. Publish the separate website ZIP to the domain. Main page footer and About page link to the GitHub repository; two dated Gridinsoft record pages were added.
+4. Confirm https://protocolvalue.com/, /about.html, both dated review URLs, and all links. Purge the CDN cache if needed.
+5. Request a new Gridinsoft review only after public deployment. No score increase is guaranteed.
+
+NOTE: No live RPC reproduction, smart-contract audit or site deployment was performed by this update.
