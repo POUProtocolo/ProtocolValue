@@ -1,0 +1,327 @@
+{
+  "schemaVersion": "2.0",
+  "approval": {
+    "status": "PENDING",
+    "approvedAt": null,
+    "scope": "ADMINISTRATIVE_PUBLICATION_ONLY",
+    "note": "Value observation does not grant administrative approval."
+  },
+  "identity": {
+    "id": "euler-k3-bsc-aster-usdt",
+    "protocol": "Euler",
+    "asset": "K3 Capital ASTERLIQUID — USDT",
+    "symbol": "eUSDT-6",
+    "onChainName": "EVK Vault eUSDT-6",
+    "network": "BNB Smart Chain",
+    "chainId": 56
+  },
+  "contracts": {
+    "token": "0x95C5Fd8618C68D6156A739C1EAb5aA7c807ff148",
+    "protocol": "0x95C5Fd8618C68D6156A739C1EAb5aA7c807ff148",
+    "underlying": "0x55d398326f99059ff775485246999027b3197955"
+  },
+  "valuation": {
+    "valueType": "Vault Share Value",
+    "quoteAsset": "USDT",
+    "sourceFunction": "convertToAssets(uint256)",
+    "selector": "0x07a2d13a",
+    "normalizedInput": "1000000000000000000",
+    "callData": "0x07a2d13a0000000000000000000000000000000000000000000000000de0b6b3a7640000",
+    "formula": "USDT per 1 token = floor(10^shareDecimals * (totalAssets() + 10^6) / (totalSupply() + 10^6)) / 10^18; totalAssets() = cash() + totalBorrows()",
+    "methodology": "Read convertToAssets() for exactly one whole vault token. Reproduce the integer conversion from native same-block accounting including virtual offsets and, for Earn vaults, accrued fee shares.",
+    "internalValueExists": true,
+    "economicMechanism": "NATIVE_ERC4626_USDT_SHARE_CONVERSION",
+    "evidenceStatus": "ONCHAIN_OBSERVED_AND_FORMULA_REPRODUCED",
+    "economicUnit": "USDT/eUSDT-6",
+    "perTokenAmount": "1",
+    "usdtRelation": "DIRECT_UNDERLYING_ASSET",
+    "inputParameters": [
+      {
+        "name": "shares",
+        "type": "uint256",
+        "raw": "1000000000000000000",
+        "meaning": "One whole vault token"
+      }
+    ],
+    "sourceOutputIsPerTokenValue": true,
+    "calculationInput": {
+      "shareAmountRaw": "1000000000000000000",
+      "shareDecimals": 18,
+      "underlyingDecimals": 18,
+      "outputDecimals": 18,
+      "virtualAssets": "1000000",
+      "virtualShares": "1000000",
+      "rounding": "FLOOR"
+    },
+    "limitations": [
+      "Accounting conversion, not a market price or an executable redemption quote.",
+      "Underlying is Binance-Peg USDT on BNB Smart Chain. No USD peg conversion is used.",
+      "Active implementation bytecode/source equivalence and complete administrative configuration were not independently established.",
+      "Borrow receivables or strategy balances may not be immediately withdrawable."
+    ]
+  },
+  "value": {
+    "raw": "1068120872281077630",
+    "normalized": "1.06812087228107763",
+    "display": "1.06812087228107763 USDT",
+    "status": "BLOCK_PINNED_PROTOCOL_VALUE",
+    "observedAt": "2026-10-12T00:21:03+00:00",
+    "blockNumber": 127114436,
+    "blockHash": "0xcf27f8c5992b4618b55d654a76ad92de5772e2dc8cb2c8574106503b9bdf6b5f",
+    "note": "Internal USDT accounting value per one whole vault token. Native conversion reproduced exactly at the same block."
+  },
+  "referenceSnapshot": {
+    "raw": "1068120872281077630",
+    "normalized": "1.06812087228107763",
+    "display": "1.06812087228107763 USDT",
+    "status": "BLOCK_PINNED_PROTOCOL_VALUE",
+    "observedAt": "2026-10-12T00:21:03+00:00",
+    "blockNumber": 127114436,
+    "blockHash": "0xcf27f8c5992b4618b55d654a76ad92de5772e2dc8cb2c8574106503b9bdf6b5f",
+    "note": "Internal USDT accounting value per one whole vault token. Native conversion reproduced exactly at the same block."
+  },
+  "components": {
+    "totalSupply": "108054135038553597320756",
+    "totalAssets": "115414876970957222321858",
+    "virtualAssets": "1000000",
+    "virtualShares": "1000000",
+    "cash": "39784958717268235546603",
+    "totalBorrows": "75629918253688986775255"
+  },
+  "search": {
+    "aliases": [
+      "Euler",
+      "eUSDT-6",
+      "USDT",
+      "k3-bsc-aster",
+      "K3 Capital ASTERLIQUID"
+    ]
+  },
+  "links": {
+    "tokenExplorer": "https://bscscan.com/token/0x95C5Fd8618C68D6156A739C1EAb5aA7c807ff148",
+    "contractExplorer": "https://bscscan.com/address/0x95C5Fd8618C68D6156A739C1EAb5aA7c807ff148#readContract",
+    "underlyingExplorer": "https://bscscan.com/token/0x55d398326f99059ff775485246999027b3197955",
+    "referenceBlock": "https://bscscan.com/block/127114436",
+    "officialSource": "https://github.com/euler-xyz/euler-vault-kit/blob/master/src/EVault/modules/Vault.sol",
+    "officialContracts": "https://github.com/euler-xyz/euler-labels/blob/development/56/products.json",
+    "conversionHelper": "https://github.com/euler-xyz/euler-vault-kit/blob/master/src/EVault/shared/lib/ConversionHelpers.sol"
+  },
+  "runtime": {
+    "enabled": true,
+    "autoUpdate": true,
+    "readMode": "ETH_CALL_UINT256",
+    "outputDecimals": 18,
+    "displayUnit": "USDT",
+    "cacheSeconds": 60,
+    "blockTagPolicy": "PINNED_CURRENT_BLOCK",
+    "compatibleWithCurrentLiveReader": true,
+    "note": "Automatic observations enabled. Administrative PENDING status remains unchanged. Requires reader accepting valuation.callData with ABI arguments.",
+    "runtimeNote": "Observação RPC automática somente em página ativa. LIVE requer resposta RPC real no bloco atual; senão referência histórica. Sem aprovação administrativa ou garantia de segurança."
+  },
+  "monitoring": {
+    "publishEnabled": false,
+    "requiresRevalidation": true,
+    "adminBaselineStatus": "PARTIAL",
+    "baselineBlockNumber": 127114436,
+    "baselineBlockHash": "0xcf27f8c5992b4618b55d654a76ad92de5772e2dc8cb2c8574106503b9bdf6b5f",
+    "baseline": {
+      "governorAdmin()": "0x5bb012482fa43c44a29168c6393657130fdf0506"
+    },
+    "watch": [
+      "Underlying asset and decimals",
+      "Runtime bytecode",
+      "Governor/owner and implementation changes"
+    ],
+    "onAdministrativeChange": "SUSPEND_AND_HIDE",
+    "enforcementStatus": "METADATA_NOT_ENFORCED_BY_EXISTING_SITE_LOADER"
+  },
+  "evidence": {
+    "rpcEndpoint": "https://bsc-dataseed.bnbchain.org",
+    "chainIdRaw": "0x38",
+    "blockTag": "0x7939cc4",
+    "blockNumber": 127114436,
+    "blockHash": "0xcf27f8c5992b4618b55d654a76ad92de5772e2dc8cb2c8574106503b9bdf6b5f",
+    "blockTimestamp": "2026-10-12T00:21:03+00:00",
+    "calls": [
+      {
+        "to": "0x95C5Fd8618C68D6156A739C1EAb5aA7c807ff148",
+        "function": "asset()",
+        "data": "0x38d52e0f",
+        "blockTag": "0x7939cc4",
+        "result": "0x00000000000000000000000055d398326f99059ff775485246999027b3197955"
+      },
+      {
+        "to": "0x95C5Fd8618C68D6156A739C1EAb5aA7c807ff148",
+        "function": "decimals()",
+        "data": "0x313ce567",
+        "blockTag": "0x7939cc4",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000012"
+      },
+      {
+        "to": "0x55d398326f99059ff775485246999027b3197955",
+        "function": "decimals()",
+        "data": "0x313ce567",
+        "blockTag": "0x7939cc4",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000012"
+      },
+      {
+        "to": "0x95C5Fd8618C68D6156A739C1EAb5aA7c807ff148",
+        "function": "symbol()",
+        "data": "0x95d89b41",
+        "blockTag": "0x7939cc4",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000765555344542d3600000000000000000000000000000000000000000000000000"
+      },
+      {
+        "to": "0x95C5Fd8618C68D6156A739C1EAb5aA7c807ff148",
+        "function": "name()",
+        "data": "0x06fdde03",
+        "blockTag": "0x7939cc4",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000001145564b205661756c742065555344542d36000000000000000000000000000000"
+      },
+      {
+        "to": "0x95C5Fd8618C68D6156A739C1EAb5aA7c807ff148",
+        "function": "totalSupply()",
+        "data": "0x18160ddd",
+        "blockTag": "0x7939cc4",
+        "result": "0x0000000000000000000000000000000000000000000016e1a05b9a3894be9e34"
+      },
+      {
+        "to": "0x95C5Fd8618C68D6156A739C1EAb5aA7c807ff148",
+        "function": "totalAssets()",
+        "data": "0x01e1d114",
+        "blockTag": "0x7939cc4",
+        "result": "0x000000000000000000000000000000000000000000001870a72c26dc252a1ec2"
+      },
+      {
+        "to": "0x95C5Fd8618C68D6156A739C1EAb5aA7c807ff148",
+        "function": "convertToAssets(uint256)",
+        "data": "0x07a2d13a0000000000000000000000000000000000000000000000000de0b6b3a7640000",
+        "blockTag": "0x7939cc4",
+        "result": "0x0000000000000000000000000000000000000000000000000ed2ba46317e777e"
+      },
+      {
+        "to": "0x95C5Fd8618C68D6156A739C1EAb5aA7c807ff148",
+        "function": "cash()",
+        "data": "0x961be391",
+        "blockTag": "0x7939cc4",
+        "result": "0x00000000000000000000000000000000000000000000086cbf370b9c31d66feb"
+      },
+      {
+        "to": "0x95C5Fd8618C68D6156A739C1EAb5aA7c807ff148",
+        "function": "totalBorrows()",
+        "data": "0x47bd3718",
+        "blockTag": "0x7939cc4",
+        "result": "0x000000000000000000000000000000000000000000001003e7f51b3ff353aed7"
+      },
+      {
+        "to": "0x95C5Fd8618C68D6156A739C1EAb5aA7c807ff148",
+        "function": "governorAdmin()",
+        "data": "0x6ce98c29",
+        "blockTag": "0x7939cc4",
+        "result": "0x0000000000000000000000005bb012482fa43c44a29168c6393657130fdf0506"
+      }
+    ],
+    "runtimeCode": [
+      {
+        "address": "0x95C5Fd8618C68D6156A739C1EAb5aA7c807ff148",
+        "blockTag": "0x7939cc4",
+        "code": "0x60806040527f5c60da1b000000000000000000000000000000000000000000000000000000005f9081527f0000000000000000000000007f53e2755eb3c43824e162f7f6f087832b9c9df6907f0000000000000000000000000000000000000000000000000000000000000040907f0000000055d398326f99059ff775485246999027b3197955021f0021d0234359907fbdf7598353b9b71d418e184c0000000000000000000000000000000000000348907f0000000000000000000000000000000000000000000000000000000000000000907f000000000000000000000000000000000000000000000000000000000000000090602090600481895afa5f51365f80378536528436602001528336604001528236606001525f803689015f845af49150503d5f803e808015610134573d5ff35b3d5ffdfea2646970667358221220790fe9d1cd064f0c23daceddb779ebd37b1955af4ff80f2c522d35fb2eb695d864736f6c63430008180033",
+        "sha256": "09fffec11d085c679565803cbd5d28dae3bd8689ef77cbc13412f95e034f1150"
+      }
+    ],
+    "formulaCheck": {
+      "calculatedRaw": "1068120872281077630",
+      "observedRaw": "1068120872281077630",
+      "exactMatch": true
+    },
+    "sourceReview": "Reference source arithmetic reproduced; deployed source equivalence not established."
+  },
+  "admissionChecks": {
+    "duplicate": "NONE_IN_EXISTING_CATALOG",
+    "chainId": "PASS_56",
+    "underlying": "PASS_DIRECT_USDT",
+    "nativeAccounting": "PASS_SAME_BLOCK",
+    "integerFormula": "PASS_EXACT_MATCH",
+    "usdtEligibility": "PASS_DIRECT_RELATION",
+    "activeSourceEquivalence": "NOT_ESTABLISHED",
+    "administrativeBaseline": "PARTIAL"
+  },
+  "presentation": {
+    "unit": "USDT",
+    "perTokenAmount": "1",
+    "valueLabel": "Internal value",
+    "showApprovalBadge": false
+  },
+  "eligibility": {
+    "status": "DIRECT_USDT_RELATION",
+    "quoteAsset": "USDT",
+    "perTokenAmount": "1"
+  },
+  "unitPolicy": {
+    "targetAsset": "USDT",
+    "targetAssetContract": "0x55d398326f99059ff775485246999027b3197955",
+    "perTokenAmount": "1",
+    "missingConversionAction": "EXCLUDE_FROM_PUBLIC_CATALOG",
+    "unverifiedPegAssumptionsAllowed": false
+  },
+  "lifecycle": {
+    "status": "LISTED_IN_OFFICIAL_METADATA",
+    "source": "https://github.com/euler-xyz/euler-labels",
+    "activeProductConfirmed": false,
+    "note": "Official metadata listing confirmed; executable deposits/redemptions and product availability not established.",
+    "productId": "k3-bsc-aster",
+    "entity": "k3-capital",
+    "markedDeprecatedInOfficialLabels": false
+  },
+  "capitalization": {
+    "enabled": true,
+    "quoteAsset": "USDT",
+    "label": "Capitalização interna — USDT",
+    "supplyContract": "0x95C5Fd8618C68D6156A739C1EAb5aA7c807ff148",
+    "supplyFunction": "totalSupply()",
+    "supplySelector": "0x18160ddd",
+    "supplyDecimals": 18,
+    "supplyBasis": "TOKEN_TOTAL_SUPPLY",
+    "requireSameBlock": true,
+    "referenceSnapshot": {
+      "rawProduct": "115414876970957222177319366182124446288280",
+      "productDecimals": 36,
+      "normalized": "115414.87697095722217731936618212444628828",
+      "quoteAsset": "USDT",
+      "status": "REFERENCE_SNAPSHOT",
+      "observedAt": "2026-10-12T00:21:03+00:00",
+      "blockNumber": 127114436,
+      "blockHash": "0xcf27f8c5992b4618b55d654a76ad92de5772e2dc8cb2c8574106503b9bdf6b5f",
+      "valueRaw": "1068120872281077630",
+      "valueDecimals": 18,
+      "valueNormalized": "1.06812087228107763",
+      "supplyRaw": "108054135038553597320756",
+      "supplyDecimals": 18,
+      "supplyNormalized": "108054.135038553597320756",
+      "supplyBasis": "TOKEN_TOTAL_SUPPLY",
+      "formula": "internal USDT value per token × corresponding totalSupply()",
+      "note": "Capitalization of this vault token; not total Euler capitalization or immediately withdrawable USDT."
+    }
+  },
+  "priceProof": {
+    "type": "ONCHAIN_INTERNAL_PRICE",
+    "status": "HISTORICAL_RPC_EVIDENCE_REPRODUCED_FROM_SUPPLIED_JSON",
+    "independentCurrentRPCVerified": false,
+    "method": "DIRECT_UINT256_PER_TOKEN",
+    "chainId": 56,
+    "contract": "0x95C5Fd8618C68D6156A739C1EAb5aA7c807ff148",
+    "underlying": "0x55d398326f99059ff775485246999027b3197955",
+    "blockNumber": 127114436,
+    "blockHash": "0xcf27f8c5992b4618b55d654a76ad92de5772e2dc8cb2c8574106503b9bdf6b5f",
+    "callData": "0x07a2d13a0000000000000000000000000000000000000000000000000de0b6b3a7640000",
+    "function": "convertToAssets(uint256)",
+    "raw": "1068120872281077630",
+    "outputDecimals": 18,
+    "normalized": "1.06812087228107763",
+    "unit": "USDT/eUSDT-6",
+    "formula": "USDT per 1 token = floor(10^shareDecimals * (totalAssets() + 10^6) / (totalSupply() + 10^6)) / 10^18; totalAssets() = cash() + totalBorrows()",
+    "onchainSource": "contract eth_call at pinned block; receipt copied from supplied JSON",
+    "evidenceProvenance": "SOURCE_JSON_SUPPLIED_BY_USER_NOT_INDEPENDENTLY_QUERIED",
+    "note": "Prova matemática e resposta histórica presentes no JSON entregue; resultado LIVE só com consulta RPC corrente. Dados não certificam resgate ou solvência."
+  }
+}

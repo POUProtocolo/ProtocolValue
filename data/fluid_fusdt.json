@@ -1,0 +1,171 @@
+{
+  "schemaVersion": "2.0",
+  "identity": {
+    "id": "fluid_fusdt",
+    "protocol": "Fluid",
+    "asset": "fUSDT",
+    "symbol": "fUSDT",
+    "network": "Ethereum",
+    "chainId": 1
+  },
+  "contracts": {
+    "token": "0x5C20B550819128074FD538Edf79791733ccEdd18",
+    "protocol": "0x5C20B550819128074FD538Edf79791733ccEdd18",
+    "underlying": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+    "implementation": null
+  },
+  "valuation": {
+    "valueType": "ERC4626",
+    "quoteAsset": "USDT",
+    "economicMechanism": "ERC4626",
+    "perTokenAmount": "1",
+    "sourceOutputIsPerTokenValue": true,
+    "sourceFunction": "convertToAssets(uint256)",
+    "selector": "0x07a2d13a",
+    "callData": "0x07a2d13a00000000000000000000000000000000000000000000000000000000000f4240",
+    "normalizedInput": "1000000",
+    "formula": "convertToAssets(10^shareDecimals) / 10^underlyingDecimals",
+    "outputDecimals": 6
+  },
+  "value": {
+    "raw": "1209849",
+    "normalized": "1.209849",
+    "display": "1.209849 USDT",
+    "status": "BLOCK_PINNED_EVIDENCE_FROM_SUPPLIED_RPC_RECORD",
+    "observedAt": "2026-10-12T15:31:23+00:00",
+    "blockNumber": 26177303,
+    "blockHash": "0xad059467b5373bb69ebf7a36aee7b5d7579111a61e9f6036bbafdfb522cfda6d",
+    "note": "Recorded RPC response and formula, reproducible by calling the public contract at the indicated block; independent live RPC confirmation not performed in this build."
+  },
+  "referenceSnapshot": {
+    "raw": "1209849",
+    "normalized": "1.209849",
+    "display": "1.209849 USDT",
+    "status": "BLOCK_PINNED_EVIDENCE_FROM_SUPPLIED_RPC_RECORD",
+    "observedAt": "2026-10-12T15:31:23+00:00",
+    "blockNumber": 26177303,
+    "blockHash": "0xad059467b5373bb69ebf7a36aee7b5d7579111a61e9f6036bbafdfb522cfda6d",
+    "note": "Recorded RPC response and formula, reproducible by calling the public contract at the indicated block; independent live RPC confirmation not performed in this build."
+  },
+  "links": {
+    "contractExplorer": "https://etherscan.io/address/0x5C20B550819128074FD538Edf79791733ccEdd18",
+    "officialSource": "https://github.com/Instadapp/fluid-contracts-public/blob/main/deployments/mainnet/fToken_fUSDT.json",
+    "referenceBlock": "https://etherscan.io/block/26177303"
+  },
+  "lifecycle": {
+    "status": "NOT_ESTABLISHED",
+    "note": "Operational status not asserted; no EOL/DEPRECATED/SUNSET tag in received record."
+  },
+  "priceProof": {
+    "type": "ONCHAIN_INTERNAL_PRICE",
+    "status": "BLOCK_PINNED_RPC_METHOD_EVIDENCE",
+    "method": "DIRECT_CONVERSION",
+    "chainId": 1,
+    "contract": "0x5C20B550819128074FD538Edf79791733ccEdd18",
+    "underlying": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+    "unit": "USDT/fUSDT",
+    "blockNumber": 26177303,
+    "blockHash": "0xad059467b5373bb69ebf7a36aee7b5d7579111a61e9f6036bbafdfb522cfda6d",
+    "blockTag": "0x18f6f17",
+    "observedAt": "2026-10-12T15:31:23+00:00",
+    "sourceFunction": "convertToAssets(uint256)",
+    "callData": "0x07a2d13a00000000000000000000000000000000000000000000000000000000000f4240",
+    "raw": "1209849",
+    "normalized": "1.209849",
+    "outputDecimals": 6,
+    "shareDecimals": 6,
+    "underlyingDecimals": 6,
+    "inputRaw": "1000000",
+    "rawReturn": "0x00000000000000000000000000000000000000000000000000000000001275f9",
+    "underlyingGetter": {
+      "to": "0x5C20B550819128074FD538Edf79791733ccEdd18",
+      "data": "0x38d52e0f",
+      "result": "0x000000000000000000000000dac17f958d2ee523a2206206994597c13d831ec7"
+    },
+    "evidenceProvenance": "USER_SUPPLIED_BLOCK_PINNED_RPC_OBSERVATION",
+    "scope": "PRICE_INTERNAL_VALUE_ONLY_NO_SECURITY_OR_LIFECYCLE_CERTIFICATION",
+    "evidenceRpcEndpoint": "https://ethereum.publicnode.com"
+  },
+  "runtime": {
+    "enabled": true,
+    "autoUpdate": true,
+    "readMode": "ETH_CALL_UINT256",
+    "outputDecimals": 6,
+    "cacheSeconds": 60,
+    "blockTagPolicy": "PINNED_CURRENT_BLOCK",
+    "supportedNetworks": [
+      56,
+      1,
+      43114
+    ]
+  },
+  "capitalization": {
+    "enabled": true,
+    "quoteAsset": "USDT",
+    "supplyContract": "0x5C20B550819128074FD538Edf79791733ccEdd18",
+    "supplySelector": "0x18160ddd",
+    "supplyDecimals": 6,
+    "supplyBasis": "ERC20_TOTAL_SUPPLY",
+    "requireSameBlock": true,
+    "referenceSnapshot": {
+      "normalized": "130008944.06232002796",
+      "quoteAsset": "USDT",
+      "status": "SNAPSHOT",
+      "blockNumber": 26177303,
+      "blockHash": "0xad059467b5373bb69ebf7a36aee7b5d7579111a61e9f6036bbafdfb522cfda6d",
+      "observedAt": "2026-10-12T15:31:23+00:00",
+      "valueNormalized": "1.209849",
+      "supplyRaw": "107458818466040",
+      "supplyNormalized": "107458818.46604",
+      "supplyDecimals": 6,
+      "valueRaw": "1209849",
+      "valueDecimals": 6,
+      "supplyBasis": "ERC20_TOTAL_SUPPLY"
+    }
+  },
+  "evidence": {
+    "chainIdRaw": "0x1",
+    "rpcEndpoint": "https://ethereum.publicnode.com",
+    "blockNumber": 26177303,
+    "blockHash": "0xad059467b5373bb69ebf7a36aee7b5d7579111a61e9f6036bbafdfb522cfda6d",
+    "blockTimestamp": "2026-10-12T15:31:23+00:00",
+    "calls": [
+      {
+        "to": "0x5C20B550819128074FD538Edf79791733ccEdd18",
+        "function": "decimals()",
+        "data": "0x313ce567",
+        "blockTag": "0x18f6f17",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000006"
+      },
+      {
+        "to": "0x5C20B550819128074FD538Edf79791733ccEdd18",
+        "function": "totalSupply()",
+        "data": "0x18160ddd",
+        "blockTag": "0x18f6f17",
+        "result": "0x000000000000000000000000000000000000000000000000000061bbb4b3e0f8"
+      },
+      {
+        "to": "0x5C20B550819128074FD538Edf79791733ccEdd18",
+        "function": "asset()",
+        "data": "0x38d52e0f",
+        "blockTag": "0x18f6f17",
+        "result": "0x000000000000000000000000dac17f958d2ee523a2206206994597c13d831ec7"
+      },
+      {
+        "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "function": "decimals()",
+        "data": "0x313ce567",
+        "blockTag": "0x18f6f17",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000006"
+      },
+      {
+        "to": "0x5C20B550819128074FD538Edf79791733ccEdd18",
+        "function": "convertToAssets(uint256)",
+        "data": "0x07a2d13a00000000000000000000000000000000000000000000000000000000000f4240",
+        "blockTag": "0x18f6f17",
+        "result": "0x00000000000000000000000000000000000000000000000000000000001275f9"
+      }
+    ],
+    "note": "Public RPC records retained for exact method, underlying, and decimals at a pinned block; independent repeat call not recorded for this build."
+  }
+}

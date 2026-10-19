@@ -1,0 +1,171 @@
+{
+  "schemaVersion": "2.0",
+  "identity": {
+    "id": "aave_stata_bnb_usdt",
+    "protocol": "Aave",
+    "asset": "stataBnbUSDT",
+    "symbol": "stataBnbUSDT",
+    "network": "BNB Smart Chain",
+    "chainId": 56
+  },
+  "contracts": {
+    "token": "0x0471D185cc7Be61E154277cAB2396cD397663da6",
+    "protocol": "0x0471D185cc7Be61E154277cAB2396cD397663da6",
+    "underlying": "0x55d398326f99059ff775485246999027b3197955",
+    "implementation": null
+  },
+  "valuation": {
+    "valueType": "ERC4626",
+    "quoteAsset": "USDT",
+    "economicMechanism": "ERC4626",
+    "perTokenAmount": "1",
+    "sourceOutputIsPerTokenValue": true,
+    "sourceFunction": "convertToAssets(uint256)",
+    "selector": "0x07a2d13a",
+    "callData": "0x07a2d13a0000000000000000000000000000000000000000000000000de0b6b3a7640000",
+    "normalizedInput": "1000000000000000000",
+    "formula": "convertToAssets(10^shareDecimals) / 10^underlyingDecimals",
+    "outputDecimals": 18
+  },
+  "value": {
+    "raw": "1126824188944224226",
+    "normalized": "1.126824188944224226",
+    "display": "1.126824188944224226 USDT",
+    "status": "BLOCK_PINNED_EVIDENCE_FROM_SUPPLIED_RPC_RECORD",
+    "observedAt": "2026-10-12T15:31:28+00:00",
+    "blockNumber": 127235274,
+    "blockHash": "0x533f420ac4c56e36fd4ede143f898a0ed0306397c6472d4d51af7f43b2eb12fa",
+    "note": "Recorded RPC response and formula, reproducible by calling the public contract at the indicated block; independent live RPC confirmation not performed in this build."
+  },
+  "referenceSnapshot": {
+    "raw": "1126824188944224226",
+    "normalized": "1.126824188944224226",
+    "display": "1.126824188944224226 USDT",
+    "status": "BLOCK_PINNED_EVIDENCE_FROM_SUPPLIED_RPC_RECORD",
+    "observedAt": "2026-10-12T15:31:28+00:00",
+    "blockNumber": 127235274,
+    "blockHash": "0x533f420ac4c56e36fd4ede143f898a0ed0306397c6472d4d51af7f43b2eb12fa",
+    "note": "Recorded RPC response and formula, reproducible by calling the public contract at the indicated block; independent live RPC confirmation not performed in this build."
+  },
+  "links": {
+    "contractExplorer": "https://bscscan.com/address/0x0471D185cc7Be61E154277cAB2396cD397663da6",
+    "officialSource": "https://github.com/aave-dao/aave-address-book/blob/main/tokenlist.json",
+    "referenceBlock": "https://bscscan.com/block/127235274"
+  },
+  "lifecycle": {
+    "status": "NOT_ESTABLISHED",
+    "note": "Operational status not asserted; no EOL/DEPRECATED/SUNSET tag in received record."
+  },
+  "priceProof": {
+    "type": "ONCHAIN_INTERNAL_PRICE",
+    "status": "BLOCK_PINNED_RPC_METHOD_EVIDENCE",
+    "method": "DIRECT_CONVERSION",
+    "chainId": 56,
+    "contract": "0x0471D185cc7Be61E154277cAB2396cD397663da6",
+    "underlying": "0x55d398326f99059ff775485246999027b3197955",
+    "unit": "USDT/stataBnbUSDT",
+    "blockNumber": 127235274,
+    "blockHash": "0x533f420ac4c56e36fd4ede143f898a0ed0306397c6472d4d51af7f43b2eb12fa",
+    "blockTag": "0x79574ca",
+    "observedAt": "2026-10-12T15:31:28+00:00",
+    "sourceFunction": "convertToAssets(uint256)",
+    "callData": "0x07a2d13a0000000000000000000000000000000000000000000000000de0b6b3a7640000",
+    "raw": "1126824188944224226",
+    "normalized": "1.126824188944224226",
+    "outputDecimals": 18,
+    "shareDecimals": 18,
+    "underlyingDecimals": 18,
+    "inputRaw": "1000000000000000000",
+    "rawReturn": "0x0000000000000000000000000000000000000000000000000fa348a132568fe2",
+    "underlyingGetter": {
+      "to": "0x0471D185cc7Be61E154277cAB2396cD397663da6",
+      "data": "0x38d52e0f",
+      "result": "0x00000000000000000000000055d398326f99059ff775485246999027b3197955"
+    },
+    "evidenceProvenance": "USER_SUPPLIED_BLOCK_PINNED_RPC_OBSERVATION",
+    "scope": "PRICE_INTERNAL_VALUE_ONLY_NO_SECURITY_OR_LIFECYCLE_CERTIFICATION",
+    "evidenceRpcEndpoint": "https://bsc-dataseed.bnbchain.org"
+  },
+  "runtime": {
+    "enabled": true,
+    "autoUpdate": true,
+    "readMode": "ETH_CALL_UINT256",
+    "outputDecimals": 18,
+    "cacheSeconds": 60,
+    "blockTagPolicy": "PINNED_CURRENT_BLOCK",
+    "supportedNetworks": [
+      56,
+      1,
+      43114
+    ]
+  },
+  "capitalization": {
+    "enabled": true,
+    "quoteAsset": "USDT",
+    "supplyContract": "0x0471D185cc7Be61E154277cAB2396cD397663da6",
+    "supplySelector": "0x18160ddd",
+    "supplyDecimals": 18,
+    "supplyBasis": "ERC20_TOTAL_SUPPLY",
+    "requireSameBlock": true,
+    "referenceSnapshot": {
+      "normalized": "790.075808578045894492371599215206781886",
+      "quoteAsset": "USDT",
+      "status": "SNAPSHOT",
+      "blockNumber": 127235274,
+      "blockHash": "0x533f420ac4c56e36fd4ede143f898a0ed0306397c6472d4d51af7f43b2eb12fa",
+      "observedAt": "2026-10-12T15:31:28+00:00",
+      "valueNormalized": "1.126824188944224226",
+      "supplyRaw": "701152687641810312911",
+      "supplyNormalized": "701.152687641810312911",
+      "supplyDecimals": 18,
+      "valueRaw": "1126824188944224226",
+      "valueDecimals": 18,
+      "supplyBasis": "ERC20_TOTAL_SUPPLY"
+    }
+  },
+  "evidence": {
+    "chainIdRaw": "0x38",
+    "rpcEndpoint": "https://bsc-dataseed.bnbchain.org",
+    "blockNumber": 127235274,
+    "blockHash": "0x533f420ac4c56e36fd4ede143f898a0ed0306397c6472d4d51af7f43b2eb12fa",
+    "blockTimestamp": "2026-10-12T15:31:28+00:00",
+    "calls": [
+      {
+        "to": "0x0471D185cc7Be61E154277cAB2396cD397663da6",
+        "function": "decimals()",
+        "data": "0x313ce567",
+        "blockTag": "0x79574ca",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000012"
+      },
+      {
+        "to": "0x0471D185cc7Be61E154277cAB2396cD397663da6",
+        "function": "totalSupply()",
+        "data": "0x18160ddd",
+        "blockTag": "0x79574ca",
+        "result": "0x0000000000000000000000000000000000000000000000260272be8b48861ecf"
+      },
+      {
+        "to": "0x0471D185cc7Be61E154277cAB2396cD397663da6",
+        "function": "asset()",
+        "data": "0x38d52e0f",
+        "blockTag": "0x79574ca",
+        "result": "0x00000000000000000000000055d398326f99059ff775485246999027b3197955"
+      },
+      {
+        "to": "0x55d398326f99059ff775485246999027b3197955",
+        "function": "decimals()",
+        "data": "0x313ce567",
+        "blockTag": "0x79574ca",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000012"
+      },
+      {
+        "to": "0x0471D185cc7Be61E154277cAB2396cD397663da6",
+        "function": "convertToAssets(uint256)",
+        "data": "0x07a2d13a0000000000000000000000000000000000000000000000000de0b6b3a7640000",
+        "blockTag": "0x79574ca",
+        "result": "0x0000000000000000000000000000000000000000000000000fa348a132568fe2"
+      }
+    ],
+    "note": "Public RPC records retained for exact method, underlying, and decimals at a pinned block; independent repeat call not recorded for this build."
+  }
+}

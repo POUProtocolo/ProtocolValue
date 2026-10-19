@@ -1,0 +1,334 @@
+{
+  "schemaVersion": "2.0",
+  "approval": {
+    "status": "PENDING_VALIDATION",
+    "approvedAt": null,
+    "scope": "PUBLIC_PRICE_EVIDENCE_ONLY",
+    "note": "Price listing based solely on public, reproducible on-chain internal-value evidence; no security, operational, or investment certification."
+  },
+  "identity": {
+    "id": "morpho_1_a71d08a1",
+    "protocol": "Morpho",
+    "asset": "Hakutora USDT",
+    "symbol": "hUSDT",
+    "onChainName": "Hakutora USDT",
+    "network": "Ethereum",
+    "chainId": 1
+  },
+  "contracts": {
+    "token": "0xa71D08A159258553a5Ac190d60Fa919425Ff02EA",
+    "protocol": "0xa71D08A159258553a5Ac190d60Fa919425Ff02EA",
+    "underlying": "0xdac17f958d2ee523a2206206994597c13d831ec7"
+  },
+  "valuation": {
+    "valueType": "Vault Share Value",
+    "quoteAsset": "USDT",
+    "sourceFunction": "convertToAssets(uint256)",
+    "selector": "0x07a2d13a",
+    "normalizedInput": "1000000000000000000",
+    "callData": "0x07a2d13a0000000000000000000000000000000000000000000000000de0b6b3a7640000",
+    "formula": "feeAssets=floor(max(totalAssets-lastTotalAssets,0)*fee/1e18); feeShares=floor(feeAssets*(totalSupply+10^offset)/(totalAssets-feeAssets+1)); price=floor(10^shareDecimals*(totalAssets+1)/(totalSupply+feeShares+10^offset))/10^USDTDecimals",
+    "methodology": "Direct native USDT value per one share. All components read at a single pinned block and checked with independent integer arithmetic.",
+    "internalValueExists": true,
+    "economicMechanism": "MORPHO_INTERNAL_USDT_SHARE_VALUE",
+    "evidenceStatus": "PINNED_RPC_EXACT_RECONSTRUCTION",
+    "economicUnit": "USDT/share",
+    "perTokenAmount": "1",
+    "usdtRelation": "DIRECT_UNDERLYING_ASSET",
+    "inputParameters": [
+      "1000000000000000000"
+    ],
+    "sourceOutputIsPerTokenValue": true,
+    "calculationInput": {
+      "shareAmountRaw": "1000000000000000000",
+      "shareDecimals": 18,
+      "underlyingDecimals": 6,
+      "outputDecimals": 6,
+      "virtualAssets": "",
+      "virtualShares": "",
+      "rounding": ""
+    },
+    "limitations": [
+      "Research snapshot; no publication approval.",
+      "Exclusive pricing and aggregator marginalization not established.",
+      "Full administrative state, withdrawals and source equivalence not established."
+    ]
+  },
+  "value": {
+    "raw": "1052951",
+    "normalized": "1.052951",
+    "display": "1.052951 USDT",
+    "status": "BLOCK_PINNED_RESEARCH_OBSERVATION",
+    "observedAt": "2026-10-14T03:30:11+00:00",
+    "blockNumber": 26188059,
+    "blockHash": "0x9beaa185fc64544949d7aaafde296906de6386093bb74572bc3007abe95e9433",
+    "note": "Internal value snapshot; not LIVE or a guaranteed redemption amount."
+  },
+  "referenceSnapshot": {
+    "raw": "1052951",
+    "normalized": "1.052951",
+    "display": "1.052951 USDT",
+    "status": "BLOCK_PINNED_RESEARCH_OBSERVATION",
+    "observedAt": "2026-10-14T03:30:11+00:00",
+    "blockNumber": 26188059,
+    "blockHash": "0x9beaa185fc64544949d7aaafde296906de6386093bb74572bc3007abe95e9433",
+    "note": "Internal value snapshot; not LIVE or a guaranteed redemption amount."
+  },
+  "components": {
+    "totalSupply": "5239558762085350718220466",
+    "totalAssets": "5517020430478",
+    "virtualAssets": "",
+    "virtualShares": "",
+    "cash": "",
+    "totalBorrows": ""
+  },
+  "search": {
+    "aliases": [
+      "Hakutora USDT",
+      "Hakutora USDT",
+      "hUSDT",
+      "Morpho"
+    ]
+  },
+  "links": {
+    "tokenExplorer": "https://etherscan.io/token/0xa71D08A159258553a5Ac190d60Fa919425Ff02EA",
+    "contractExplorer": "https://etherscan.io/address/0xa71D08A159258553a5Ac190d60Fa919425Ff02EA#readContract",
+    "underlyingExplorer": "https://etherscan.io/token/0xdac17f958d2ee523a2206206994597c13d831ec7",
+    "referenceBlock": "https://etherscan.io/block/26188059",
+    "officialSource": "https://github.com/morpho-org/metamorpho/blob/main/src/MetaMorpho.sol",
+    "officialContracts": "https://api.morpho.org/graphql",
+    "conversionHelper": "",
+    "recordedProofJson": "data/proofs/morpho_1_a71d08a1.json"
+  },
+  "runtime": {
+    "enabled": true,
+    "autoUpdate": true,
+    "readMode": "ETH_CALL_UINT256",
+    "outputDecimals": 6,
+    "displayUnit": "USDT",
+    "cacheSeconds": 60,
+    "blockTagPolicy": "PINNED_CURRENT_BLOCK",
+    "compatibleWithCurrentLiveReader": true,
+    "note": "Public internal-value method: live only after same-block RPC succeeds; historical snapshot otherwise.",
+    "runtimeNote": "Block-pinned historical proof reproduced; live quotes require current RPC and on-chain USDT/decimals checks."
+  },
+  "monitoring": {
+    "publishEnabled": true,
+    "requiresRevalidation": true,
+    "adminBaselineStatus": "NOT_VALIDATED",
+    "baselineBlockNumber": null,
+    "baselineBlockHash": "",
+    "baseline": {
+      "governorAdmin()": ""
+    },
+    "watch": [],
+    "onAdministrativeChange": "SUSPEND_AND_HIDE",
+    "enforcementStatus": "PRICE_EVIDENCE_ONLY; not an administrative-control audit."
+  },
+  "evidence": {
+    "rpcEndpoint": "https://eth.drpc.org",
+    "chainIdRaw": "0x1",
+    "blockTag": "0x18f991b",
+    "blockNumber": 26188059,
+    "blockHash": "0x9beaa185fc64544949d7aaafde296906de6386093bb74572bc3007abe95e9433",
+    "blockTimestamp": "2026-10-14T03:30:11+00:00",
+    "calls": [
+      {
+        "to": "0xa71D08A159258553a5Ac190d60Fa919425Ff02EA",
+        "function": "asset()",
+        "data": "0x38d52e0f",
+        "parameters": [],
+        "blockTag": "0x18f991b",
+        "result": "0x000000000000000000000000dac17f958d2ee523a2206206994597c13d831ec7"
+      },
+      {
+        "to": "0xa71D08A159258553a5Ac190d60Fa919425Ff02EA",
+        "function": "decimals()",
+        "data": "0x313ce567",
+        "parameters": [],
+        "blockTag": "0x18f991b",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000012"
+      },
+      {
+        "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "function": "decimals()",
+        "data": "0x313ce567",
+        "parameters": [],
+        "blockTag": "0x18f991b",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000006"
+      },
+      {
+        "to": "0xa71D08A159258553a5Ac190d60Fa919425Ff02EA",
+        "function": "totalSupply()",
+        "data": "0x18160ddd",
+        "parameters": [],
+        "blockTag": "0x18f991b",
+        "result": "0x0000000000000000000000000000000000000000000455850cb4f08c926ea8b2"
+      },
+      {
+        "to": "0xa71D08A159258553a5Ac190d60Fa919425Ff02EA",
+        "function": "totalAssets()",
+        "data": "0x01e1d114",
+        "parameters": [],
+        "blockTag": "0x18f991b",
+        "result": "0x00000000000000000000000000000000000000000000000000000504880b008e"
+      },
+      {
+        "to": "0xa71D08A159258553a5Ac190d60Fa919425Ff02EA",
+        "function": "lastTotalAssets()",
+        "data": "0x568efc07",
+        "parameters": [],
+        "blockTag": "0x18f991b",
+        "result": "0x00000000000000000000000000000000000000000000000000000504810edf9e"
+      },
+      {
+        "to": "0xa71D08A159258553a5Ac190d60Fa919425Ff02EA",
+        "function": "fee()",
+        "data": "0xddca3f43",
+        "parameters": [],
+        "blockTag": "0x18f991b",
+        "result": "0x0000000000000000000000000000000000000000000000000214e8348c4f0000"
+      },
+      {
+        "to": "0xa71D08A159258553a5Ac190d60Fa919425Ff02EA",
+        "function": "DECIMALS_OFFSET()",
+        "data": "0xaea70acc",
+        "parameters": [],
+        "blockTag": "0x18f991b",
+        "result": "0x000000000000000000000000000000000000000000000000000000000000000c"
+      },
+      {
+        "to": "0xa71D08A159258553a5Ac190d60Fa919425Ff02EA",
+        "function": "convertToAssets(uint256)",
+        "data": "0x07a2d13a0000000000000000000000000000000000000000000000000de0b6b3a7640000",
+        "parameters": [
+          "1000000000000000000"
+        ],
+        "blockTag": "0x18f991b",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000101117"
+      },
+      {
+        "to": "0xa71D08A159258553a5Ac190d60Fa919425Ff02EA",
+        "function": "name()",
+        "data": "0x06fdde03",
+        "parameters": [],
+        "blockTag": "0x18f991b",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000d48616b75746f7261205553445400000000000000000000000000000000000000"
+      },
+      {
+        "to": "0xa71D08A159258553a5Ac190d60Fa919425Ff02EA",
+        "function": "symbol()",
+        "data": "0x95d89b41",
+        "parameters": [],
+        "blockTag": "0x18f991b",
+        "result": "0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000056855534454000000000000000000000000000000000000000000000000000000"
+      }
+    ],
+    "formulaCheck": {
+      "observedRaw": "1052951",
+      "calculatedRaw": "1052951",
+      "difference": "0",
+      "components": {
+        "lastTotalAssets": "5516903243678",
+        "fee": "150000000000000000",
+        "decimalsOffset": 12,
+        "accruedFeeAssets": "17578020",
+        "accruedFeeShares": "16694040437205586945",
+        "virtualShares": "1000000000000"
+      }
+    },
+    "sourceReview": "Official source formula used; active bytecode-source equivalence pending."
+  },
+  "admissionChecks": {
+    "duplicate": "ABSENT_FROM_ZIP_AND_ALL_PREVIOUS_RECORDS",
+    "chainId": "PASS",
+    "underlying": "PASS_NATIVE_USDT",
+    "nativeAccounting": "PASS_POSITIVE_ASSETS_AND_SUPPLY",
+    "integerFormula": "PASS_EXACT_MATCH",
+    "usdtEligibility": "PASS_DIRECT_USDT",
+    "activeSourceEquivalence": "NOT_ESTABLISHED",
+    "administrativeBaseline": "NOT_VALIDATED"
+  },
+  "presentation": {
+    "unit": "USDT",
+    "perTokenAmount": "1",
+    "valueLabel": "Internal value",
+    "showApprovalBadge": false
+  },
+  "eligibility": {
+    "status": "PUBLIC_REPRODUCIBLE_ONCHAIN_INTERNAL_PRICE",
+    "quoteAsset": "USDT",
+    "perTokenAmount": "1",
+    "proofBasis": "BLOCK_PINNED_RPC_METHOD_AND_EXACT_INTEGER_RECONSTRUCTION",
+    "securityAudit": "NOT_PERFORMED",
+    "currentRpcRecheckedInThisBuild": false,
+    "marketPriceSubstitution": false
+  },
+  "unitPolicy": {
+    "targetAsset": "USDT",
+    "targetAssetContract": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+    "perTokenAmount": "1",
+    "missingConversionAction": "EXCLUDE_FROM_PUBLIC_CATALOG",
+    "unverifiedPegAssumptionsAllowed": false
+  },
+  "lifecycle": {
+    "status": "OFFICIAL_LISTED_CANDIDATE",
+    "source": "https://api.morpho.org/graphql",
+    "activeProductConfirmed": true,
+    "note": "Official listing does not replace validation of deposit/redemption permissions.",
+    "productId": "Hakutora USDT",
+    "entity": "Morpho",
+    "markedDeprecatedInOfficialLabels": false
+  },
+  "capitalization": {
+    "enabled": false,
+    "quoteAsset": "USDT",
+    "label": "Capitalização interna — USDT",
+    "supplyContract": "0xa71D08A159258553a5Ac190d60Fa919425Ff02EA",
+    "supplyFunction": "totalSupply()",
+    "supplySelector": "0x18160ddd",
+    "supplyDecimals": 18,
+    "supplyBasis": "TOKEN_TOTAL_SUPPLY",
+    "requireSameBlock": true,
+    "referenceSnapshot": {
+      "rawProduct": "5516998638096532124100957895166",
+      "productDecimals": 24,
+      "normalized": "5516998.638096532124100957895166",
+      "quoteAsset": "USDT",
+      "status": "REFERENCE_SNAPSHOT",
+      "observedAt": "2026-10-14T03:30:11+00:00",
+      "blockNumber": 26188059,
+      "blockHash": "0x9beaa185fc64544949d7aaafde296906de6386093bb74572bc3007abe95e9433",
+      "valueRaw": "1052951",
+      "valueDecimals": 6,
+      "valueNormalized": "1.052951",
+      "supplyRaw": "5239558762085350718220466",
+      "supplyDecimals": 18,
+      "supplyNormalized": "5239558.762085350718220466",
+      "supplyBasis": "TOKEN_TOTAL_SUPPLY",
+      "formula": "internal USDT value per share × corresponding supply",
+      "note": "Registered vault capitalization, not capitalization of the whole protocol."
+    }
+  },
+  "priceProof": {
+    "type": "MORPHO",
+    "status": "PINNED_ACCOUNTING_VALUE_VERIFIED",
+    "independentCurrentRPCVerified": true,
+    "method": "Separate contract value and integer reconstruction",
+    "chainId": 1,
+    "contract": "0xa71D08A159258553a5Ac190d60Fa919425Ff02EA",
+    "underlying": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+    "blockNumber": 26188059,
+    "blockHash": "0x9beaa185fc64544949d7aaafde296906de6386093bb74572bc3007abe95e9433",
+    "callData": "0x07a2d13a0000000000000000000000000000000000000000000000000de0b6b3a7640000",
+    "function": "convertToAssets(uint256)",
+    "raw": "1052951",
+    "outputDecimals": 6,
+    "normalized": "1.052951",
+    "unit": "USDT/share",
+    "formula": "feeAssets=floor(max(totalAssets-lastTotalAssets,0)*fee/1e18); feeShares=floor(feeAssets*(totalSupply+10^offset)/(totalAssets-feeAssets+1)); price=floor(10^shareDecimals*(totalAssets+1)/(totalSupply+feeShares+10^offset))/10^USDTDecimals",
+    "onchainSource": "https://etherscan.io/address/0xa71D08A159258553a5Ac190d60Fa919425Ff02EA#readContract",
+    "evidenceProvenance": "New direct RPC observations on 2026-10-14",
+    "note": "No market quotation used. Approval and exclusive-price classification remain pending."
+  }
+}
