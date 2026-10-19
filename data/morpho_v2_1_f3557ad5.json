@@ -1,0 +1,5728 @@
+{
+  "schemaVersion": "2.0",
+  "approval": {
+    "status": "APPROVED",
+    "approvedAt": "2026-10-15T23:08:47.046Z",
+    "scope": "NATIVE_USDT_ACCOUNTING_METHOD_AND_OPERATIONAL_SNAPSHOT",
+    "note": "Previously approved source-specific method revalidated after identified administrative events: unchanged bytecode/controls, exact independent accounting, recent economic receipt rechecked, current existing-holder redemption simulation, failure fixtures and actual browser LIVE read passed. Scope is accounting and observed operation."
+  },
+  "identity": {
+    "id": "morpho_v2_1_f3557ad5",
+    "protocol": "Morpho",
+    "asset": "Gauntlet USDT Prime",
+    "symbol": "gtusdtp",
+    "onChainName": "Gauntlet USDT Prime",
+    "network": "Ethereum",
+    "chainId": 1
+  },
+  "contracts": {
+    "token": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+    "protocol": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+    "underlying": "0xdac17f958d2ee523a2206206994597c13d831ec7"
+  },
+  "valuation": {
+    "valueType": "Vault Share Value",
+    "quoteAsset": "USDT",
+    "economicMechanism": "MORPHO_V2",
+    "sourceFunction": "convertToAssets(uint256)",
+    "selector": "0x07a2d13a",
+    "callData": "0x07a2d13a0000000000000000000000000000000000000000000000000de0b6b3a7640000",
+    "normalizedInput": "1000000000000000000",
+    "formula": "realAssets=USDT.balanceOf(vault)+sum(adapter.realAssets); assets=min(realAssets,_totalAssets+floor(_totalAssets*elapsed*maxRate/1e18)); fee shares calculated per VaultV2 using performance and management fees; floor(10^shareDecimals*(assets+1)/(totalSupply+performanceFeeShares+managementFeeShares+virtualShares))/10^USDTDecimals",
+    "internalValueExists": true,
+    "sourceOutputIsPerTokenValue": true,
+    "usdtRelation": "DIRECT_UNDERLYING_ASSET",
+    "economicUnit": "USDT/gtusdtp",
+    "perTokenAmount": "1",
+    "methodology": "VaultV2-specific asset and fee reconstruction; maxDeposit zero is an intentional unsupported max-function convention, not a pause flag."
+  },
+  "value": {
+    "raw": "1026447",
+    "normalized": "1.026447",
+    "display": "1.026447 USDT",
+    "status": "BLOCK_PINNED_PROTOCOL_VALUE",
+    "observedAt": "2026-10-15T23:05:35+00:00",
+    "blockNumber": 26201094,
+    "blockHash": "0x9b02edb1d57adc7925db7fda15d2a3ae0a9e2fdee20d6231d1e7fdbd4b734d06",
+    "note": "Internal USDT accounting value per one share; not a market quotation or guaranteed immediate redemption."
+  },
+  "referenceSnapshot": {
+    "raw": "1026447",
+    "normalized": "1.026447",
+    "display": "1.026447 USDT",
+    "status": "BLOCK_PINNED_PROTOCOL_VALUE",
+    "observedAt": "2026-10-15T23:05:35+00:00",
+    "blockNumber": 26201094,
+    "blockHash": "0x9b02edb1d57adc7925db7fda15d2a3ae0a9e2fdee20d6231d1e7fdbd4b734d06",
+    "note": "Internal USDT accounting value per one share; not a market quotation or guaranteed immediate redemption."
+  },
+  "components": {
+    "totalSupply": "256704082652908784980765",
+    "totalAssets": "263493208977",
+    "realAssets": "263493208977",
+    "idleUSDT": "0",
+    "accruedPerformanceFeeShares": "0",
+    "accruedManagementFeeShares": "0",
+    "virtualShares": "1000000000000"
+  },
+  "search": {
+    "aliases": [
+      "Gauntlet USDT Prime",
+      "gtusdtp",
+      "Morpho V2",
+      "batch20-20261014"
+    ]
+  },
+  "links": {
+    "tokenExplorer": "https://etherscan.io/token/0xf3557AD5E984211ac8A0874A670344f2C3376471",
+    "contractExplorer": "https://etherscan.io/address/0xf3557AD5E984211ac8A0874A670344f2C3376471#readContract",
+    "officialSource": "https://docs.morpho.org/developers/contracts/morpho-vaults-v2/",
+    "verifiedSource": "https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=contract&action=getsourcecode&address=0xf3557ad5e984211ac8a0874a670344f2c3376471"
+  },
+  "runtime": {
+    "enabled": true,
+    "autoUpdate": true,
+    "readMode": "VALIDATED_USDT_NATIVE",
+    "outputDecimals": 6,
+    "displayUnit": "USDT",
+    "cacheSeconds": 60,
+    "blockTagPolicy": "PINNED_CURRENT_BLOCK",
+    "validationPlan": {
+      "model": "MORPHO_V2",
+      "chainId": 1,
+      "rpcEndpoint": "https://ethereum-rpc.publicnode.com",
+      "reads": {
+        "asset": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x38d52e0f",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "shareDecimals": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x313ce567",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "assetDecimals": {
+          "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+          "data": "0x313ce567",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "supply": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x18160ddd",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "storedAssets": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xce04bebb",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "firstAssets": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xf73f8f31",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "lastUpdate": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xc0463711",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "maxRate": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xece1d6e5",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "virtualShares": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xc719946c",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "performanceFee": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x87788782",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "managementFee": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xa6f7f5d6",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "performanceFeeRecipient": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xed27f7c9",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "managementFeeRecipient": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x6d9a3010",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "owner": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x8da5cb5b",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "curator": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe66f53b7",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "receiveSharesGate": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x7e729ac4",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "sendSharesGate": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x93ab2ab7",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "receiveAssetsGate": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x54cde13e",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "sendAssetsGate": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x8eede801",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "adapterRegistry": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x50b5c16a",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "liquidityAdapter": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xad468d11",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "liquidityData": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x2e029228",
+          "decode": "words",
+          "maxWords": 7
+        },
+        "adaptersLength": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x5aa22bc8",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "cash": {
+          "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+          "data": "0x70a08231000000000000000000000000f3557ad5e984211ac8a0874a670344f2c3376471",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "adapter0": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x4ef501ac0000000000000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "adapterParent0": {
+          "to": "0x0fc9b889756e1241a4d89472db701c0417c26d89",
+          "data": "0x0fe36536",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "adapterAssets0": {
+          "to": "0x0fc9b889756e1241a4d89472db701c0417c26d89",
+          "data": "0x56c07573",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "adapter0skimRecipient": {
+          "to": "0x0fc9b889756e1241a4d89472db701c0417c26d89",
+          "data": "0x388af5b5",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "adapter0morpho": {
+          "to": "0x0fc9b889756e1241a4d89472db701c0417c26d89",
+          "data": "0xd8fbc833",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "adapter0factory": {
+          "to": "0x0fc9b889756e1241a4d89472db701c0417c26d89",
+          "data": "0xc45a0155",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock0": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14eb2e3284800000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "abdicated0": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bcb2e3284800000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock1": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14ee470b8bc00000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "abdicated1": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bce470b8bc00000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock2": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e60d54d4100000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "abdicated2": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc60d54d4100000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock3": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e8c54519b00000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "abdicated3": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc8c54519b00000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock4": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e5797527000000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "abdicated4": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc5797527000000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock5": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e5c1a1a4f00000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "abdicated5": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc5c1a1a4f00000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock6": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14ef6f98fd500000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "abdicated6": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bcf6f98fd500000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock7": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e2438525b00000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "abdicated7": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc2438525b00000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock8": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e4796629100000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "abdicated8": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc4796629100000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock9": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e585cd34b00000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "abdicated9": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc585cd34b00000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock10": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e5b34b82300000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "abdicated10": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc5b34b82300000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock11": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14ee90956cf00000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "abdicated11": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bce90956cf00000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock12": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e3e9d2ac700000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "abdicated12": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc3e9d2ac700000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock13": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14eb192a84a00000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "abdicated13": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bcb192a84a00000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock14": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e920ed70600000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "abdicated14": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc920ed70600000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock15": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e7fb6caad00000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "abdicated15": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc7fb6caad00000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock16": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14efe56e23200000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "abdicated16": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bcfe56e23200000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock17": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e9faae46400000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "abdicated17": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc9faae46400000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock18": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14eaa4abe7f00000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "abdicated18": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bcaa4abe7f00000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock19": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14ec47f002700000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "abdicated19": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bcc47f002700000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock20": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e13af403500000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "abdicated20": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc13af403500000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock21": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e70897b2300000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "abdicated21": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc70897b2300000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock22": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e6a5f1aa200000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "abdicated22": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc6a5f1aa200000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock23": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e04dbf0ce00000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "abdicated23": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc04dbf0ce00000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock24": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e2cb19f9800000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "abdicated24": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc2cb19f9800000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock25": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e871c979c00000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "abdicated25": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc871c979c00000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock26": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14ec21ad02800000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "abdicated26": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bcc21ad02800000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock27": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14eb84c824600000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "abdicated27": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bcb84c824600000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "canReceivePerformanceFee": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x98c9b49c00000000000000000000000034702f5f789196a723b8df6334922f145a7db1b2",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "canReceiveManagementFee": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x98c9b49c00000000000000000000000034702f5f789196a723b8df6334922f145a7db1b2",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "accrued": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x60a38ac1",
+          "decode": "words",
+          "maxWords": 3
+        },
+        "assets": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x01e1d114",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "price": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x07a2d13a0000000000000000000000000000000000000000000000000de0b6b3a7640000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "maxDeposit": {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x402d267d0000000000000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "assetPaused": {
+          "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+          "data": "0x5c975abb",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "assetBlacklisted": {
+          "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+          "data": "0xe47d6060000000000000000000000000f3557ad5e984211ac8a0874a670344f2c3376471",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "registryOwner": {
+          "to": "0x3696c5eae4a7ffd04ea163564571e9cd8ed9364e",
+          "data": "0x8da5cb5b",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "subRegistryLength": {
+          "to": "0x3696c5eae4a7ffd04ea163564571e9cd8ed9364e",
+          "data": "0x7041c2a8",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "subRegistry0": {
+          "to": "0x3696c5eae4a7ffd04ea163564571e9cd8ed9364e",
+          "data": "0x542873410000000000000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "subRegistry1": {
+          "to": "0x3696c5eae4a7ffd04ea163564571e9cd8ed9364e",
+          "data": "0x542873410000000000000000000000000000000000000000000000000000000000000001",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "subRegistry2": {
+          "to": "0x3696c5eae4a7ffd04ea163564571e9cd8ed9364e",
+          "data": "0x542873410000000000000000000000000000000000000000000000000000000000000002",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "subRegistry3": {
+          "to": "0x3696c5eae4a7ffd04ea163564571e9cd8ed9364e",
+          "data": "0x542873410000000000000000000000000000000000000000000000000000000000000003",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "registryAllowsAdapter0": {
+          "to": "0x3696c5eae4a7ffd04ea163564571e9cd8ed9364e",
+          "data": "0xe4bb26f20000000000000000000000000fc9b889756e1241a4d89472db701c0417c26d89",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "adapterBlacklisted0": {
+          "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+          "data": "0xe47d60600000000000000000000000000fc9b889756e1241a4d89472db701c0417c26d89",
+          "decode": "uint",
+          "maxWords": 1
+        }
+      },
+      "administrativeCalls": [
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xece1d6e5",
+          "function": "maxRate()",
+          "expected": "0x00000000000000000000000000000000000000000000000000000007620d06ef"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xc719946c",
+          "function": "virtualShares()",
+          "expected": "0x000000000000000000000000000000000000000000000000000000e8d4a51000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x87788782",
+          "function": "performanceFee()",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xa6f7f5d6",
+          "function": "managementFee()",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xed27f7c9",
+          "function": "performanceFeeRecipient()",
+          "expected": "0x00000000000000000000000034702f5f789196a723b8df6334922f145a7db1b2"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x6d9a3010",
+          "function": "managementFeeRecipient()",
+          "expected": "0x00000000000000000000000034702f5f789196a723b8df6334922f145a7db1b2"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x8da5cb5b",
+          "function": "owner()",
+          "expected": "0x000000000000000000000000c684c6587712e5e7bdf9fd64415f23bd2b05faec"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe66f53b7",
+          "function": "curator()",
+          "expected": "0x0000000000000000000000009e33faae38ff641094fa68c65c2ce600b3410585"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x7e729ac4",
+          "function": "receiveSharesGate()",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x93ab2ab7",
+          "function": "sendSharesGate()",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x54cde13e",
+          "function": "receiveAssetsGate()",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x8eede801",
+          "function": "sendAssetsGate()",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x50b5c16a",
+          "function": "adapterRegistry()",
+          "expected": "0x0000000000000000000000003696c5eae4a7ffd04ea163564571e9cd8ed9364e"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xad468d11",
+          "function": "liquidityAdapter()",
+          "expected": "0x0000000000000000000000000fc9b889756e1241a4d89472db701c0417c26d89"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x5aa22bc8",
+          "function": "adaptersLength()",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000001"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0x4ef501ac0000000000000000000000000000000000000000000000000000000000000000",
+          "function": "adapters(uint256)",
+          "expected": "0x0000000000000000000000000fc9b889756e1241a4d89472db701c0417c26d89"
+        },
+        {
+          "to": "0x0fc9b889756e1241a4d89472db701c0417c26d89",
+          "data": "0x0fe36536",
+          "function": "parentVault()",
+          "expected": "0x000000000000000000000000f3557ad5e984211ac8a0874a670344f2c3376471"
+        },
+        {
+          "to": "0x0fc9b889756e1241a4d89472db701c0417c26d89",
+          "data": "0x388af5b5",
+          "function": "skimRecipient()",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0x0fc9b889756e1241a4d89472db701c0417c26d89",
+          "data": "0xd8fbc833",
+          "function": "morpho()",
+          "expected": "0x000000000000000000000000bbbbbbbbbb9cc5e90e3b3af64bdaf62c37eeffcb"
+        },
+        {
+          "to": "0x0fc9b889756e1241a4d89472db701c0417c26d89",
+          "data": "0xc45a0155",
+          "function": "factory()",
+          "expected": "0x00000000000000000000000032bb1c0d48d8b1b3363e86eeb9a0300bad61ccc1"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14eb2e3284800000000000000000000000000000000000000000000000000000000",
+          "function": "timelock(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000093a80"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bcb2e3284800000000000000000000000000000000000000000000000000000000",
+          "function": "abdicated(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14ee470b8bc00000000000000000000000000000000000000000000000000000000",
+          "function": "timelock(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bce470b8bc00000000000000000000000000000000000000000000000000000000",
+          "function": "abdicated(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e60d54d4100000000000000000000000000000000000000000000000000000000",
+          "function": "timelock(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000093a80"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc60d54d4100000000000000000000000000000000000000000000000000000000",
+          "function": "abdicated(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e8c54519b00000000000000000000000000000000000000000000000000000000",
+          "function": "timelock(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc8c54519b00000000000000000000000000000000000000000000000000000000",
+          "function": "abdicated(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e5797527000000000000000000000000000000000000000000000000000000000",
+          "function": "timelock(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc5797527000000000000000000000000000000000000000000000000000000000",
+          "function": "abdicated(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e5c1a1a4f00000000000000000000000000000000000000000000000000000000",
+          "function": "timelock(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc5c1a1a4f00000000000000000000000000000000000000000000000000000000",
+          "function": "abdicated(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14ef6f98fd500000000000000000000000000000000000000000000000000000000",
+          "function": "timelock(bytes4)",
+          "expected": "0x000000000000000000000000000000000000000000000000000000000003f480"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bcf6f98fd500000000000000000000000000000000000000000000000000000000",
+          "function": "abdicated(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e2438525b00000000000000000000000000000000000000000000000000000000",
+          "function": "timelock(bytes4)",
+          "expected": "0x000000000000000000000000000000000000000000000000000000000003f480"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc2438525b00000000000000000000000000000000000000000000000000000000",
+          "function": "abdicated(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e4796629100000000000000000000000000000000000000000000000000000000",
+          "function": "timelock(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000093a80"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc4796629100000000000000000000000000000000000000000000000000000000",
+          "function": "abdicated(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e585cd34b00000000000000000000000000000000000000000000000000000000",
+          "function": "timelock(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000093a80"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc585cd34b00000000000000000000000000000000000000000000000000000000",
+          "function": "abdicated(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e5b34b82300000000000000000000000000000000000000000000000000000000",
+          "function": "timelock(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000093a80"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc5b34b82300000000000000000000000000000000000000000000000000000000",
+          "function": "abdicated(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000001"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14ee90956cf00000000000000000000000000000000000000000000000000000000",
+          "function": "timelock(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bce90956cf00000000000000000000000000000000000000000000000000000000",
+          "function": "abdicated(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e3e9d2ac700000000000000000000000000000000000000000000000000000000",
+          "function": "timelock(bytes4)",
+          "expected": "0x000000000000000000000000000000000000000000000000000000000003f480"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc3e9d2ac700000000000000000000000000000000000000000000000000000000",
+          "function": "abdicated(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14eb192a84a00000000000000000000000000000000000000000000000000000000",
+          "function": "timelock(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000093a80"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bcb192a84a00000000000000000000000000000000000000000000000000000000",
+          "function": "abdicated(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e920ed70600000000000000000000000000000000000000000000000000000000",
+          "function": "timelock(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc920ed70600000000000000000000000000000000000000000000000000000000",
+          "function": "abdicated(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e7fb6caad00000000000000000000000000000000000000000000000000000000",
+          "function": "timelock(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc7fb6caad00000000000000000000000000000000000000000000000000000000",
+          "function": "abdicated(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14efe56e23200000000000000000000000000000000000000000000000000000000",
+          "function": "timelock(bytes4)",
+          "expected": "0x000000000000000000000000000000000000000000000000000000000003f480"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bcfe56e23200000000000000000000000000000000000000000000000000000000",
+          "function": "abdicated(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e9faae46400000000000000000000000000000000000000000000000000000000",
+          "function": "timelock(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc9faae46400000000000000000000000000000000000000000000000000000000",
+          "function": "abdicated(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14eaa4abe7f00000000000000000000000000000000000000000000000000000000",
+          "function": "timelock(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bcaa4abe7f00000000000000000000000000000000000000000000000000000000",
+          "function": "abdicated(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14ec47f002700000000000000000000000000000000000000000000000000000000",
+          "function": "timelock(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bcc47f002700000000000000000000000000000000000000000000000000000000",
+          "function": "abdicated(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e13af403500000000000000000000000000000000000000000000000000000000",
+          "function": "timelock(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc13af403500000000000000000000000000000000000000000000000000000000",
+          "function": "abdicated(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e70897b2300000000000000000000000000000000000000000000000000000000",
+          "function": "timelock(bytes4)",
+          "expected": "0x000000000000000000000000000000000000000000000000000000000003f480"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc70897b2300000000000000000000000000000000000000000000000000000000",
+          "function": "abdicated(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e6a5f1aa200000000000000000000000000000000000000000000000000000000",
+          "function": "timelock(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc6a5f1aa200000000000000000000000000000000000000000000000000000000",
+          "function": "abdicated(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e04dbf0ce00000000000000000000000000000000000000000000000000000000",
+          "function": "timelock(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000093a80"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc04dbf0ce00000000000000000000000000000000000000000000000000000000",
+          "function": "abdicated(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000001"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e2cb19f9800000000000000000000000000000000000000000000000000000000",
+          "function": "timelock(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000093a80"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc2cb19f9800000000000000000000000000000000000000000000000000000000",
+          "function": "abdicated(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000001"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14e871c979c00000000000000000000000000000000000000000000000000000000",
+          "function": "timelock(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000093a80"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bc871c979c00000000000000000000000000000000000000000000000000000000",
+          "function": "abdicated(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14ec21ad02800000000000000000000000000000000000000000000000000000000",
+          "function": "timelock(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000093a80"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bcc21ad02800000000000000000000000000000000000000000000000000000000",
+          "function": "abdicated(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000001"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe78ab14eb84c824600000000000000000000000000000000000000000000000000000000",
+          "function": "timelock(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "data": "0xe470b8bcb84c824600000000000000000000000000000000000000000000000000000000",
+          "function": "abdicated(bytes4)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+          "data": "0x5c975abb",
+          "function": "paused()",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+          "data": "0xe47d6060000000000000000000000000f3557ad5e984211ac8a0874a670344f2c3376471",
+          "function": "isBlackListed(address)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0x3696c5eae4a7ffd04ea163564571e9cd8ed9364e",
+          "data": "0x8da5cb5b",
+          "function": "owner()",
+          "expected": "0x000000000000000000000000cba28b38103307ec8da98377fff9816c164f9afa"
+        },
+        {
+          "to": "0x3696c5eae4a7ffd04ea163564571e9cd8ed9364e",
+          "data": "0x7041c2a8",
+          "function": "subRegistriesLength()",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000004"
+        },
+        {
+          "to": "0x3696c5eae4a7ffd04ea163564571e9cd8ed9364e",
+          "data": "0x542873410000000000000000000000000000000000000000000000000000000000000000",
+          "function": "subRegistries(uint256)",
+          "expected": "0x000000000000000000000000a31788949d0fe443d3d1033222fc9479499bc3f5"
+        },
+        {
+          "to": "0x3696c5eae4a7ffd04ea163564571e9cd8ed9364e",
+          "data": "0x542873410000000000000000000000000000000000000000000000000000000000000001",
+          "function": "subRegistries(uint256)",
+          "expected": "0x000000000000000000000000cef9ee779ef9428f50bb7a21b3e3b4efdbc33844"
+        },
+        {
+          "to": "0x3696c5eae4a7ffd04ea163564571e9cd8ed9364e",
+          "data": "0x542873410000000000000000000000000000000000000000000000000000000000000002",
+          "function": "subRegistries(uint256)",
+          "expected": "0x000000000000000000000000ca38e878439e02f2feb364a2b36b52789f983727"
+        },
+        {
+          "to": "0x3696c5eae4a7ffd04ea163564571e9cd8ed9364e",
+          "data": "0x542873410000000000000000000000000000000000000000000000000000000000000003",
+          "function": "subRegistries(uint256)",
+          "expected": "0x000000000000000000000000fb4d38d93736a040993c50aaac776a2be2cff8be"
+        },
+        {
+          "to": "0x3696c5eae4a7ffd04ea163564571e9cd8ed9364e",
+          "data": "0xe4bb26f20000000000000000000000000fc9b889756e1241a4d89472db701c0417c26d89",
+          "function": "isInRegistry(address)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000001"
+        },
+        {
+          "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+          "data": "0xe47d60600000000000000000000000000fc9b889756e1241a4d89472db701c0417c26d89",
+          "function": "isBlackListed(address)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      ],
+      "codeChecks": [
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "keccak256": "0xd3e8fb4da2e312d233b8bf884a7e5f4f4fa8bdd4531dcaa4448791251a1b1f5a",
+          "sha256": "c95dbbf45f9e65bc3f1cb6e26448ee1368d28338802c1d7ed31ab998c5c306cb"
+        },
+        {
+          "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+          "keccak256": "0xb44fb4e949d0f78f87f79ee46428f23a2a5713ce6fc6e0beb3dda78c2ac1ea55",
+          "sha256": "6d967f98f2f3843065688dc2065248e3686b56fc0b6ddfa82007df016148becb"
+        },
+        {
+          "address": "0x0fc9b889756e1241a4d89472db701c0417c26d89",
+          "keccak256": "0x9c50a02b28d68a4e8e067c760aa20a7e1a7e821b31996e8e6d2e2719c30b39e6",
+          "sha256": "59ab10310d9c3c67c6b383cc668ad295a3cb9a0bb3fb396a0674202e486d5ef8"
+        },
+        {
+          "address": "0x3696c5eae4a7ffd04ea163564571e9cd8ed9364e",
+          "sha256": "7ccfbf1999fb0ead8f804856e66a43e928bdbc7b446c47905da745de60f5af25",
+          "keccak256": "0x426928df6636ab7d3cd2a2cace4cefe83c1edf3a9bc7f0b33f34a596aaf19fe4"
+        },
+        {
+          "address": "0xa31788949d0fe443d3d1033222fc9479499bc3f5",
+          "sha256": "8707a171b94c30ef3cf6cd6f54d9efa785fe64a5efebd3af8afd3c9bdc900351",
+          "keccak256": "0x2602767595004f57f3772555c0364043a5eb4420b08527c9a691d1e1c0a87e12"
+        },
+        {
+          "address": "0xcef9ee779ef9428f50bb7a21b3e3b4efdbc33844",
+          "sha256": "668e3414b67d657937fb553e9c2929220a6de66661382791c271f12485192b8a",
+          "keccak256": "0xadf166c9c6439dfd6f895f0b6acd128a292e61e187c4d80db6142d33acbc4cf5"
+        },
+        {
+          "address": "0xca38e878439e02f2feb364a2b36b52789f983727",
+          "sha256": "cd31a0970b5aecbfe33724078cb7d1549bc74e413547c520360cffd27a4dc03f",
+          "keccak256": "0x7801aa616d0e4cde2f4da2b9c26747fc52a286f99a0174cf94cce56c6696f584"
+        },
+        {
+          "address": "0xfb4d38d93736a040993c50aaac776a2be2cff8be",
+          "sha256": "e12c25b184f8ccca922566219f0de8c865e3440401388cb068ebfc163fa09b5d",
+          "keccak256": "0xb4e32b2550d131bf6bcdc4ec075ecd58f7000fb59f57ac3e8596941296a402bd"
+        }
+      ],
+      "storageChecks": [],
+      "administrativeEvents": [
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "Abdicate(bytes4)",
+          "topic": "0xa8480b135a28741e8c059528bf8f82de70278485fb86bfc816a183801f0a8570"
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "AddAdapter(address)",
+          "topic": "0x8f125a24838c4c23e893904b255b5c672d43d4cb8af7e3d15841eaeabc1e68aa"
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "DecreaseAbsoluteCap(address,bytes32,bytes,uint256)",
+          "topic": "0xbc2ffe81312f53db4f327eca188ebdc13df66a8ce25f7dec6f5b4495fe27b371"
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "DecreaseRelativeCap(address,bytes32,bytes,uint256)",
+          "topic": "0xcedce6ffe8b7f89de49bd4f955667ca0a963a8059264196807b240ed470b25ce"
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "DecreaseTimelock(bytes4,uint256)",
+          "topic": "0x488e0bfafe0a9580c2271bee1f563a47d309f0105ca950ea525d909b43b36daf"
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "IncreaseAbsoluteCap(bytes32,bytes,uint256)",
+          "topic": "0x7368d59ed82f6a538f6deef9baa54623fe3699ce07b19031f762f740c8c34b03"
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "IncreaseRelativeCap(bytes32,bytes,uint256)",
+          "topic": "0x2a343b9a1ceba40853d01c6adeea53f5c0e4b95b4eb870ed4af309a0ead7e399"
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "IncreaseTimelock(bytes4,uint256)",
+          "topic": "0xed380a7a1f0afc99b313ac7d9f1e52e44430d32b4639c7993bd0021974e30c0e"
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "RemoveAdapter(address)",
+          "topic": "0x34f33faa2592bc1f615ec3e91b55b7784665ce46461403c294824d85f9f66458"
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "Revoke(address,bytes4,bytes)",
+          "topic": "0x70521cf6a7c2458c5ad406081ad7b3bc4afd31b01b586a157a9780fcee6a77cb"
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "SetAdapterRegistry(address)",
+          "topic": "0x7c5f71ef3a94efd2804ad9a6eb74b723dae0d26ef7d2a031f7986c96ae55afda"
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "SetCurator(address)",
+          "topic": "0xbd0a63c12948fbc9194a5839019f99c9d71db924e5c70018265bc778b8f1a506"
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "SetForceDeallocatePenalty(address,uint256)",
+          "topic": "0x1e29a0bf54cf1e929f17cc97a198ff5cf7f8da1df1cb8ff67f7184ce380f3924"
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "SetIsAllocator(address,bool)",
+          "topic": "0x74dc60cbc81a9472d04ad1d20e151d369c41104d655ed3f2f3091166a502cd8d"
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "SetIsSentinel(address,bool)",
+          "topic": "0x8da69db4003c01b5c7be66a7bb5953423222e5118b6af0aadf54e75feef5bc50"
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "SetLiquidityAdapterAndData(address,address,bytes)",
+          "topic": "0x9deb43d71422af41853c3921fb364b7647f9a9b136e46d66d45c1bf707af706c",
+          "allowedAdapterTopic": "0x0000000000000000000000000fc9b889756e1241a4d89472db701c0417c26d89"
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "SetManagementFee(uint256)",
+          "topic": "0xd87632b1c6ebfa21acbca0e3279b3cf6385a377cb8fda51e5b866baa6e6012ab"
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "SetManagementFeeRecipient(address)",
+          "topic": "0x7f1dd9b78dfeeb8c452333915b2f077f4920fefc4ec7f146767e9ba40303ef1f"
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "SetMaxRate(uint256)",
+          "topic": "0x75fef0e2a5e934789b0723129a0d1bbfd4a50f39c5af9919626e4f3603aef5ff"
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "SetName(string)",
+          "topic": "0x4df9dcd34ae35f40f2c756fd8ac83210ed0b76d065543ee73d868aec7c7fcf02"
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "SetOwner(address)",
+          "topic": "0x167d3e9c1016ab80e58802ca9da10ce5c6a0f4debc46a2e7a2cd9e56899a4fb5"
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "SetPerformanceFee(uint256)",
+          "topic": "0x8b940a95968ad5b511f89b01075446a4fe9f614f2dc5fbb9e9a6b227d6d4fd70"
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "SetPerformanceFeeRecipient(address)",
+          "topic": "0xe59cc3d47f72dbd81f7d5fc40b9b05d9c4374a54addea771648ae24943c26e76"
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "SetReceiveAssetsGate(address)",
+          "topic": "0x6b530281a3f54e1c3e430297307183ba1bafca3cdf775404395c208e6cf3e15f"
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "SetReceiveSharesGate(address)",
+          "topic": "0x004237ebb79833e3e0bc633281452dc9e5c76b92b603140b2a53b0bceb441cae"
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "SetSendAssetsGate(address)",
+          "topic": "0x34c1885f043c6c77736fbc402c63a383472347b85868dab73d42b69596a98e94"
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "SetSendSharesGate(address)",
+          "topic": "0x43a3573cf238e4b97d4ffec8e9b8a69cd276b47cf68230dbdbec3a7a98b28723"
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "SetSymbol(string)",
+          "topic": "0xadf3ae8bd543b3007d464f15cb8ea1db3f44e84d41d203164f40b95e27558ac6"
+        },
+        {
+          "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+          "signature": "Submit(bytes4,bytes,uint256)",
+          "topic": "0x8b18afeb361b83b025999ed5b42f1d90c68aaa5a0fd49c015f04c3b8b81e80eb"
+        },
+        {
+          "address": "0x0fc9b889756e1241a4d89472db701c0417c26d89",
+          "signature": "Abdicate(bytes4)",
+          "topic": "0xa8480b135a28741e8c059528bf8f82de70278485fb86bfc816a183801f0a8570"
+        },
+        {
+          "address": "0x0fc9b889756e1241a4d89472db701c0417c26d89",
+          "signature": "DecreaseTimelock(bytes4,uint256)",
+          "topic": "0x488e0bfafe0a9580c2271bee1f563a47d309f0105ca950ea525d909b43b36daf"
+        },
+        {
+          "address": "0x0fc9b889756e1241a4d89472db701c0417c26d89",
+          "signature": "IncreaseTimelock(bytes4,uint256)",
+          "topic": "0xed380a7a1f0afc99b313ac7d9f1e52e44430d32b4639c7993bd0021974e30c0e"
+        },
+        {
+          "address": "0x0fc9b889756e1241a4d89472db701c0417c26d89",
+          "signature": "Revoke(address,bytes4,bytes)",
+          "topic": "0x70521cf6a7c2458c5ad406081ad7b3bc4afd31b01b586a157a9780fcee6a77cb"
+        },
+        {
+          "address": "0x0fc9b889756e1241a4d89472db701c0417c26d89",
+          "signature": "SetSkimRecipient(address)",
+          "topic": "0x2e7908865670e21b9779422cadf5f1cba271a62bb95c71eaaf615c0a1c48ebee"
+        },
+        {
+          "address": "0x0fc9b889756e1241a4d89472db701c0417c26d89",
+          "signature": "Submit(bytes4,bytes,uint256)",
+          "topic": "0x8b18afeb361b83b025999ed5b42f1d90c68aaa5a0fd49c015f04c3b8b81e80eb"
+        },
+        {
+          "address": "0x3696c5eae4a7ffd04ea163564571e9cd8ed9364e",
+          "signature": "AddSubRegistry(address)",
+          "topic": "0x4c5de04e0a9fb984302e76e361d50aa774fb7922dcfdc4ad004ad087ccfec941"
+        },
+        {
+          "address": "0x3696c5eae4a7ffd04ea163564571e9cd8ed9364e",
+          "signature": "SetOwner(address)",
+          "topic": "0x167d3e9c1016ab80e58802ca9da10ce5c6a0f4debc46a2e7a2cd9e56899a4fb5"
+        }
+      ],
+      "adapters": [
+        {
+          "address": "0x0fc9b889756e1241a4d89472db701c0417c26d89",
+          "assetsKey": "adapterAssets0"
+        }
+      ],
+      "cacheSeconds": 60,
+      "blockTagPolicy": "PINNED_CURRENT_BLOCK",
+      "supplyBasis": "TOKEN_TOTAL_SUPPLY",
+      "maxAdministrativeLookbackBlocks": 50000,
+      "approvedBlockNumber": 26201094,
+      "shareDecimals": 18,
+      "assetDecimals": 6,
+      "outputDecimals": 6,
+      "oneShareRaw": "1000000000000000000",
+      "underlying": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "token": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+      "perTokenAmount": "1"
+    },
+    "moduleId": "validated-usdt-reader-v1"
+  },
+  "monitoring": {
+    "publishEnabled": true,
+    "requiresRevalidation": false,
+    "onAdministrativeChange": "SUSPEND_AND_HIDE",
+    "baselineBlockNumber": 26201094,
+    "baselineBlockHash": "0x9b02edb1d57adc7925db7fda15d2a3ae0a9e2fdee20d6231d1e7fdbd4b734d06"
+  },
+  "evidence": {
+    "rpcEndpoint": "https://ethereum-rpc.publicnode.com",
+    "blockTag": "0x18fcc06",
+    "blockNumber": 26201094,
+    "blockHash": "0x9b02edb1d57adc7925db7fda15d2a3ae0a9e2fdee20d6231d1e7fdbd4b734d06",
+    "blockTimestamp": "2026-10-15T23:05:35+00:00",
+    "calls": [
+      {
+        "key": "asset",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "asset()",
+        "data": "0x38d52e0f",
+        "blockTag": "0x18fcc06",
+        "result": "0x000000000000000000000000dac17f958d2ee523a2206206994597c13d831ec7"
+      },
+      {
+        "key": "shareDecimals",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "decimals()",
+        "data": "0x313ce567",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000012"
+      },
+      {
+        "key": "assetDecimals",
+        "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "function": "decimals()",
+        "data": "0x313ce567",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000006"
+      },
+      {
+        "key": "supply",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "totalSupply()",
+        "data": "0x18160ddd",
+        "blockTag": "0x18fcc06",
+        "result": "0x00000000000000000000000000000000000000000000365bf4c9d84ce6c8131d"
+      },
+      {
+        "key": "name",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "name()",
+        "data": "0x06fdde03",
+        "blockTag": "0x18fa025",
+        "result": "0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000134761756e746c65742055534454205072696d6500000000000000000000000000"
+      },
+      {
+        "key": "symbol",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "symbol()",
+        "data": "0x95d89b41",
+        "blockTag": "0x18fa025",
+        "result": "0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000076774757364747000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "storedAssets",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "_totalAssets()",
+        "data": "0xce04bebb",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000003d596ab066"
+      },
+      {
+        "key": "firstAssets",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "firstTotalAssets()",
+        "data": "0xf73f8f31",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "lastUpdate",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "lastUpdate()",
+        "data": "0xc0463711",
+        "blockTag": "0x18fcc06",
+        "result": "0x000000000000000000000000000000000000000000000000000000006ad15b7f"
+      },
+      {
+        "key": "maxRate",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "maxRate()",
+        "data": "0xece1d6e5",
+        "blockTag": "0x18fcc06",
+        "result": "0x00000000000000000000000000000000000000000000000000000007620d06ef"
+      },
+      {
+        "key": "virtualShares",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "virtualShares()",
+        "data": "0xc719946c",
+        "blockTag": "0x18fcc06",
+        "result": "0x000000000000000000000000000000000000000000000000000000e8d4a51000"
+      },
+      {
+        "key": "performanceFee",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "performanceFee()",
+        "data": "0x87788782",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "managementFee",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "managementFee()",
+        "data": "0xa6f7f5d6",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "performanceFeeRecipient",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "performanceFeeRecipient()",
+        "data": "0xed27f7c9",
+        "blockTag": "0x18fcc06",
+        "result": "0x00000000000000000000000034702f5f789196a723b8df6334922f145a7db1b2"
+      },
+      {
+        "key": "managementFeeRecipient",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "managementFeeRecipient()",
+        "data": "0x6d9a3010",
+        "blockTag": "0x18fcc06",
+        "result": "0x00000000000000000000000034702f5f789196a723b8df6334922f145a7db1b2"
+      },
+      {
+        "key": "owner",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "owner()",
+        "data": "0x8da5cb5b",
+        "blockTag": "0x18fcc06",
+        "result": "0x000000000000000000000000c684c6587712e5e7bdf9fd64415f23bd2b05faec"
+      },
+      {
+        "key": "curator",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "curator()",
+        "data": "0xe66f53b7",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000009e33faae38ff641094fa68c65c2ce600b3410585"
+      },
+      {
+        "key": "receiveSharesGate",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "receiveSharesGate()",
+        "data": "0x7e729ac4",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "sendSharesGate",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "sendSharesGate()",
+        "data": "0x93ab2ab7",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "receiveAssetsGate",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "receiveAssetsGate()",
+        "data": "0x54cde13e",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "sendAssetsGate",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "sendAssetsGate()",
+        "data": "0x8eede801",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "adapterRegistry",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "adapterRegistry()",
+        "data": "0x50b5c16a",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000003696c5eae4a7ffd04ea163564571e9cd8ed9364e"
+      },
+      {
+        "key": "liquidityAdapter",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "liquidityAdapter()",
+        "data": "0xad468d11",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000fc9b889756e1241a4d89472db701c0417c26d89"
+      },
+      {
+        "key": "liquidityData",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "liquidityData()",
+        "data": "0x2e029228",
+        "blockTag": "0x18fcc06",
+        "result": "0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000dac17f958d2ee523a2206206994597c13d831ec70000000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c599000000000000000000000000f1561bc4b3d1ba49053986fb9ee88d4fe22d0cf4000000000000000000000000870ac11d48b15db9a138cf899d20f13f79ba00bc0000000000000000000000000000000000000000000000000bef55718ad60000"
+      },
+      {
+        "key": "adaptersLength",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "adaptersLength()",
+        "data": "0x5aa22bc8",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000001"
+      },
+      {
+        "key": "cash",
+        "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "function": "balanceOf(address)",
+        "data": "0x70a08231000000000000000000000000f3557ad5e984211ac8a0874a670344f2c3376471",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "adapter0",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "adapters(uint256)",
+        "data": "0x4ef501ac0000000000000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000fc9b889756e1241a4d89472db701c0417c26d89"
+      },
+      {
+        "key": "adapterParent0",
+        "to": "0x0fc9b889756e1241a4d89472db701c0417c26d89",
+        "function": "parentVault()",
+        "data": "0x0fe36536",
+        "blockTag": "0x18fcc06",
+        "result": "0x000000000000000000000000f3557ad5e984211ac8a0874a670344f2c3376471"
+      },
+      {
+        "key": "adapterAssets0",
+        "to": "0x0fc9b889756e1241a4d89472db701c0417c26d89",
+        "function": "realAssets()",
+        "data": "0x56c07573",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000003d596b4b91"
+      },
+      {
+        "key": "adapter0skimRecipient",
+        "to": "0x0fc9b889756e1241a4d89472db701c0417c26d89",
+        "function": "skimRecipient()",
+        "data": "0x388af5b5",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "adapter0morpho",
+        "to": "0x0fc9b889756e1241a4d89472db701c0417c26d89",
+        "function": "morpho()",
+        "data": "0xd8fbc833",
+        "blockTag": "0x18fcc06",
+        "result": "0x000000000000000000000000bbbbbbbbbb9cc5e90e3b3af64bdaf62c37eeffcb"
+      },
+      {
+        "key": "adapter0factory",
+        "to": "0x0fc9b889756e1241a4d89472db701c0417c26d89",
+        "function": "factory()",
+        "data": "0xc45a0155",
+        "blockTag": "0x18fcc06",
+        "result": "0x00000000000000000000000032bb1c0d48d8b1b3363e86eeb9a0300bad61ccc1"
+      },
+      {
+        "key": "timelock0",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "timelock(bytes4)",
+        "data": "0xe78ab14eb2e3284800000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000093a80"
+      },
+      {
+        "key": "abdicated0",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "abdicated(bytes4)",
+        "data": "0xe470b8bcb2e3284800000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "timelock1",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "timelock(bytes4)",
+        "data": "0xe78ab14ee470b8bc00000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "abdicated1",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "abdicated(bytes4)",
+        "data": "0xe470b8bce470b8bc00000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "timelock2",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "timelock(bytes4)",
+        "data": "0xe78ab14e60d54d4100000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000093a80"
+      },
+      {
+        "key": "abdicated2",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "abdicated(bytes4)",
+        "data": "0xe470b8bc60d54d4100000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "timelock3",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "timelock(bytes4)",
+        "data": "0xe78ab14e8c54519b00000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "abdicated3",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "abdicated(bytes4)",
+        "data": "0xe470b8bc8c54519b00000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "timelock4",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "timelock(bytes4)",
+        "data": "0xe78ab14e5797527000000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "abdicated4",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "abdicated(bytes4)",
+        "data": "0xe470b8bc5797527000000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "timelock5",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "timelock(bytes4)",
+        "data": "0xe78ab14e5c1a1a4f00000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "abdicated5",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "abdicated(bytes4)",
+        "data": "0xe470b8bc5c1a1a4f00000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "timelock6",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "timelock(bytes4)",
+        "data": "0xe78ab14ef6f98fd500000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x000000000000000000000000000000000000000000000000000000000003f480"
+      },
+      {
+        "key": "abdicated6",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "abdicated(bytes4)",
+        "data": "0xe470b8bcf6f98fd500000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "timelock7",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "timelock(bytes4)",
+        "data": "0xe78ab14e2438525b00000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x000000000000000000000000000000000000000000000000000000000003f480"
+      },
+      {
+        "key": "abdicated7",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "abdicated(bytes4)",
+        "data": "0xe470b8bc2438525b00000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "timelock8",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "timelock(bytes4)",
+        "data": "0xe78ab14e4796629100000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000093a80"
+      },
+      {
+        "key": "abdicated8",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "abdicated(bytes4)",
+        "data": "0xe470b8bc4796629100000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "timelock9",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "timelock(bytes4)",
+        "data": "0xe78ab14e585cd34b00000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000093a80"
+      },
+      {
+        "key": "abdicated9",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "abdicated(bytes4)",
+        "data": "0xe470b8bc585cd34b00000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "timelock10",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "timelock(bytes4)",
+        "data": "0xe78ab14e5b34b82300000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000093a80"
+      },
+      {
+        "key": "abdicated10",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "abdicated(bytes4)",
+        "data": "0xe470b8bc5b34b82300000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000001"
+      },
+      {
+        "key": "timelock11",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "timelock(bytes4)",
+        "data": "0xe78ab14ee90956cf00000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "abdicated11",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "abdicated(bytes4)",
+        "data": "0xe470b8bce90956cf00000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "timelock12",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "timelock(bytes4)",
+        "data": "0xe78ab14e3e9d2ac700000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x000000000000000000000000000000000000000000000000000000000003f480"
+      },
+      {
+        "key": "abdicated12",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "abdicated(bytes4)",
+        "data": "0xe470b8bc3e9d2ac700000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "timelock13",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "timelock(bytes4)",
+        "data": "0xe78ab14eb192a84a00000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000093a80"
+      },
+      {
+        "key": "abdicated13",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "abdicated(bytes4)",
+        "data": "0xe470b8bcb192a84a00000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "timelock14",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "timelock(bytes4)",
+        "data": "0xe78ab14e920ed70600000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "abdicated14",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "abdicated(bytes4)",
+        "data": "0xe470b8bc920ed70600000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "timelock15",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "timelock(bytes4)",
+        "data": "0xe78ab14e7fb6caad00000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "abdicated15",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "abdicated(bytes4)",
+        "data": "0xe470b8bc7fb6caad00000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "timelock16",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "timelock(bytes4)",
+        "data": "0xe78ab14efe56e23200000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x000000000000000000000000000000000000000000000000000000000003f480"
+      },
+      {
+        "key": "abdicated16",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "abdicated(bytes4)",
+        "data": "0xe470b8bcfe56e23200000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "timelock17",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "timelock(bytes4)",
+        "data": "0xe78ab14e9faae46400000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "abdicated17",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "abdicated(bytes4)",
+        "data": "0xe470b8bc9faae46400000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "timelock18",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "timelock(bytes4)",
+        "data": "0xe78ab14eaa4abe7f00000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "abdicated18",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "abdicated(bytes4)",
+        "data": "0xe470b8bcaa4abe7f00000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "timelock19",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "timelock(bytes4)",
+        "data": "0xe78ab14ec47f002700000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "abdicated19",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "abdicated(bytes4)",
+        "data": "0xe470b8bcc47f002700000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "timelock20",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "timelock(bytes4)",
+        "data": "0xe78ab14e13af403500000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "abdicated20",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "abdicated(bytes4)",
+        "data": "0xe470b8bc13af403500000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "timelock21",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "timelock(bytes4)",
+        "data": "0xe78ab14e70897b2300000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x000000000000000000000000000000000000000000000000000000000003f480"
+      },
+      {
+        "key": "abdicated21",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "abdicated(bytes4)",
+        "data": "0xe470b8bc70897b2300000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "timelock22",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "timelock(bytes4)",
+        "data": "0xe78ab14e6a5f1aa200000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "abdicated22",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "abdicated(bytes4)",
+        "data": "0xe470b8bc6a5f1aa200000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "timelock23",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "timelock(bytes4)",
+        "data": "0xe78ab14e04dbf0ce00000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000093a80"
+      },
+      {
+        "key": "abdicated23",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "abdicated(bytes4)",
+        "data": "0xe470b8bc04dbf0ce00000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000001"
+      },
+      {
+        "key": "timelock24",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "timelock(bytes4)",
+        "data": "0xe78ab14e2cb19f9800000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000093a80"
+      },
+      {
+        "key": "abdicated24",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "abdicated(bytes4)",
+        "data": "0xe470b8bc2cb19f9800000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000001"
+      },
+      {
+        "key": "timelock25",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "timelock(bytes4)",
+        "data": "0xe78ab14e871c979c00000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000093a80"
+      },
+      {
+        "key": "abdicated25",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "abdicated(bytes4)",
+        "data": "0xe470b8bc871c979c00000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "timelock26",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "timelock(bytes4)",
+        "data": "0xe78ab14ec21ad02800000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000093a80"
+      },
+      {
+        "key": "abdicated26",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "abdicated(bytes4)",
+        "data": "0xe470b8bcc21ad02800000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000001"
+      },
+      {
+        "key": "timelock27",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "timelock(bytes4)",
+        "data": "0xe78ab14eb84c824600000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "abdicated27",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "abdicated(bytes4)",
+        "data": "0xe470b8bcb84c824600000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "canReceivePerformanceFee",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "canReceiveShares(address)",
+        "data": "0x98c9b49c00000000000000000000000034702f5f789196a723b8df6334922f145a7db1b2",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000001"
+      },
+      {
+        "key": "canReceiveManagementFee",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "canReceiveShares(address)",
+        "data": "0x98c9b49c00000000000000000000000034702f5f789196a723b8df6334922f145a7db1b2",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000001"
+      },
+      {
+        "key": "accrued",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "accrueInterestView()",
+        "data": "0x60a38ac1",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000003d596b4b9100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "assets",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "totalAssets()",
+        "data": "0x01e1d114",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000003d596b4b91"
+      },
+      {
+        "key": "price",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "convertToAssets(uint256)",
+        "data": "0x07a2d13a0000000000000000000000000000000000000000000000000de0b6b3a7640000",
+        "blockTag": "0x18fcc06",
+        "result": "0x00000000000000000000000000000000000000000000000000000000000fa98f"
+      },
+      {
+        "key": "maxDeposit",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "function": "maxDeposit(address)",
+        "data": "0x402d267d0000000000000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "assetPaused",
+        "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "function": "paused()",
+        "data": "0x5c975abb",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "assetBlacklisted",
+        "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "function": "isBlackListed(address)",
+        "data": "0xe47d6060000000000000000000000000f3557ad5e984211ac8a0874a670344f2c3376471",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "registryOwner",
+        "to": "0x3696c5eae4a7ffd04ea163564571e9cd8ed9364e",
+        "function": "owner()",
+        "data": "0x8da5cb5b",
+        "blockTag": "0x18fcc06",
+        "result": "0x000000000000000000000000cba28b38103307ec8da98377fff9816c164f9afa"
+      },
+      {
+        "key": "subRegistryLength",
+        "to": "0x3696c5eae4a7ffd04ea163564571e9cd8ed9364e",
+        "function": "subRegistriesLength()",
+        "data": "0x7041c2a8",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000004"
+      },
+      {
+        "key": "subRegistry0",
+        "to": "0x3696c5eae4a7ffd04ea163564571e9cd8ed9364e",
+        "function": "subRegistries(uint256)",
+        "data": "0x542873410000000000000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fcc06",
+        "result": "0x000000000000000000000000a31788949d0fe443d3d1033222fc9479499bc3f5"
+      },
+      {
+        "key": "subRegistry1",
+        "to": "0x3696c5eae4a7ffd04ea163564571e9cd8ed9364e",
+        "function": "subRegistries(uint256)",
+        "data": "0x542873410000000000000000000000000000000000000000000000000000000000000001",
+        "blockTag": "0x18fcc06",
+        "result": "0x000000000000000000000000cef9ee779ef9428f50bb7a21b3e3b4efdbc33844"
+      },
+      {
+        "key": "subRegistry2",
+        "to": "0x3696c5eae4a7ffd04ea163564571e9cd8ed9364e",
+        "function": "subRegistries(uint256)",
+        "data": "0x542873410000000000000000000000000000000000000000000000000000000000000002",
+        "blockTag": "0x18fcc06",
+        "result": "0x000000000000000000000000ca38e878439e02f2feb364a2b36b52789f983727"
+      },
+      {
+        "key": "subRegistry3",
+        "to": "0x3696c5eae4a7ffd04ea163564571e9cd8ed9364e",
+        "function": "subRegistries(uint256)",
+        "data": "0x542873410000000000000000000000000000000000000000000000000000000000000003",
+        "blockTag": "0x18fcc06",
+        "result": "0x000000000000000000000000fb4d38d93736a040993c50aaac776a2be2cff8be"
+      },
+      {
+        "key": "registryAllowsAdapter0",
+        "to": "0x3696c5eae4a7ffd04ea163564571e9cd8ed9364e",
+        "function": "isInRegistry(address)",
+        "data": "0xe4bb26f20000000000000000000000000fc9b889756e1241a4d89472db701c0417c26d89",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000001"
+      },
+      {
+        "key": "adapterBlacklisted0",
+        "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "function": "isBlackListed(address)",
+        "data": "0xe47d60600000000000000000000000000fc9b889756e1241a4d89472db701c0417c26d89",
+        "blockTag": "0x18fcc06",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ],
+    "codeChecks": [
+      {
+        "address": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "keccak256": "0xd3e8fb4da2e312d233b8bf884a7e5f4f4fa8bdd4531dcaa4448791251a1b1f5a",
+        "sha256": "c95dbbf45f9e65bc3f1cb6e26448ee1368d28338802c1d7ed31ab998c5c306cb"
+      },
+      {
+        "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "keccak256": "0xb44fb4e949d0f78f87f79ee46428f23a2a5713ce6fc6e0beb3dda78c2ac1ea55",
+        "sha256": "6d967f98f2f3843065688dc2065248e3686b56fc0b6ddfa82007df016148becb"
+      },
+      {
+        "address": "0x0fc9b889756e1241a4d89472db701c0417c26d89",
+        "keccak256": "0x9c50a02b28d68a4e8e067c760aa20a7e1a7e821b31996e8e6d2e2719c30b39e6",
+        "sha256": "59ab10310d9c3c67c6b383cc668ad295a3cb9a0bb3fb396a0674202e486d5ef8"
+      },
+      {
+        "address": "0x3696c5eae4a7ffd04ea163564571e9cd8ed9364e",
+        "sha256": "7ccfbf1999fb0ead8f804856e66a43e928bdbc7b446c47905da745de60f5af25",
+        "keccak256": "0x426928df6636ab7d3cd2a2cace4cefe83c1edf3a9bc7f0b33f34a596aaf19fe4"
+      },
+      {
+        "address": "0xa31788949d0fe443d3d1033222fc9479499bc3f5",
+        "sha256": "8707a171b94c30ef3cf6cd6f54d9efa785fe64a5efebd3af8afd3c9bdc900351",
+        "keccak256": "0x2602767595004f57f3772555c0364043a5eb4420b08527c9a691d1e1c0a87e12"
+      },
+      {
+        "address": "0xcef9ee779ef9428f50bb7a21b3e3b4efdbc33844",
+        "sha256": "668e3414b67d657937fb553e9c2929220a6de66661382791c271f12485192b8a",
+        "keccak256": "0xadf166c9c6439dfd6f895f0b6acd128a292e61e187c4d80db6142d33acbc4cf5"
+      },
+      {
+        "address": "0xca38e878439e02f2feb364a2b36b52789f983727",
+        "sha256": "cd31a0970b5aecbfe33724078cb7d1549bc74e413547c520360cffd27a4dc03f",
+        "keccak256": "0x7801aa616d0e4cde2f4da2b9c26747fc52a286f99a0174cf94cce56c6696f584"
+      },
+      {
+        "address": "0xfb4d38d93736a040993c50aaac776a2be2cff8be",
+        "sha256": "e12c25b184f8ccca922566219f0de8c865e3440401388cb068ebfc163fa09b5d",
+        "keccak256": "0xb4e32b2550d131bf6bcdc4ec075ecd58f7000fb59f57ac3e8596941296a402bd"
+      }
+    ],
+    "storageChecks": [],
+    "verifiedSources": [
+      {
+        "provider": "Routescan verified source API",
+        "match": "EXPLORER_VERIFIED_SOURCE",
+        "path": "research/sources/1_0xf3557ad5e984211ac8a0874a670344f2c3376471_routescan.json",
+        "url": "https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=contract&action=getsourcecode&address=0xf3557ad5e984211ac8a0874a670344f2c3376471"
+      },
+      {
+        "provider": "Routescan verified source API",
+        "match": "EXPLORER_VERIFIED_SOURCE",
+        "path": "research/sources/1_0x0fc9b889756e1241a4d89472db701c0417c26d89_routescan.json",
+        "url": "https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=contract&action=getsourcecode&address=0x0fc9b889756e1241a4d89472db701c0417c26d89"
+      },
+      {
+        "provider": "Routescan verified source API",
+        "match": "EXPLORER_VERIFIED_SOURCE",
+        "path": "research/sources/1_0x3696c5eae4a7ffd04ea163564571e9cd8ed9364e_routescan.json",
+        "url": "https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=contract&action=getsourcecode&address=0x3696c5eae4a7ffd04ea163564571e9cd8ed9364e"
+      },
+      {
+        "provider": "Routescan verified source API",
+        "match": "EXPLORER_VERIFIED_SOURCE",
+        "path": "research/sources/1_0xa31788949d0fe443d3d1033222fc9479499bc3f5_routescan.json",
+        "url": "https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=contract&action=getsourcecode&address=0xa31788949d0fe443d3d1033222fc9479499bc3f5"
+      },
+      {
+        "provider": "Routescan verified source API",
+        "match": "EXPLORER_VERIFIED_SOURCE",
+        "path": "research/sources/1_0xcef9ee779ef9428f50bb7a21b3e3b4efdbc33844_routescan.json",
+        "url": "https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=contract&action=getsourcecode&address=0xcef9ee779ef9428f50bb7a21b3e3b4efdbc33844"
+      },
+      {
+        "provider": "Routescan verified source API",
+        "match": "EXPLORER_VERIFIED_SOURCE",
+        "path": "research/sources/1_0xca38e878439e02f2feb364a2b36b52789f983727_routescan.json",
+        "url": "https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=contract&action=getsourcecode&address=0xca38e878439e02f2feb364a2b36b52789f983727"
+      },
+      {
+        "provider": "Routescan verified source API",
+        "match": "EXPLORER_VERIFIED_SOURCE",
+        "path": "research/sources/1_0xfb4d38d93736a040993c50aaac776a2be2cff8be_routescan.json",
+        "url": "https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=contract&action=getsourcecode&address=0xfb4d38d93736a040993c50aaac776a2be2cff8be"
+      }
+    ],
+    "formulaCheck": {
+      "calculatedRaw": "1026447",
+      "observedRaw": "1026447",
+      "exactMatch": true,
+      "accrualExactMatch": true
+    },
+    "administrativeRPC": "https://eth.drpc.org",
+    "recentOperationalActivity": {
+      "id": "morpho_v2_1_f3557ad5",
+      "status": "RECENT_DEPOSIT_OR_WITHDRAWAL_VERIFIED",
+      "signature": "Deposit(address,address,uint256,uint256)",
+      "fromBlock": 26001094,
+      "toBlock": 26201094,
+      "eventCountObserved": 118,
+      "blockTimestampUTC": "2026-10-15T10:11:35.000Z",
+      "transactionHash": "0xc730dc60c4b2c9a399d1527faf3a49a56bc7a9e963b37ffb55dfc8c13b1538d9",
+      "transactionReceipt": {
+        "type": "0x2",
+        "status": "0x1",
+        "cumulativeGasUsed": "0x1117b52",
+        "logs": [
+          {
+            "address": "0x8feab81d36e7576107d5de0758c1b839be31b4f6",
+            "topics": [
+              "0x7724394874fdd8ad13292ec739b441f85c6559f10dc4141b8d4c0fa4cbf55bdb"
+            ],
+            "data": "0x000000000000000000000000000000000000000000000000000000003bbcfd64",
+            "blockHash": "0x959497939e2acb3c44655e6e3583de34f11c32776ed18e54c519ee0a0da5a590",
+            "blockNumber": "0x18fbcf0",
+            "blockTimestamp": "0x6ad0a6d7",
+            "transactionHash": "0xc730dc60c4b2c9a399d1527faf3a49a56bc7a9e963b37ffb55dfc8c13b1538d9",
+            "transactionIndex": "0xa3",
+            "logIndex": "0x1e7",
+            "removed": false
+          },
+          {
+            "address": "0x8feab81d36e7576107d5de0758c1b839be31b4f6",
+            "topics": [
+              "0x7970b0744fdb6cf0b120e5e0a5f4da3ab8cbec6d5d9ec8a4f327ccc1d8a5eb8b"
+            ],
+            "data": "0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000640000000000000000000000000000000000000000000000000000000000000000",
+            "blockHash": "0x959497939e2acb3c44655e6e3583de34f11c32776ed18e54c519ee0a0da5a590",
+            "blockNumber": "0x18fbcf0",
+            "blockTimestamp": "0x6ad0a6d7",
+            "transactionHash": "0xc730dc60c4b2c9a399d1527faf3a49a56bc7a9e963b37ffb55dfc8c13b1538d9",
+            "transactionIndex": "0xa3",
+            "logIndex": "0x1e8",
+            "removed": false
+          },
+          {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "topics": [
+              "0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c",
+              "0x0000000000000000000000008feab81d36e7576107d5de0758c1b839be31b4f6"
+            ],
+            "data": "0x0000000000000000000000000000000000000000000000000000c0043ab62e06",
+            "blockHash": "0x959497939e2acb3c44655e6e3583de34f11c32776ed18e54c519ee0a0da5a590",
+            "blockNumber": "0x18fbcf0",
+            "blockTimestamp": "0x6ad0a6d7",
+            "transactionHash": "0xc730dc60c4b2c9a399d1527faf3a49a56bc7a9e963b37ffb55dfc8c13b1538d9",
+            "transactionIndex": "0xa3",
+            "logIndex": "0x1e9",
+            "removed": false
+          },
+          {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "topics": [
+              "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+              "0x0000000000000000000000008feab81d36e7576107d5de0758c1b839be31b4f6",
+              "0x0000000000000000000000006747bcaf9bd5a5f0758cbe08903490e45ddfacb5"
+            ],
+            "data": "0x0000000000000000000000000000000000000000000000000000c0043ab62e06",
+            "blockHash": "0x959497939e2acb3c44655e6e3583de34f11c32776ed18e54c519ee0a0da5a590",
+            "blockNumber": "0x18fbcf0",
+            "blockTimestamp": "0x6ad0a6d7",
+            "transactionHash": "0xc730dc60c4b2c9a399d1527faf3a49a56bc7a9e963b37ffb55dfc8c13b1538d9",
+            "transactionIndex": "0xa3",
+            "logIndex": "0x1ea",
+            "removed": false
+          },
+          {
+            "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+            "topics": [
+              "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+              "0x000000000000000000000000acdb27b266142223e1e676841c1e809255fc6d07",
+              "0x0000000000000000000000008feab81d36e7576107d5de0758c1b839be31b4f6"
+            ],
+            "data": "0x000000000000000000000000000000000000000000000000000000000007a0cd",
+            "blockHash": "0x959497939e2acb3c44655e6e3583de34f11c32776ed18e54c519ee0a0da5a590",
+            "blockNumber": "0x18fbcf0",
+            "blockTimestamp": "0x6ad0a6d7",
+            "transactionHash": "0xc730dc60c4b2c9a399d1527faf3a49a56bc7a9e963b37ffb55dfc8c13b1538d9",
+            "transactionIndex": "0xa3",
+            "logIndex": "0x1eb",
+            "removed": false
+          },
+          {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "topics": [
+              "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+              "0x0000000000000000000000006747bcaf9bd5a5f0758cbe08903490e45ddfacb5",
+              "0x000000000000000000000000acdb27b266142223e1e676841c1e809255fc6d07"
+            ],
+            "data": "0x0000000000000000000000000000000000000000000000000000c0043ab62e06",
+            "blockHash": "0x959497939e2acb3c44655e6e3583de34f11c32776ed18e54c519ee0a0da5a590",
+            "blockNumber": "0x18fbcf0",
+            "blockTimestamp": "0x6ad0a6d7",
+            "transactionHash": "0xc730dc60c4b2c9a399d1527faf3a49a56bc7a9e963b37ffb55dfc8c13b1538d9",
+            "transactionIndex": "0xa3",
+            "logIndex": "0x1ec",
+            "removed": false
+          },
+          {
+            "address": "0xacdb27b266142223e1e676841c1e809255fc6d07",
+            "topics": [
+              "0x19b47279256b2a23a1665c810c8d55a1758940ee09377d4f8d26497a3577dc83",
+              "0x0000000000000000000000006747bcaf9bd5a5f0758cbe08903490e45ddfacb5",
+              "0x0000000000000000000000008feab81d36e7576107d5de0758c1b839be31b4f6"
+            ],
+            "data": "0x0000000000000000000000000000000000000000000000000000c0043ab62e06fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff85f3300000000000000000000000000000000000000000003306f503e950eb81bed65000000000000000000000000000000000000000000000000002197e89d21eebcfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcf822000000000000000000000000000000000000000000000000000000019f45965b0000000000000000000000000000000000000000000000000000000000000000",
+            "blockHash": "0x959497939e2acb3c44655e6e3583de34f11c32776ed18e54c519ee0a0da5a590",
+            "blockNumber": "0x18fbcf0",
+            "blockTimestamp": "0x6ad0a6d7",
+            "transactionHash": "0xc730dc60c4b2c9a399d1527faf3a49a56bc7a9e963b37ffb55dfc8c13b1538d9",
+            "transactionIndex": "0xa3",
+            "logIndex": "0x1ed",
+            "removed": false
+          },
+          {
+            "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+            "topics": [
+              "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+              "0x0000000000000000000000008feab81d36e7576107d5de0758c1b839be31b4f6",
+              "0x0000000000000000000000000fc188e48e2fd07cee7ae98d7364b4b9555b421b"
+            ],
+            "data": "0x000000000000000000000000000000000000000000000000000000000007a0cd",
+            "blockHash": "0x959497939e2acb3c44655e6e3583de34f11c32776ed18e54c519ee0a0da5a590",
+            "blockNumber": "0x18fbcf0",
+            "blockTimestamp": "0x6ad0a6d7",
+            "transactionHash": "0xc730dc60c4b2c9a399d1527faf3a49a56bc7a9e963b37ffb55dfc8c13b1538d9",
+            "transactionIndex": "0xa3",
+            "logIndex": "0x1ee",
+            "removed": false
+          },
+          {
+            "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+            "topics": [
+              "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925",
+              "0x0000000000000000000000000fc188e48e2fd07cee7ae98d7364b4b9555b421b",
+              "0x000000000000000000000000f3557ad5e984211ac8a0874a670344f2c3376471"
+            ],
+            "data": "0x000000000000000000000000000000000000000000000000000000000007a0cd",
+            "blockHash": "0x959497939e2acb3c44655e6e3583de34f11c32776ed18e54c519ee0a0da5a590",
+            "blockNumber": "0x18fbcf0",
+            "blockTimestamp": "0x6ad0a6d7",
+            "transactionHash": "0xc730dc60c4b2c9a399d1527faf3a49a56bc7a9e963b37ffb55dfc8c13b1538d9",
+            "transactionIndex": "0xa3",
+            "logIndex": "0x1ef",
+            "removed": false
+          },
+          {
+            "address": "0xf3557ad5e984211ac8a0874a670344f2c3376471",
+            "topics": [
+              "0x4dec04e750ca11537cabcd8a9eab06494de08da3735bc8871cd41250e190bc04"
+            ],
+            "data": "0x0000000000000000000000000000000000000000000000000000003d57ea24970000000000000000000000000000000000000000000000000000003d58cf24f600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "blockHash": "0x959497939e2acb3c44655e6e3583de34f11c32776ed18e54c519ee0a0da5a590",
+            "blockNumber": "0x18fbcf0",
+            "blockTimestamp": "0x6ad0a6d7",
+            "transactionHash": "0xc730dc60c4b2c9a399d1527faf3a49a56bc7a9e963b37ffb55dfc8c13b1538d9",
+            "transactionIndex": "0xa3",
+            "logIndex": "0x1f0",
+            "removed": false
+          },
+          {
+            "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+            "topics": [
+              "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+              "0x0000000000000000000000000fc188e48e2fd07cee7ae98d7364b4b9555b421b",
+              "0x000000000000000000000000f3557ad5e984211ac8a0874a670344f2c3376471"
+            ],
+            "data": "0x000000000000000000000000000000000000000000000000000000000007a0cd",
+            "blockHash": "0x959497939e2acb3c44655e6e3583de34f11c32776ed18e54c519ee0a0da5a590",
+            "blockNumber": "0x18fbcf0",
+            "blockTimestamp": "0x6ad0a6d7",
+            "transactionHash": "0xc730dc60c4b2c9a399d1527faf3a49a56bc7a9e963b37ffb55dfc8c13b1538d9",
+            "transactionIndex": "0xa3",
+            "logIndex": "0x1f1",
+            "removed": false
+          },
+          {
+            "address": "0xf3557ad5e984211ac8a0874a670344f2c3376471",
+            "topics": [
+              "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+              "0x0000000000000000000000000000000000000000000000000000000000000000",
+              "0x0000000000000000000000008feab81d36e7576107d5de0758c1b839be31b4f6"
+            ],
+            "data": "0x00000000000000000000000000000000000000000000000006c25d3843974951",
+            "blockHash": "0x959497939e2acb3c44655e6e3583de34f11c32776ed18e54c519ee0a0da5a590",
+            "blockNumber": "0x18fbcf0",
+            "blockTimestamp": "0x6ad0a6d7",
+            "transactionHash": "0xc730dc60c4b2c9a399d1527faf3a49a56bc7a9e963b37ffb55dfc8c13b1538d9",
+            "transactionIndex": "0xa3",
+            "logIndex": "0x1f2",
+            "removed": false
+          },
+          {
+            "address": "0xf3557ad5e984211ac8a0874a670344f2c3376471",
+            "topics": [
+              "0xdcbc1c05240f31ff3ad067ef1ee35ce4997762752e3a095284754544f4c709d7",
+              "0x0000000000000000000000000fc188e48e2fd07cee7ae98d7364b4b9555b421b",
+              "0x0000000000000000000000008feab81d36e7576107d5de0758c1b839be31b4f6"
+            ],
+            "data": "0x000000000000000000000000000000000000000000000000000000000007a0cd00000000000000000000000000000000000000000000000006c25d3843974951",
+            "blockHash": "0x959497939e2acb3c44655e6e3583de34f11c32776ed18e54c519ee0a0da5a590",
+            "blockNumber": "0x18fbcf0",
+            "blockTimestamp": "0x6ad0a6d7",
+            "transactionHash": "0xc730dc60c4b2c9a399d1527faf3a49a56bc7a9e963b37ffb55dfc8c13b1538d9",
+            "transactionIndex": "0xa3",
+            "logIndex": "0x1f3",
+            "removed": false
+          },
+          {
+            "address": "0xf3557ad5e984211ac8a0874a670344f2c3376471",
+            "topics": [
+              "0x4dec04e750ca11537cabcd8a9eab06494de08da3735bc8871cd41250e190bc04"
+            ],
+            "data": "0x0000000000000000000000000000000000000000000000000000003d58d6c5c30000000000000000000000000000000000000000000000000000003d58d6c5c300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "blockHash": "0x959497939e2acb3c44655e6e3583de34f11c32776ed18e54c519ee0a0da5a590",
+            "blockNumber": "0x18fbcf0",
+            "blockTimestamp": "0x6ad0a6d7",
+            "transactionHash": "0xc730dc60c4b2c9a399d1527faf3a49a56bc7a9e963b37ffb55dfc8c13b1538d9",
+            "transactionIndex": "0xa3",
+            "logIndex": "0x1f4",
+            "removed": false
+          },
+          {
+            "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+            "topics": [
+              "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+              "0x000000000000000000000000f3557ad5e984211ac8a0874a670344f2c3376471",
+              "0x0000000000000000000000000fc9b889756e1241a4d89472db701c0417c26d89"
+            ],
+            "data": "0x000000000000000000000000000000000000000000000000000000000007a0cd",
+            "blockHash": "0x959497939e2acb3c44655e6e3583de34f11c32776ed18e54c519ee0a0da5a590",
+            "blockNumber": "0x18fbcf0",
+            "blockTimestamp": "0x6ad0a6d7",
+            "transactionHash": "0xc730dc60c4b2c9a399d1527faf3a49a56bc7a9e963b37ffb55dfc8c13b1538d9",
+            "transactionIndex": "0xa3",
+            "logIndex": "0x1f5",
+            "removed": false
+          },
+          {
+            "address": "0x870ac11d48b15db9a138cf899d20f13f79ba00bc",
+            "topics": [
+              "0x7120161a7b3d31251e01294ab351ef15a41b91659a36032e4641bb89b121e321",
+              "0x3c5a244b778095e1e1b2e44b7c2ecc9bf4fda9cd85cc22740e09205a7a4bf510"
+            ],
+            "data": "0x0000000000000000000000000000000000000000000000000000000038974f28000000000000000000000000000000000000000000000000000000003c5fa203",
+            "blockHash": "0x959497939e2acb3c44655e6e3583de34f11c32776ed18e54c519ee0a0da5a590",
+            "blockNumber": "0x18fbcf0",
+            "blockTimestamp": "0x6ad0a6d7",
+            "transactionHash": "0xc730dc60c4b2c9a399d1527faf3a49a56bc7a9e963b37ffb55dfc8c13b1538d9",
+            "transactionIndex": "0xa3",
+            "logIndex": "0x1f6",
+            "removed": false
+          },
+          {
+            "address": "0xbbbbbbbbbb9cc5e90e3b3af64bdaf62c37eeffcb",
+            "topics": [
+              "0x9d9bd501d0657d7dfe415f779a620a62b78bc508ddc0891fbbd8b7ac0f8fce87",
+              "0x3c5a244b778095e1e1b2e44b7c2ecc9bf4fda9cd85cc22740e09205a7a4bf510"
+            ],
+            "data": "0x0000000000000000000000000000000000000000000000000000000038974f28000000000000000000000000000000000000000000000000000000000f3691c90000000000000000000000000000000000000000000000000000000000000000",
+            "blockHash": "0x959497939e2acb3c44655e6e3583de34f11c32776ed18e54c519ee0a0da5a590",
+            "blockNumber": "0x18fbcf0",
+            "blockTimestamp": "0x6ad0a6d7",
+            "transactionHash": "0xc730dc60c4b2c9a399d1527faf3a49a56bc7a9e963b37ffb55dfc8c13b1538d9",
+            "transactionIndex": "0xa3",
+            "logIndex": "0x1f7",
+            "removed": false
+          },
+          {
+            "address": "0xbbbbbbbbbb9cc5e90e3b3af64bdaf62c37eeffcb",
+            "topics": [
+              "0xedf8870433c83823eb071d3df1caa8d008f12f6440918c20d75a3602cda30fe0",
+              "0x3c5a244b778095e1e1b2e44b7c2ecc9bf4fda9cd85cc22740e09205a7a4bf510",
+              "0x0000000000000000000000000fc9b889756e1241a4d89472db701c0417c26d89",
+              "0x0000000000000000000000000fc9b889756e1241a4d89472db701c0417c26d89"
+            ],
+            "data": "0x000000000000000000000000000000000000000000000000000000000007a0cd000000000000000000000000000000000000000000000000000000726f5dd17b",
+            "blockHash": "0x959497939e2acb3c44655e6e3583de34f11c32776ed18e54c519ee0a0da5a590",
+            "blockNumber": "0x18fbcf0",
+            "blockTimestamp": "0x6ad0a6d7",
+            "transactionHash": "0xc730dc60c4b2c9a399d1527faf3a49a56bc7a9e963b37ffb55dfc8c13b1538d9",
+            "transactionIndex": "0xa3",
+            "logIndex": "0x1f8",
+            "removed": false
+          },
+          {
+            "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+            "topics": [
+              "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+              "0x0000000000000000000000000fc9b889756e1241a4d89472db701c0417c26d89",
+              "0x000000000000000000000000bbbbbbbbbb9cc5e90e3b3af64bdaf62c37eeffcb"
+            ],
+            "data": "0x000000000000000000000000000000000000000000000000000000000007a0cd",
+            "blockHash": "0x959497939e2acb3c44655e6e3583de34f11c32776ed18e54c519ee0a0da5a590",
+            "blockNumber": "0x18fbcf0",
+            "blockTimestamp": "0x6ad0a6d7",
+            "transactionHash": "0xc730dc60c4b2c9a399d1527faf3a49a56bc7a9e963b37ffb55dfc8c13b1538d9",
+            "transactionIndex": "0xa3",
+            "logIndex": "0x1f9",
+            "removed": false
+          },
+          {
+            "address": "0x0fc9b889756e1241a4d89472db701c0417c26d89",
+            "topics": [
+              "0x67bd2993814767565e883edd1e76edf105cdd33766384ca8495e53562e20bea7",
+              "0x3c5a244b778095e1e1b2e44b7c2ecc9bf4fda9cd85cc22740e09205a7a4bf510"
+            ],
+            "data": "0x00000000000000000000000000000000000000000000000000000022440ccd5d000000000000000000000000000000000000000000000000000000726f5dd17b",
+            "blockHash": "0x959497939e2acb3c44655e6e3583de34f11c32776ed18e54c519ee0a0da5a590",
+            "blockNumber": "0x18fbcf0",
+            "blockTimestamp": "0x6ad0a6d7",
+            "transactionHash": "0xc730dc60c4b2c9a399d1527faf3a49a56bc7a9e963b37ffb55dfc8c13b1538d9",
+            "transactionIndex": "0xa3",
+            "logIndex": "0x1fa",
+            "removed": false
+          },
+          {
+            "address": "0xf3557ad5e984211ac8a0874a670344f2c3376471",
+            "topics": [
+              "0x2bc7948a96a066968d2a58aaf46eb0b305aa166b1d1951d2f7ef0919746b8c2a",
+              "0x0000000000000000000000000fc188e48e2fd07cee7ae98d7364b4b9555b421b",
+              "0x0000000000000000000000000fc9b889756e1241a4d89472db701c0417c26d89"
+            ],
+            "data": "0x000000000000000000000000000000000000000000000000000000000007a0cd0000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000087b8c700000000000000000000000000000000000000000000000000000000000000039046c7a66227629bb83eeee69604c0833a9f0d16c1e3a35267aa587a110a31cd7e50b2d1a555e26ad34679567e2d319a7fdafeabb38b0957566156a1c9369ae43ad47e997f0d8b33eba61ebaf033930470b29dc3b0f2fac7dacde9c5525ef244",
+            "blockHash": "0x959497939e2acb3c44655e6e3583de34f11c32776ed18e54c519ee0a0da5a590",
+            "blockNumber": "0x18fbcf0",
+            "blockTimestamp": "0x6ad0a6d7",
+            "transactionHash": "0xc730dc60c4b2c9a399d1527faf3a49a56bc7a9e963b37ffb55dfc8c13b1538d9",
+            "transactionIndex": "0xa3",
+            "logIndex": "0x1fb",
+            "removed": false
+          },
+          {
+            "address": "0xf3557ad5e984211ac8a0874a670344f2c3376471",
+            "topics": [
+              "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+              "0x0000000000000000000000008feab81d36e7576107d5de0758c1b839be31b4f6",
+              "0x0000000000000000000000002de361134127481d6f3144a3a12d36cdd3e70024"
+            ],
+            "data": "0x00000000000000000000000000000000000000000000000006c25d3843974951",
+            "blockHash": "0x959497939e2acb3c44655e6e3583de34f11c32776ed18e54c519ee0a0da5a590",
+            "blockNumber": "0x18fbcf0",
+            "blockTimestamp": "0x6ad0a6d7",
+            "transactionHash": "0xc730dc60c4b2c9a399d1527faf3a49a56bc7a9e963b37ffb55dfc8c13b1538d9",
+            "transactionIndex": "0xa3",
+            "logIndex": "0x1fc",
+            "removed": false
+          },
+          {
+            "address": "0x8feab81d36e7576107d5de0758c1b839be31b4f6",
+            "topics": [
+              "0x1bb43f2da90e35f7b0cf38521ca95a49e68eb42fac49924930a5bd73cdf7576c"
+            ],
+            "data": "0x000000000000000000000000eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee000000000000000000000000f3557ad5e984211ac8a0874a670344f2c33764710000000000000000000000002de361134127481d6f3144a3a12d36cdd3e700240000000000000000000000000000000000000000000000000000c0043ab62e0600000000000000000000000000000000000000000000000006c25d3843974951",
+            "blockHash": "0x959497939e2acb3c44655e6e3583de34f11c32776ed18e54c519ee0a0da5a590",
+            "blockNumber": "0x18fbcf0",
+            "blockTimestamp": "0x6ad0a6d7",
+            "transactionHash": "0xc730dc60c4b2c9a399d1527faf3a49a56bc7a9e963b37ffb55dfc8c13b1538d9",
+            "transactionIndex": "0xa3",
+            "logIndex": "0x1fd",
+            "removed": false
+          }
+        ],
+        "logsBloom": "0x000000000000000000000020000200801000000000004000000060000004000000004000004800080200000480020100120080000c0400000000000020a4400004002050005000000000000880000000000800080020000000000008801000000000001002100000004000000000080000010000808400000010001000000000000000000000000c000000000000002000002001200000000000000000100080020040000000000000000080000000000000010100000000000000000000000020000002000000000001000100430004000000020008000000000000000020404010200001040040800000200081000000200000000400400000000900020000",
+        "transactionHash": "0xc730dc60c4b2c9a399d1527faf3a49a56bc7a9e963b37ffb55dfc8c13b1538d9",
+        "transactionIndex": "0xa3",
+        "blockHash": "0x959497939e2acb3c44655e6e3583de34f11c32776ed18e54c519ee0a0da5a590",
+        "blockNumber": "0x18fbcf0",
+        "gasUsed": "0x99a80",
+        "effectiveGasPrice": "0x53204b5",
+        "from": "0x2de361134127481d6f3144a3a12d36cdd3e70024",
+        "to": "0x8feab81d36e7576107d5de0758c1b839be31b4f6",
+        "contractAddress": null
+      },
+      "event": {
+        "address": "0xf3557ad5e984211ac8a0874a670344f2c3376471",
+        "topics": [
+          "0xdcbc1c05240f31ff3ad067ef1ee35ce4997762752e3a095284754544f4c709d7",
+          "0x0000000000000000000000000fc188e48e2fd07cee7ae98d7364b4b9555b421b",
+          "0x0000000000000000000000008feab81d36e7576107d5de0758c1b839be31b4f6"
+        ],
+        "data": "0x000000000000000000000000000000000000000000000000000000000007a0cd00000000000000000000000000000000000000000000000006c25d3843974951",
+        "blockNumber": "0x18fbcf0",
+        "blockHash": "0x959497939e2acb3c44655e6e3583de34f11c32776ed18e54c519ee0a0da5a590",
+        "timeStamp": "0x6ad0a6d7",
+        "gasPrice": "0x53204b5",
+        "gasUsed": "0x99a80",
+        "logIndex": "0x1f3",
+        "transactionHash": "0xc730dc60c4b2c9a399d1527faf3a49a56bc7a9e963b37ffb55dfc8c13b1538d9",
+        "transactionIndex": "0xa3"
+      },
+      "assetsRaw": "499917",
+      "sharesRaw": "487054205942974801",
+      "ageSecondsAtValidation": 46440,
+      "paginationLimit": 1000,
+      "completenessClaim": false,
+      "recheckedAt": "2026-10-15T23:05:44.288Z",
+      "receiptRPCPolicy": [
+        "https://ethereum-rpc.publicnode.com",
+        "https://eth.drpc.org"
+      ],
+      "indexProvider": "https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api",
+      "afterReviewedAdministrativeChange": false,
+      "currentOperationEvidence": "Separate pinned existing-holder redemption eth_call in differentialRevalidation"
+    },
+    "browserRead": {
+      "cells": [
+        "Gauntlet USDT Prime (gtusdtp)",
+        "LIVE",
+        "1.026372 USDT",
+        "26193422"
+      ],
+      "id": "morpho_v2_1_f3557ad5"
+    },
+    "differentialRevalidation": {
+      "status": "APPROVED",
+      "at": "2026-10-15T23:05:44.288Z",
+      "previous": {
+        "approval": {
+          "status": "APPROVED",
+          "approvedAt": "2026-10-14T21:32:47.024931+00:00",
+          "scope": "NATIVE_USDT_ACCOUNTING_METHOD_AND_OPERATIONAL_SNAPSHOT",
+          "note": "Verified source, independent integer calculation, recent successful Deposit/Withdraw receipt, administrative controls, fixture tests and actual browser LIVE read passed. No exclusive-price or aggregator-marginalization claim."
+        },
+        "approvedBlockNumber": 26189861,
+        "referenceSnapshot": {
+          "raw": "1026337",
+          "normalized": "1.026337",
+          "display": "1.026337 USDT",
+          "status": "BLOCK_PINNED_PROTOCOL_VALUE",
+          "observedAt": "2026-10-14T09:31:59+00:00",
+          "blockNumber": 26189861,
+          "blockHash": "0x15439641187b16b0c2930698679fa8b0b1e2f945c06241ed71f5c214f586ebf1",
+          "note": "Internal USDT accounting value per one share; not a market quotation or guaranteed immediate redemption."
+        }
+      },
+      "report": "../../validation/revalidation45.json",
+      "codeUnchanged": true,
+      "administrativeEventsReviewed": 1,
+      "redemptionSimulation": {
+        "from": "0x3bd9248048df95db4fbd748c6cd99c1baa40bad0",
+        "to": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+        "data": "0xba08765200000000000000000000000000000000000000000000000000f1e68f986adde60000000000000000000000003bd9248048df95db4fbd748c6cd99c1baa40bad00000000000000000000000003bd9248048df95db4fbd748c6cd99c1baa40bad0",
+        "sharesRaw": "68088973799120358",
+        "assetsRaw": "69889",
+        "blockTag": "0x18fcc06"
+      },
+      "activityReceipt": "0xc730dc60c4b2c9a399d1527faf3a49a56bc7a9e963b37ffb55dfc8c13b1538d9",
+      "activityReceiptRechecked": true,
+      "queueReorderOnly": false,
+      "browserRead": {
+        "status": "LIVE",
+        "evidence": "../../validation/browser45.json",
+        "blockNumber": "26201107"
+      },
+      "fixtureCases": 8,
+      "decision": "RETAIN_SAME_CONTRACT"
+    }
+  },
+  "admissionChecks": {
+    "duplicate": "ABSENT_FROM_PREVIOUS_PUBLIC_CATALOG",
+    "chainId": "PASS",
+    "underlying": "PASS_NATIVE_USDT",
+    "nativeAccounting": "PASS_POSITIVE_ASSETS_AND_SUPPLY",
+    "integerFormula": "PASS_EXACT_MATCH",
+    "usdtEligibility": "PASS_DIRECT_USDT",
+    "activeSourceEquivalence": "EXPLORER_VERIFIED_SOURCE_AND_PINNED_CODE_HASH",
+    "administrativeBaseline": "VALIDATED_AND_MONITORED"
+  },
+  "presentation": {
+    "unit": "USDT",
+    "perTokenAmount": "1",
+    "valueLabel": "Internal value",
+    "showApprovalBadge": false
+  },
+  "eligibility": {
+    "status": "DIRECT_USDT_RELATION",
+    "quoteAsset": "USDT",
+    "perTokenAmount": "1",
+    "publicAdmission": "APPROVED"
+  },
+  "unitPolicy": {
+    "targetAsset": "USDT",
+    "targetAssetContract": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+    "perTokenAmount": "1",
+    "missingConversionAction": "EXCLUDE_FROM_PUBLIC_CATALOG",
+    "unverifiedPegAssumptionsAllowed": false
+  },
+  "capitalization": {
+    "enabled": true,
+    "quoteAsset": "USDT",
+    "label": "Capitalização interna — USDT",
+    "supplyContract": "0xf3557AD5E984211ac8A0874A670344f2C3376471",
+    "supplyFunction": "totalSupply()",
+    "supplySelector": "0x18160ddd",
+    "supplyDecimals": 18,
+    "supplyBasis": "TOKEN_TOTAL_SUPPLY",
+    "requireSameBlock": true,
+    "referenceSnapshot": {
+      "rawProduct": "263493135526830263617151291955",
+      "productDecimals": 24,
+      "normalized": "263493.135526830263617151291955",
+      "supplyRaw": "256704082652908784980765",
+      "supplyNormalized": "256704.082652908784980765",
+      "supplyDecimals": 18,
+      "valueRaw": "1026447",
+      "valueNormalized": "1.026447",
+      "valueDecimals": 6,
+      "quoteAsset": "USDT",
+      "status": "REFERENCE_SNAPSHOT",
+      "observedAt": "2026-10-15T23:05:35+00:00",
+      "blockNumber": 26201094,
+      "blockHash": "0x9b02edb1d57adc7925db7fda15d2a3ae0a9e2fdee20d6231d1e7fdbd4b734d06",
+      "note": "Scope: registered receipt/share token only; includes receivables and is not total protocol market capitalization or immediately available cash."
+    }
+  },
+  "validationAbi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_asset",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "Abdicated",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "AbsoluteCapExceeded",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "AbsoluteCapNotDecreasing",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "AbsoluteCapNotIncreasing",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "AutomaticallyTimelocked",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "CannotReceiveAssets",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "CannotReceiveShares",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "CannotSendAssets",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "CannotSendShares",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "CastOverflow",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "DataAlreadyPending",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "DataNotTimelocked",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "FeeInvariantBroken",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "FeeTooHigh",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidSigner",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "MaxRateTooHigh",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NoCode",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NotAdapter",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NotInAdapterRegistry",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "PenaltyTooHigh",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "PermitDeadlineExpired",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "RelativeCapAboveOne",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "RelativeCapExceeded",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "RelativeCapNotDecreasing",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "RelativeCapNotIncreasing",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "TimelockNotDecreasing",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "TimelockNotExpired",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "TimelockNotIncreasing",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "TransferFromReturnedFalse",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "TransferFromReverted",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "TransferReturnedFalse",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "TransferReverted",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "Unauthorized",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ZeroAbsoluteCap",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ZeroAddress",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ZeroAllocation",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes4",
+          "name": "selector",
+          "type": "bytes4"
+        }
+      ],
+      "name": "Abdicate",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes4",
+          "name": "selector",
+          "type": "bytes4"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "Accept",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "previousTotalAssets",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newTotalAssets",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "performanceFeeShares",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "managementFeeShares",
+          "type": "uint256"
+        }
+      ],
+      "name": "AccrueInterest",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "AddAdapter",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "adapter",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "assets",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32[]",
+          "name": "ids",
+          "type": "bytes32[]"
+        },
+        {
+          "indexed": false,
+          "internalType": "int256",
+          "name": "change",
+          "type": "int256"
+        }
+      ],
+      "name": "Allocate",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "shares",
+          "type": "uint256"
+        }
+      ],
+      "name": "AllowanceUpdatedByTransferFrom",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "shares",
+          "type": "uint256"
+        }
+      ],
+      "name": "Approval",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "asset",
+          "type": "address"
+        }
+      ],
+      "name": "Constructor",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "adapter",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "assets",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32[]",
+          "name": "ids",
+          "type": "bytes32[]"
+        },
+        {
+          "indexed": false,
+          "internalType": "int256",
+          "name": "change",
+          "type": "int256"
+        }
+      ],
+      "name": "Deallocate",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "id",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "idData",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newAbsoluteCap",
+          "type": "uint256"
+        }
+      ],
+      "name": "DecreaseAbsoluteCap",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "id",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "idData",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newRelativeCap",
+          "type": "uint256"
+        }
+      ],
+      "name": "DecreaseRelativeCap",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes4",
+          "name": "selector",
+          "type": "bytes4"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newDuration",
+          "type": "uint256"
+        }
+      ],
+      "name": "DecreaseTimelock",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "onBehalf",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "assets",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "shares",
+          "type": "uint256"
+        }
+      ],
+      "name": "Deposit",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "adapter",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "assets",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "onBehalf",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32[]",
+          "name": "ids",
+          "type": "bytes32[]"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "penaltyAssets",
+          "type": "uint256"
+        }
+      ],
+      "name": "ForceDeallocate",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "id",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "idData",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newAbsoluteCap",
+          "type": "uint256"
+        }
+      ],
+      "name": "IncreaseAbsoluteCap",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "id",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "idData",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newRelativeCap",
+          "type": "uint256"
+        }
+      ],
+      "name": "IncreaseRelativeCap",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes4",
+          "name": "selector",
+          "type": "bytes4"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newDuration",
+          "type": "uint256"
+        }
+      ],
+      "name": "IncreaseTimelock",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "shares",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "nonce",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "deadline",
+          "type": "uint256"
+        }
+      ],
+      "name": "Permit",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "RemoveAdapter",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes4",
+          "name": "selector",
+          "type": "bytes4"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "Revoke",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newAdapterRegistry",
+          "type": "address"
+        }
+      ],
+      "name": "SetAdapterRegistry",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newCurator",
+          "type": "address"
+        }
+      ],
+      "name": "SetCurator",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "adapter",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "forceDeallocatePenalty",
+          "type": "uint256"
+        }
+      ],
+      "name": "SetForceDeallocatePenalty",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "newIsAllocator",
+          "type": "bool"
+        }
+      ],
+      "name": "SetIsAllocator",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "newIsSentinel",
+          "type": "bool"
+        }
+      ],
+      "name": "SetIsSentinel",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newLiquidityAdapter",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes",
+          "name": "newLiquidityData",
+          "type": "bytes"
+        }
+      ],
+      "name": "SetLiquidityAdapterAndData",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newManagementFee",
+          "type": "uint256"
+        }
+      ],
+      "name": "SetManagementFee",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newManagementFeeRecipient",
+          "type": "address"
+        }
+      ],
+      "name": "SetManagementFeeRecipient",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newMaxRate",
+          "type": "uint256"
+        }
+      ],
+      "name": "SetMaxRate",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "newName",
+          "type": "string"
+        }
+      ],
+      "name": "SetName",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "SetOwner",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newPerformanceFee",
+          "type": "uint256"
+        }
+      ],
+      "name": "SetPerformanceFee",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newPerformanceFeeRecipient",
+          "type": "address"
+        }
+      ],
+      "name": "SetPerformanceFeeRecipient",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newReceiveAssetsGate",
+          "type": "address"
+        }
+      ],
+      "name": "SetReceiveAssetsGate",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newReceiveSharesGate",
+          "type": "address"
+        }
+      ],
+      "name": "SetReceiveSharesGate",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newSendAssetsGate",
+          "type": "address"
+        }
+      ],
+      "name": "SetSendAssetsGate",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newSendSharesGate",
+          "type": "address"
+        }
+      ],
+      "name": "SetSendSharesGate",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "newSymbol",
+          "type": "string"
+        }
+      ],
+      "name": "SetSymbol",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes4",
+          "name": "selector",
+          "type": "bytes4"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "executableAt",
+          "type": "uint256"
+        }
+      ],
+      "name": "Submit",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "shares",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "receiver",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "onBehalf",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "assets",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "shares",
+          "type": "uint256"
+        }
+      ],
+      "name": "Withdraw",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "DOMAIN_SEPARATOR",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "_totalAssets",
+      "outputs": [
+        {
+          "internalType": "uint128",
+          "name": "",
+          "type": "uint128"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "selector",
+          "type": "bytes4"
+        }
+      ],
+      "name": "abdicate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "selector",
+          "type": "bytes4"
+        }
+      ],
+      "name": "abdicated",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "id",
+          "type": "bytes32"
+        }
+      ],
+      "name": "absoluteCap",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "accrueInterest",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "accrueInterestView",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "adapterRegistry",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "adapters",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "adaptersLength",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "addAdapter",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "adapter",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        },
+        {
+          "internalType": "uint256",
+          "name": "assets",
+          "type": "uint256"
+        }
+      ],
+      "name": "allocate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "id",
+          "type": "bytes32"
+        }
+      ],
+      "name": "allocation",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        }
+      ],
+      "name": "allowance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "shares",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "asset",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "canReceiveAssets",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "canReceiveShares",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "canSendAssets",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "canSendShares",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "shares",
+          "type": "uint256"
+        }
+      ],
+      "name": "convertToAssets",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "assets",
+          "type": "uint256"
+        }
+      ],
+      "name": "convertToShares",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "curator",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "adapter",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        },
+        {
+          "internalType": "uint256",
+          "name": "assets",
+          "type": "uint256"
+        }
+      ],
+      "name": "deallocate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "decimals",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "idData",
+          "type": "bytes"
+        },
+        {
+          "internalType": "uint256",
+          "name": "newAbsoluteCap",
+          "type": "uint256"
+        }
+      ],
+      "name": "decreaseAbsoluteCap",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "idData",
+          "type": "bytes"
+        },
+        {
+          "internalType": "uint256",
+          "name": "newRelativeCap",
+          "type": "uint256"
+        }
+      ],
+      "name": "decreaseRelativeCap",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "selector",
+          "type": "bytes4"
+        },
+        {
+          "internalType": "uint256",
+          "name": "newDuration",
+          "type": "uint256"
+        }
+      ],
+      "name": "decreaseTimelock",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "assets",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "onBehalf",
+          "type": "address"
+        }
+      ],
+      "name": "deposit",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "executableAt",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "firstTotalAssets",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "adapter",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        },
+        {
+          "internalType": "uint256",
+          "name": "assets",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "onBehalf",
+          "type": "address"
+        }
+      ],
+      "name": "forceDeallocate",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "adapter",
+          "type": "address"
+        }
+      ],
+      "name": "forceDeallocatePenalty",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "idData",
+          "type": "bytes"
+        },
+        {
+          "internalType": "uint256",
+          "name": "newAbsoluteCap",
+          "type": "uint256"
+        }
+      ],
+      "name": "increaseAbsoluteCap",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "idData",
+          "type": "bytes"
+        },
+        {
+          "internalType": "uint256",
+          "name": "newRelativeCap",
+          "type": "uint256"
+        }
+      ],
+      "name": "increaseRelativeCap",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "selector",
+          "type": "bytes4"
+        },
+        {
+          "internalType": "uint256",
+          "name": "newDuration",
+          "type": "uint256"
+        }
+      ],
+      "name": "increaseTimelock",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isAdapter",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isAllocator",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isSentinel",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "lastUpdate",
+      "outputs": [
+        {
+          "internalType": "uint64",
+          "name": "",
+          "type": "uint64"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "liquidityAdapter",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "liquidityData",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "managementFee",
+      "outputs": [
+        {
+          "internalType": "uint96",
+          "name": "",
+          "type": "uint96"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "managementFeeRecipient",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "maxDeposit",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "maxMint",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "maxRate",
+      "outputs": [
+        {
+          "internalType": "uint64",
+          "name": "",
+          "type": "uint64"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "maxRedeem",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "maxWithdraw",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "shares",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "onBehalf",
+          "type": "address"
+        }
+      ],
+      "name": "mint",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes[]",
+          "name": "data",
+          "type": "bytes[]"
+        }
+      ],
+      "name": "multicall",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "nonces",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "performanceFee",
+      "outputs": [
+        {
+          "internalType": "uint96",
+          "name": "",
+          "type": "uint96"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "performanceFeeRecipient",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "shares",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "deadline",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint8",
+          "name": "v",
+          "type": "uint8"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "r",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "s",
+          "type": "bytes32"
+        }
+      ],
+      "name": "permit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "assets",
+          "type": "uint256"
+        }
+      ],
+      "name": "previewDeposit",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "shares",
+          "type": "uint256"
+        }
+      ],
+      "name": "previewMint",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "shares",
+          "type": "uint256"
+        }
+      ],
+      "name": "previewRedeem",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "assets",
+          "type": "uint256"
+        }
+      ],
+      "name": "previewWithdraw",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "receiveAssetsGate",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "receiveSharesGate",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "shares",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "receiver",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "onBehalf",
+          "type": "address"
+        }
+      ],
+      "name": "redeem",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "id",
+          "type": "bytes32"
+        }
+      ],
+      "name": "relativeCap",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "removeAdapter",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "revoke",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "sendAssetsGate",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "sendSharesGate",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newAdapterRegistry",
+          "type": "address"
+        }
+      ],
+      "name": "setAdapterRegistry",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newCurator",
+          "type": "address"
+        }
+      ],
+      "name": "setCurator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "adapter",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "newForceDeallocatePenalty",
+          "type": "uint256"
+        }
+      ],
+      "name": "setForceDeallocatePenalty",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "newIsAllocator",
+          "type": "bool"
+        }
+      ],
+      "name": "setIsAllocator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "newIsSentinel",
+          "type": "bool"
+        }
+      ],
+      "name": "setIsSentinel",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newLiquidityAdapter",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "newLiquidityData",
+          "type": "bytes"
+        }
+      ],
+      "name": "setLiquidityAdapterAndData",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "newManagementFee",
+          "type": "uint256"
+        }
+      ],
+      "name": "setManagementFee",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newManagementFeeRecipient",
+          "type": "address"
+        }
+      ],
+      "name": "setManagementFeeRecipient",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "newMaxRate",
+          "type": "uint256"
+        }
+      ],
+      "name": "setMaxRate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "newName",
+          "type": "string"
+        }
+      ],
+      "name": "setName",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "setOwner",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "newPerformanceFee",
+          "type": "uint256"
+        }
+      ],
+      "name": "setPerformanceFee",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newPerformanceFeeRecipient",
+          "type": "address"
+        }
+      ],
+      "name": "setPerformanceFeeRecipient",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newReceiveAssetsGate",
+          "type": "address"
+        }
+      ],
+      "name": "setReceiveAssetsGate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newReceiveSharesGate",
+          "type": "address"
+        }
+      ],
+      "name": "setReceiveSharesGate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newSendAssetsGate",
+          "type": "address"
+        }
+      ],
+      "name": "setSendAssetsGate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newSendSharesGate",
+          "type": "address"
+        }
+      ],
+      "name": "setSendSharesGate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "newSymbol",
+          "type": "string"
+        }
+      ],
+      "name": "setSymbol",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "submit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "symbol",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "selector",
+          "type": "bytes4"
+        }
+      ],
+      "name": "timelock",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalAssets",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "shares",
+          "type": "uint256"
+        }
+      ],
+      "name": "transfer",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "shares",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "virtualShares",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "assets",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "receiver",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "onBehalf",
+          "type": "address"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "validation": {
+    "status": "APPROVED",
+    "criteria": {
+      "C01": {
+        "status": "PASS",
+        "evidence": "Positive supply/assets; successful recent nonzero Deposit/Withdraw confirmed by direct RPC receipt. V1 capacity positive; V2 open gates and source-defined unsupported maxDeposit convention verified."
+      },
+      "C02": {
+        "status": "PASS"
+      },
+      "C03": {
+        "status": "PASS"
+      },
+      "C04": {
+        "status": "PASS"
+      },
+      "C05": {
+        "status": "PASS"
+      },
+      "C06": {
+        "status": "PASS"
+      },
+      "C07": {
+        "status": "PASS"
+      },
+      "C08": {
+        "status": "PASS"
+      },
+      "C09": {
+        "status": "PASS"
+      },
+      "C10": {
+        "status": "PASS"
+      },
+      "C11": {
+        "status": "PASS",
+        "evidence": "Revalidation: 8 fixture scenarios passed; actual browser LIVE at Ethereum block 26201107. See validation/browser45.json and fixtures45.json."
+      },
+      "C12": {
+        "status": "PASS"
+      },
+      "C13": {
+        "status": "PASS"
+      },
+      "C14": {
+        "status": "PASS",
+        "evidence": "Differential revalidation completed; retain same contract. Future administrative changes still suspend."
+      }
+    },
+    "checks": {
+      "sourceVerified": true,
+      "underlyingIsUSDT": true,
+      "formulaExactMatch": true,
+      "openPermissionGates": true,
+      "maxFunctionConventionVerified": true,
+      "usdtOperationalControls": true
+    },
+    "missing": [],
+    "errors": [],
+    "lastRevalidatedAt": "2026-10-15T23:08:47.046Z"
+  },
+  "integration": {
+    "module": "assets/validated-usdt-reader.js",
+    "refreshIntervalSeconds": 60,
+    "displayRule": "APPROVED_AND_CURRENT_RPC_VERIFIED_ONLY",
+    "onReadFailure": "HIDE_VALUE_AND_SHOW_UNAVAILABLE_COUNT",
+    "onAdministrativeChange": "SUSPEND_AND_HIDE"
+  }
+}
