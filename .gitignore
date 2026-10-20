@@ -1,1 +1,9 @@
+# Never commit secrets, cloud credentials or manually recorded FTP sessions
+.env
+.env.*
+*secret*
+*.key
+*.pem
+current.json.next
+node_modules/
 
