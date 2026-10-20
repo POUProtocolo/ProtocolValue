@@ -1,0 +1,169 @@
+{
+  "schemaVersion": "2.0",
+  "identity": {
+    "id": "benqi_qiusdtn",
+    "protocol": "BENQI",
+    "asset": "qiUSDTn",
+    "symbol": "qiUSDTn",
+    "network": "Avalanche",
+    "chainId": 43114
+  },
+  "contracts": {
+    "token": "0xd8fcDa6ec4Bdc547C0827B8804e89aCd817d56EF",
+    "protocol": "0xd8fcDa6ec4Bdc547C0827B8804e89aCd817d56EF",
+    "underlying": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7",
+    "implementation": null
+  },
+  "valuation": {
+    "valueType": "EXCHANGE_RATE",
+    "quoteAsset": "USDT",
+    "economicMechanism": "EXCHANGE_RATE",
+    "perTokenAmount": "1",
+    "sourceOutputIsPerTokenValue": true,
+    "sourceFunction": "exchangeRateStored()",
+    "selector": "0x182df0f5",
+    "formula": "exchangeRateStored * 10^shareDecimals / 10^(18 + underlyingDecimals)",
+    "outputDecimals": 16
+  },
+  "value": {
+    "raw": "254167683993881",
+    "normalized": "0.0254167683993881",
+    "display": "0.0254167683993881 USDT",
+    "status": "BLOCK_PINNED_EVIDENCE_FROM_SUPPLIED_RPC_RECORD",
+    "observedAt": "2026-10-12T15:31:36+00:00",
+    "blockNumber": 97371747,
+    "blockHash": "0x25da2fc7306fea9d936c3b68d7a2a61ea61e53376e9d47e3029f83589625bf9f",
+    "note": "Recorded RPC response and formula, reproducible by calling the public contract at the indicated block; independent live RPC confirmation not performed in this build."
+  },
+  "referenceSnapshot": {
+    "raw": "254167683993881",
+    "normalized": "0.0254167683993881",
+    "display": "0.0254167683993881 USDT",
+    "status": "BLOCK_PINNED_EVIDENCE_FROM_SUPPLIED_RPC_RECORD",
+    "observedAt": "2026-10-12T15:31:36+00:00",
+    "blockNumber": 97371747,
+    "blockHash": "0x25da2fc7306fea9d936c3b68d7a2a61ea61e53376e9d47e3029f83589625bf9f",
+    "note": "Recorded RPC response and formula, reproducible by calling the public contract at the indicated block; independent live RPC confirmation not performed in this build."
+  },
+  "links": {
+    "contractExplorer": "https://routescan.io/address/0xd8fcda6ec4bdc547c0827b8804e89acd817d56ef",
+    "documentation": "https://docs.benqi.fi/resources/contracts",
+    "referenceBlock": "https://snowtrace.io/block/97371747"
+  },
+  "lifecycle": {
+    "status": "NOT_ESTABLISHED",
+    "note": "Operational status not asserted; no EOL/DEPRECATED/SUNSET tag in received record."
+  },
+  "priceProof": {
+    "type": "ONCHAIN_INTERNAL_PRICE",
+    "status": "BLOCK_PINNED_RPC_METHOD_EVIDENCE",
+    "method": "DIRECT_CONVERSION",
+    "chainId": 43114,
+    "contract": "0xd8fcDa6ec4Bdc547C0827B8804e89aCd817d56EF",
+    "underlying": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7",
+    "unit": "USDT/qiUSDTn",
+    "blockNumber": 97371747,
+    "blockHash": "0x25da2fc7306fea9d936c3b68d7a2a61ea61e53376e9d47e3029f83589625bf9f",
+    "blockTag": "0x5cdc663",
+    "observedAt": "2026-10-12T15:31:36+00:00",
+    "sourceFunction": "exchangeRateStored()",
+    "callData": "0x182df0f5",
+    "raw": "254167683993881",
+    "normalized": "0.0254167683993881",
+    "outputDecimals": 16,
+    "shareDecimals": 8,
+    "underlyingDecimals": 6,
+    "inputRaw": null,
+    "rawReturn": "0x0000000000000000000000000000000000000000000000000000e72a06849119",
+    "underlyingGetter": {
+      "to": "0xd8fcDa6ec4Bdc547C0827B8804e89aCd817d56EF",
+      "data": "0x6f307dc3",
+      "result": "0x0000000000000000000000009702230a8ea53601f5cd2dc00fdbc13d4df4a8c7"
+    },
+    "evidenceProvenance": "USER_SUPPLIED_BLOCK_PINNED_RPC_OBSERVATION",
+    "scope": "PRICE_INTERNAL_VALUE_ONLY_NO_SECURITY_OR_LIFECYCLE_CERTIFICATION",
+    "evidenceRpcEndpoint": "https://avalanche-c-chain-rpc.publicnode.com"
+  },
+  "runtime": {
+    "enabled": true,
+    "autoUpdate": true,
+    "readMode": "ETH_CALL_UINT256",
+    "outputDecimals": 16,
+    "cacheSeconds": 60,
+    "blockTagPolicy": "PINNED_CURRENT_BLOCK",
+    "supportedNetworks": [
+      56,
+      1,
+      43114
+    ]
+  },
+  "capitalization": {
+    "enabled": true,
+    "quoteAsset": "USDT",
+    "supplyContract": "0xd8fcDa6ec4Bdc547C0827B8804e89aCd817d56EF",
+    "supplySelector": "0x18160ddd",
+    "supplyDecimals": 8,
+    "supplyBasis": "ERC20_TOTAL_SUPPLY",
+    "requireSameBlock": true,
+    "referenceSnapshot": {
+      "normalized": "3860190.6454739971369392165303",
+      "quoteAsset": "USDT",
+      "status": "SNAPSHOT",
+      "blockNumber": 97371747,
+      "blockHash": "0x25da2fc7306fea9d936c3b68d7a2a61ea61e53376e9d47e3029f83589625bf9f",
+      "observedAt": "2026-10-12T15:31:36+00:00",
+      "valueNormalized": "0.0254167683993881",
+      "supplyRaw": "15187574536686300",
+      "supplyNormalized": "151875745.366863",
+      "supplyDecimals": 8,
+      "valueRaw": "254167683993881",
+      "valueDecimals": 16,
+      "supplyBasis": "ERC20_TOTAL_SUPPLY"
+    }
+  },
+  "evidence": {
+    "chainIdRaw": "0xa86a",
+    "rpcEndpoint": "https://avalanche-c-chain-rpc.publicnode.com",
+    "blockNumber": 97371747,
+    "blockHash": "0x25da2fc7306fea9d936c3b68d7a2a61ea61e53376e9d47e3029f83589625bf9f",
+    "blockTimestamp": "2026-10-12T15:31:36+00:00",
+    "calls": [
+      {
+        "to": "0xd8fcDa6ec4Bdc547C0827B8804e89aCd817d56EF",
+        "function": "decimals()",
+        "data": "0x313ce567",
+        "blockTag": "0x5cdc663",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000008"
+      },
+      {
+        "to": "0xd8fcDa6ec4Bdc547C0827B8804e89aCd817d56EF",
+        "function": "totalSupply()",
+        "data": "0x18160ddd",
+        "blockTag": "0x5cdc663",
+        "result": "0x0000000000000000000000000000000000000000000000000035f504c1424adc"
+      },
+      {
+        "to": "0xd8fcDa6ec4Bdc547C0827B8804e89aCd817d56EF",
+        "function": "underlying()",
+        "data": "0x6f307dc3",
+        "blockTag": "0x5cdc663",
+        "result": "0x0000000000000000000000009702230a8ea53601f5cd2dc00fdbc13d4df4a8c7"
+      },
+      {
+        "to": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7",
+        "function": "decimals()",
+        "data": "0x313ce567",
+        "blockTag": "0x5cdc663",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000006"
+      },
+      {
+        "to": "0xd8fcDa6ec4Bdc547C0827B8804e89aCd817d56EF",
+        "function": "exchangeRateStored()",
+        "data": "0x182df0f5",
+        "blockTag": "0x5cdc663",
+        "result": "0x0000000000000000000000000000000000000000000000000000e72a06849119"
+      }
+    ],
+    "note": "Public RPC records retained for exact method, underlying, and decimals at a pinned block; independent repeat call not recorded for this build."
+  }
+}

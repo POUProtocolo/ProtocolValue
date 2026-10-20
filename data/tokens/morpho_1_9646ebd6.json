@@ -1,0 +1,3360 @@
+{
+  "schemaVersion": "2.0",
+  "identity": {
+    "id": "morpho_1_9646ebd6",
+    "protocol": "Morpho",
+    "asset": "Pendlend USDT",
+    "symbol": "penUSDT",
+    "network": "Ethereum",
+    "chainId": 1
+  },
+  "contracts": {
+    "token": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+    "protocol": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+    "underlying": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+    "implementation": null
+  },
+  "approval": {
+    "status": "APPROVED",
+    "approvedAt": "2026-10-14T21:32:47.024931+00:00",
+    "scope": "NATIVE_USDT_ACCOUNTING_METHOD_AND_OPERATIONAL_SNAPSHOT",
+    "note": "Verified source, independent integer calculation, recent successful Deposit/Withdraw receipt, administrative controls, fixture tests and actual browser LIVE read passed. No exclusive-price or aggregator-marginalization claim."
+  },
+  "runtime": {
+    "enabled": true,
+    "autoUpdate": true,
+    "readMode": "VALIDATED_USDT_NATIVE",
+    "outputDecimals": 6,
+    "displayUnit": "USDT",
+    "cacheSeconds": 60,
+    "blockTagPolicy": "PINNED_CURRENT_BLOCK",
+    "validationPlan": {
+      "model": "MORPHO_4626",
+      "chainId": 1,
+      "rpcEndpoint": "https://ethereum-rpc.publicnode.com",
+      "reads": {
+        "asset": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x38d52e0f",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "assetDecimals": {
+          "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+          "data": "0x313ce567",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "shareDecimals": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x313ce567",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "supply": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x18160ddd",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "assets": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x01e1d114",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "lastAssets": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x568efc07",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "fee": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xddca3f43",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "offset": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xaea70acc",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "owner()": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x8da5cb5b",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "pendingOwner()": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xe30c3978",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "curator()": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xe66f53b7",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "guardian()": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x452a9320",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "timelock()": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xd33219b4",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "feeRecipient()": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x46904840",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "skimRecipient()": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x388af5b5",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "pendingGuardian": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x762c31ba",
+          "decode": "words",
+          "maxWords": 2
+        },
+        "pendingTimelock": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x7cc4d9a1",
+          "decode": "words",
+          "maxWords": 2
+        },
+        "supplyQueueLength": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xa17b3130",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "withdrawQueueLength": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x33f91ebb",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "market0": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x62518ddf0000000000000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "config0": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xcc718f765c6aaf2dfecf6b2d60ef4ee8192b83c53ade0b35cb8e7f763a83a30db10502d1",
+          "decode": "words",
+          "maxWords": 3
+        },
+        "market1": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x62518ddf0000000000000000000000000000000000000000000000000000000000000001",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "config1": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xcc718f76fd2e0d55ed4fcc26fec66f2bb890a8eeb985e456ac236b29127c75db3e1e23c8",
+          "decode": "words",
+          "maxWords": 3
+        },
+        "market2": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x62518ddf0000000000000000000000000000000000000000000000000000000000000002",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "config2": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xcc718f76fc238b7b39e0febab89433ab0380f2988b13671c1884d7ebb2f3eba4627261f0",
+          "decode": "words",
+          "maxWords": 3
+        },
+        "market3": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x62518ddf0000000000000000000000000000000000000000000000000000000000000003",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "config3": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xcc718f76134c6d598a8314a53b15d5fa5005f8bb16ba97dee6350d4a317d09b7af4dab6f",
+          "decode": "words",
+          "maxWords": 3
+        },
+        "market4": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x62518ddf0000000000000000000000000000000000000000000000000000000000000004",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "config4": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xcc718f76f42b0dd39d1f852412283354dcb10eb7a39238832608f030d5163411e4197d43",
+          "decode": "words",
+          "maxWords": 3
+        },
+        "market5": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x62518ddf0000000000000000000000000000000000000000000000000000000000000005",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "config5": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xcc718f769a33209eee9e93f5f7aed04085f9f5e0ce9a7a103c476f5c30a0e5ca03c3d540",
+          "decode": "words",
+          "maxWords": 3
+        },
+        "market6": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x62518ddf0000000000000000000000000000000000000000000000000000000000000006",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "config6": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xcc718f76e09be287c4f6583dfef6aa61d71f6cc76062aa1294e79b5c7c0a69d69bc1dd72",
+          "decode": "words",
+          "maxWords": 3
+        },
+        "market7": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x62518ddf0000000000000000000000000000000000000000000000000000000000000007",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "config7": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xcc718f762545c16bb6edadc9ad720f8d0a705d7637d1d0d8deb50b79b829a2795ef2cf74",
+          "decode": "words",
+          "maxWords": 3
+        },
+        "market8": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x62518ddf0000000000000000000000000000000000000000000000000000000000000008",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "config8": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xcc718f766f252f8726c705af2caa40b97a1b0458db0dd84722a3405c55379fc809c3bd6c",
+          "decode": "words",
+          "maxWords": 3
+        },
+        "maxDeposit": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x402d267d0000000000000000000000000000000000000000000000000000000000000000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "price": {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x07a2d13a0000000000000000000000000000000000000000000000000de0b6b3a7640000",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "assetPaused": {
+          "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+          "data": "0x5c975abb",
+          "decode": "uint",
+          "maxWords": 1
+        },
+        "assetBlacklisted": {
+          "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+          "data": "0xe47d60600000000000000000000000009646ebd6346c8c3a9f3d408f71c312eb0cbe8507",
+          "decode": "uint",
+          "maxWords": 1
+        }
+      },
+      "administrativeCalls": [
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xddca3f43",
+          "function": "fee()",
+          "expected": "0x000000000000000000000000000000000000000000000000016345785d8a0000"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x8da5cb5b",
+          "function": "owner()",
+          "expected": "0x000000000000000000000000dd84a24eedde63f10ec3e928f1c8302a47538b6b"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xe30c3978",
+          "function": "pendingOwner()",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xe66f53b7",
+          "function": "curator()",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x452a9320",
+          "function": "guardian()",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xd33219b4",
+          "function": "timelock()",
+          "expected": "0x000000000000000000000000000000000000000000000000000000000003f480"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x46904840",
+          "function": "feeRecipient()",
+          "expected": "0x0000000000000000000000009ce1c5271b26978bc95bfa180e6b3d0507523d9c"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x388af5b5",
+          "function": "skimRecipient()",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x762c31ba",
+          "function": "pendingGuardian()",
+          "expected": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x7cc4d9a1",
+          "function": "pendingTimelock()",
+          "expected": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xa17b3130",
+          "function": "supplyQueueLength()",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000006"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x33f91ebb",
+          "function": "withdrawQueueLength()",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000009"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x62518ddf0000000000000000000000000000000000000000000000000000000000000000",
+          "function": "withdrawQueue(uint256)",
+          "expected": "0x5c6aaf2dfecf6b2d60ef4ee8192b83c53ade0b35cb8e7f763a83a30db10502d1"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xcc718f765c6aaf2dfecf6b2d60ef4ee8192b83c53ade0b35cb8e7f763a83a30db10502d1",
+          "function": "config(bytes32)",
+          "expected": "0x0000000000000000000000000000000000000000000000000de0b6b3a764000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x62518ddf0000000000000000000000000000000000000000000000000000000000000001",
+          "function": "withdrawQueue(uint256)",
+          "expected": "0xfd2e0d55ed4fcc26fec66f2bb890a8eeb985e456ac236b29127c75db3e1e23c8"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xcc718f76fd2e0d55ed4fcc26fec66f2bb890a8eeb985e456ac236b29127c75db3e1e23c8",
+          "function": "config(bytes32)",
+          "expected": "0x00000000000000000000000000000000000000000000000000001fd51291300000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x62518ddf0000000000000000000000000000000000000000000000000000000000000002",
+          "function": "withdrawQueue(uint256)",
+          "expected": "0xfc238b7b39e0febab89433ab0380f2988b13671c1884d7ebb2f3eba4627261f0"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xcc718f76fc238b7b39e0febab89433ab0380f2988b13671c1884d7ebb2f3eba4627261f0",
+          "function": "config(bytes32)",
+          "expected": "0x00000000000000000000000000000000000000000000000000000da475abf00000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x62518ddf0000000000000000000000000000000000000000000000000000000000000003",
+          "function": "withdrawQueue(uint256)",
+          "expected": "0x134c6d598a8314a53b15d5fa5005f8bb16ba97dee6350d4a317d09b7af4dab6f"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xcc718f76134c6d598a8314a53b15d5fa5005f8bb16ba97dee6350d4a317d09b7af4dab6f",
+          "function": "config(bytes32)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000048c2739500000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x62518ddf0000000000000000000000000000000000000000000000000000000000000004",
+          "function": "withdrawQueue(uint256)",
+          "expected": "0xf42b0dd39d1f852412283354dcb10eb7a39238832608f030d5163411e4197d43"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xcc718f76f42b0dd39d1f852412283354dcb10eb7a39238832608f030d5163411e4197d43",
+          "function": "config(bytes32)",
+          "expected": "0x000000000000000000000000000000000000000000000000000009184e72a00000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x62518ddf0000000000000000000000000000000000000000000000000000000000000005",
+          "function": "withdrawQueue(uint256)",
+          "expected": "0x9a33209eee9e93f5f7aed04085f9f5e0ce9a7a103c476f5c30a0e5ca03c3d540"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xcc718f769a33209eee9e93f5f7aed04085f9f5e0ce9a7a103c476f5c30a0e5ca03c3d540",
+          "function": "config(bytes32)",
+          "expected": "0x00000000000000000000000000000000000000000000000000000da475abf00000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x62518ddf0000000000000000000000000000000000000000000000000000000000000006",
+          "function": "withdrawQueue(uint256)",
+          "expected": "0xe09be287c4f6583dfef6aa61d71f6cc76062aa1294e79b5c7c0a69d69bc1dd72"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xcc718f76e09be287c4f6583dfef6aa61d71f6cc76062aa1294e79b5c7c0a69d69bc1dd72",
+          "function": "config(bytes32)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000048c2739500000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x62518ddf0000000000000000000000000000000000000000000000000000000000000007",
+          "function": "withdrawQueue(uint256)",
+          "expected": "0x2545c16bb6edadc9ad720f8d0a705d7637d1d0d8deb50b79b829a2795ef2cf74"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xcc718f762545c16bb6edadc9ad720f8d0a705d7637d1d0d8deb50b79b829a2795ef2cf74",
+          "function": "config(bytes32)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000048c2739500000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0x62518ddf0000000000000000000000000000000000000000000000000000000000000008",
+          "function": "withdrawQueue(uint256)",
+          "expected": "0x6f252f8726c705af2caa40b97a1b0458db0dd84722a3405c55379fc809c3bd6c"
+        },
+        {
+          "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "data": "0xcc718f766f252f8726c705af2caa40b97a1b0458db0dd84722a3405c55379fc809c3bd6c",
+          "function": "config(bytes32)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000048c2739500000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+          "data": "0x5c975abb",
+          "function": "paused()",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        {
+          "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+          "data": "0xe47d60600000000000000000000000009646ebd6346c8c3a9f3d408f71c312eb0cbe8507",
+          "function": "isBlackListed(address)",
+          "expected": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      ],
+      "codeChecks": [
+        {
+          "address": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "keccak256": "0x21c149eab6d9b8234e8bbc390a8d2747f6ef9bc2c9f8ef8b44448ca80c2f5d75",
+          "sha256": "1ef6d5a8c22c145e5abf031d60c4ee20e521cf01c5fb43af4e186ef4c9f313a9"
+        },
+        {
+          "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+          "keccak256": "0xb44fb4e949d0f78f87f79ee46428f23a2a5713ce6fc6e0beb3dda78c2ac1ea55",
+          "sha256": "6d967f98f2f3843065688dc2065248e3686b56fc0b6ddfa82007df016148becb"
+        }
+      ],
+      "storageChecks": [],
+      "perTokenAmount": "1",
+      "supplyBasis": "TOKEN_TOTAL_SUPPLY",
+      "blockTagPolicy": "PINNED_CURRENT_BLOCK",
+      "cacheSeconds": 60,
+      "shareDecimals": 18,
+      "assetDecimals": 6,
+      "underlying": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "token": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+      "oneShareRaw": "1000000000000000000",
+      "outputDecimals": 6,
+      "administrativeEvents": [
+        {
+          "address": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "topic": "0x38d16b8cac22d99fc7c124b9cd0de2d3fa1faef420bfe791d8c362d765e22700",
+          "signature": "OwnershipTransferStarted(address,address)"
+        },
+        {
+          "address": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "topic": "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
+          "signature": "OwnershipTransferred(address,address)"
+        },
+        {
+          "address": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "topic": "0xe86b6d3313d3098f4c5f689c935de8fde876a597c185def2cedab85efedac686",
+          "signature": "SetCap(address,bytes32,uint256)"
+        },
+        {
+          "address": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "topic": "0xbd0a63c12948fbc9194a5839019f99c9d71db924e5c70018265bc778b8f1a506",
+          "signature": "SetCurator(address)"
+        },
+        {
+          "address": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "topic": "0x01fe2943baee27f47add82886c2200f910c749c461c9b63c5fe83901a53bdb49",
+          "signature": "SetFee(address,uint256)"
+        },
+        {
+          "address": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "topic": "0xcb11cc8aade2f5a556749d1b2380d108a16fac3431e6a5d5ce12ef9de0bd76e3",
+          "signature": "SetGuardian(address,address)"
+        },
+        {
+          "address": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "topic": "0x74dc60cbc81a9472d04ad1d20e151d369c41104d655ed3f2f3091166a502cd8d",
+          "signature": "SetIsAllocator(address,bool)"
+        },
+        {
+          "address": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "topic": "0x6ce31538fc7fba95714ddc8a275a09252b4b1fb8f33d2550aa58a5f62ad934de",
+          "signature": "SetSupplyQueue(address,bytes32[])"
+        },
+        {
+          "address": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "topic": "0xd28e9b90ee9b37c5936ff84392d71f29ff18117d7e76bcee60615262a90a3f75",
+          "signature": "SetTimelock(address,uint256)"
+        },
+        {
+          "address": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "topic": "0xe0c2db6b54586be6d7d49943139fccf0dd315ba63e55364a76c73cd8fdba724d",
+          "signature": "SetWithdrawQueue(address,bytes32[])"
+        },
+        {
+          "address": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+          "topic": "0xe851bb5856808a50efd748be463b8f35bcfb5ec74c5bfde776fe0a4d2a26db27",
+          "signature": "SubmitCap(address,bytes32,uint256)"
+        }
+      ],
+      "approvedBlockNumber": 26189837,
+      "maxAdministrativeLookbackBlocks": 50000
+    },
+    "moduleId": "validated-usdt-reader-v1"
+  },
+  "monitoring": {
+    "publishEnabled": true,
+    "requiresRevalidation": false,
+    "onAdministrativeChange": "SUSPEND_AND_HIDE",
+    "baselineBlockNumber": 26189837,
+    "baselineBlockHash": "0x1af6fd57729aee73a5b29b48570346ed4e4e8d1469f83f7ba988381980399053"
+  },
+  "validationAbi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newTotalAssets",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "feeShares",
+          "type": "uint256"
+        }
+      ],
+      "name": "AccrueInterest",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Approval",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "assets",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "shares",
+          "type": "uint256"
+        }
+      ],
+      "name": "Deposit",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "EIP712DomainChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferStarted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "Id",
+          "name": "id",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "suppliedAssets",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "suppliedShares",
+          "type": "uint256"
+        }
+      ],
+      "name": "ReallocateSupply",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "Id",
+          "name": "id",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "withdrawnAssets",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "withdrawnShares",
+          "type": "uint256"
+        }
+      ],
+      "name": "ReallocateWithdraw",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "Id",
+          "name": "id",
+          "type": "bytes32"
+        }
+      ],
+      "name": "RevokePendingCap",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        }
+      ],
+      "name": "RevokePendingGuardian",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "Id",
+          "name": "id",
+          "type": "bytes32"
+        }
+      ],
+      "name": "RevokePendingMarketRemoval",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        }
+      ],
+      "name": "RevokePendingTimelock",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "Id",
+          "name": "id",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "cap",
+          "type": "uint256"
+        }
+      ],
+      "name": "SetCap",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newCurator",
+          "type": "address"
+        }
+      ],
+      "name": "SetCurator",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newFee",
+          "type": "uint256"
+        }
+      ],
+      "name": "SetFee",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newFeeRecipient",
+          "type": "address"
+        }
+      ],
+      "name": "SetFeeRecipient",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "guardian",
+          "type": "address"
+        }
+      ],
+      "name": "SetGuardian",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "allocator",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "isAllocator",
+          "type": "bool"
+        }
+      ],
+      "name": "SetIsAllocator",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        }
+      ],
+      "name": "SetName",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newSkimRecipient",
+          "type": "address"
+        }
+      ],
+      "name": "SetSkimRecipient",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "Id[]",
+          "name": "newSupplyQueue",
+          "type": "bytes32[]"
+        }
+      ],
+      "name": "SetSupplyQueue",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "symbol",
+          "type": "string"
+        }
+      ],
+      "name": "SetSymbol",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newTimelock",
+          "type": "uint256"
+        }
+      ],
+      "name": "SetTimelock",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "Id[]",
+          "name": "newWithdrawQueue",
+          "type": "bytes32[]"
+        }
+      ],
+      "name": "SetWithdrawQueue",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Skim",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "Id",
+          "name": "id",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "cap",
+          "type": "uint256"
+        }
+      ],
+      "name": "SubmitCap",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newGuardian",
+          "type": "address"
+        }
+      ],
+      "name": "SubmitGuardian",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "Id",
+          "name": "id",
+          "type": "bytes32"
+        }
+      ],
+      "name": "SubmitMarketRemoval",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newTimelock",
+          "type": "uint256"
+        }
+      ],
+      "name": "SubmitTimelock",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "updatedTotalAssets",
+          "type": "uint256"
+        }
+      ],
+      "name": "UpdateLastTotalAssets",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newLostAssets",
+          "type": "uint256"
+        }
+      ],
+      "name": "UpdateLostAssets",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "receiver",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "assets",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "shares",
+          "type": "uint256"
+        }
+      ],
+      "name": "Withdraw",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "DECIMALS_OFFSET",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "DOMAIN_SEPARATOR",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "MORPHO",
+      "outputs": [
+        {
+          "internalType": "contract IMorpho",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "loanToken",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "collateralToken",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "oracle",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "irm",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "lltv",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct MarketParams",
+          "name": "marketParams",
+          "type": "tuple"
+        }
+      ],
+      "name": "acceptCap",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "acceptGuardian",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "acceptOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "acceptTimelock",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        }
+      ],
+      "name": "allowance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "asset",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "Id",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "config",
+      "outputs": [
+        {
+          "internalType": "uint184",
+          "name": "cap",
+          "type": "uint184"
+        },
+        {
+          "internalType": "bool",
+          "name": "enabled",
+          "type": "bool"
+        },
+        {
+          "internalType": "uint64",
+          "name": "removableAt",
+          "type": "uint64"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "shares",
+          "type": "uint256"
+        }
+      ],
+      "name": "convertToAssets",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "assets",
+          "type": "uint256"
+        }
+      ],
+      "name": "convertToShares",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "curator",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "decimals",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "assets",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "receiver",
+          "type": "address"
+        }
+      ],
+      "name": "deposit",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "shares",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "eip712Domain",
+      "outputs": [
+        {
+          "internalType": "bytes1",
+          "name": "fields",
+          "type": "bytes1"
+        },
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "version",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "chainId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "verifyingContract",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "salt",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "extensions",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "fee",
+      "outputs": [
+        {
+          "internalType": "uint96",
+          "name": "",
+          "type": "uint96"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "feeRecipient",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "guardian",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "isAllocator",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "lastTotalAssets",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "lostAssets",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "maxDeposit",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "maxMint",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "maxRedeem",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "maxWithdraw",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "assets",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "shares",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "receiver",
+          "type": "address"
+        }
+      ],
+      "name": "mint",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "assets",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes[]",
+          "name": "data",
+          "type": "bytes[]"
+        }
+      ],
+      "name": "multicall",
+      "outputs": [
+        {
+          "internalType": "bytes[]",
+          "name": "results",
+          "type": "bytes[]"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "nonces",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "Id",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "pendingCap",
+      "outputs": [
+        {
+          "internalType": "uint192",
+          "name": "value",
+          "type": "uint192"
+        },
+        {
+          "internalType": "uint64",
+          "name": "validAt",
+          "type": "uint64"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "pendingGuardian",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "value",
+          "type": "address"
+        },
+        {
+          "internalType": "uint64",
+          "name": "validAt",
+          "type": "uint64"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "pendingOwner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "pendingTimelock",
+      "outputs": [
+        {
+          "internalType": "uint192",
+          "name": "value",
+          "type": "uint192"
+        },
+        {
+          "internalType": "uint64",
+          "name": "validAt",
+          "type": "uint64"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "deadline",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint8",
+          "name": "v",
+          "type": "uint8"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "r",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "s",
+          "type": "bytes32"
+        }
+      ],
+      "name": "permit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "assets",
+          "type": "uint256"
+        }
+      ],
+      "name": "previewDeposit",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "shares",
+          "type": "uint256"
+        }
+      ],
+      "name": "previewMint",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "shares",
+          "type": "uint256"
+        }
+      ],
+      "name": "previewRedeem",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "assets",
+          "type": "uint256"
+        }
+      ],
+      "name": "previewWithdraw",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "loanToken",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "collateralToken",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "oracle",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "irm",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "lltv",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct MarketParams",
+              "name": "marketParams",
+              "type": "tuple"
+            },
+            {
+              "internalType": "uint256",
+              "name": "assets",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct MarketAllocation[]",
+          "name": "allocations",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "reallocate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "shares",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "receiver",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "redeem",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "assets",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "Id",
+          "name": "id",
+          "type": "bytes32"
+        }
+      ],
+      "name": "revokePendingCap",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "revokePendingGuardian",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "Id",
+          "name": "id",
+          "type": "bytes32"
+        }
+      ],
+      "name": "revokePendingMarketRemoval",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "revokePendingTimelock",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newCurator",
+          "type": "address"
+        }
+      ],
+      "name": "setCurator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "newFee",
+          "type": "uint256"
+        }
+      ],
+      "name": "setFee",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newFeeRecipient",
+          "type": "address"
+        }
+      ],
+      "name": "setFeeRecipient",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newAllocator",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "newIsAllocator",
+          "type": "bool"
+        }
+      ],
+      "name": "setIsAllocator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "newName",
+          "type": "string"
+        }
+      ],
+      "name": "setName",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newSkimRecipient",
+          "type": "address"
+        }
+      ],
+      "name": "setSkimRecipient",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "Id[]",
+          "name": "newSupplyQueue",
+          "type": "bytes32[]"
+        }
+      ],
+      "name": "setSupplyQueue",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "newSymbol",
+          "type": "string"
+        }
+      ],
+      "name": "setSymbol",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "skim",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "skimRecipient",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "loanToken",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "collateralToken",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "oracle",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "irm",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "lltv",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct MarketParams",
+          "name": "marketParams",
+          "type": "tuple"
+        },
+        {
+          "internalType": "uint256",
+          "name": "newSupplyCap",
+          "type": "uint256"
+        }
+      ],
+      "name": "submitCap",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newGuardian",
+          "type": "address"
+        }
+      ],
+      "name": "submitGuardian",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "loanToken",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "collateralToken",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "oracle",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "irm",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "lltv",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct MarketParams",
+          "name": "marketParams",
+          "type": "tuple"
+        }
+      ],
+      "name": "submitMarketRemoval",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "newTimelock",
+          "type": "uint256"
+        }
+      ],
+      "name": "submitTimelock",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "supplyQueue",
+      "outputs": [
+        {
+          "internalType": "Id",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "supplyQueueLength",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "symbol",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "timelock",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalAssets",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "transfer",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "indexes",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "updateWithdrawQueue",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "assets",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "receiver",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "shares",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdrawQueue",
+      "outputs": [
+        {
+          "internalType": "Id",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "withdrawQueueLength",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "valuation": {
+    "valueType": "Vault Share Value",
+    "quoteAsset": "USDT",
+    "economicMechanism": "MORPHO_4626",
+    "sourceFunction": "convertToAssets(uint256)",
+    "selector": "0x07a2d13a",
+    "callData": "0x07a2d13a0000000000000000000000000000000000000000000000000de0b6b3a7640000",
+    "normalizedInput": "1000000000000000000",
+    "formula": "feeAssets=floor(max(totalAssets-lastTotalAssets,0)*fee/1e18); feeShares=floor(feeAssets*(totalSupply+10^offset)/(totalAssets-feeAssets+1)); price=floor(10^shareDecimals*(totalAssets+1)/(totalSupply+feeShares+10^offset))/10^USDTDecimals",
+    "internalValueExists": true,
+    "sourceOutputIsPerTokenValue": true,
+    "usdtRelation": "DIRECT_UNDERLYING_ASSET",
+    "economicUnit": "USDT/penUSDT",
+    "perTokenAmount": "1",
+    "methodology": "Same-block native contract accounting; independent source-specific integer recalculation. No market-price API or cross-stablecoin peg assumption."
+  },
+  "value": {
+    "raw": "1993016",
+    "normalized": "1.993016",
+    "display": "1.993016 USDT",
+    "status": "BLOCK_PINNED_PROTOCOL_VALUE",
+    "observedAt": "2026-10-14T09:27:11+00:00",
+    "blockNumber": 26189837,
+    "blockHash": "0x1af6fd57729aee73a5b29b48570346ed4e4e8d1469f83f7ba988381980399053",
+    "note": "Contract accounting value per whole receipt/share; not exchange price or a guarantee of immediate withdrawal."
+  },
+  "referenceSnapshot": {
+    "raw": "1993016",
+    "normalized": "1.993016",
+    "display": "1.993016 USDT",
+    "status": "BLOCK_PINNED_PROTOCOL_VALUE",
+    "observedAt": "2026-10-14T09:27:11+00:00",
+    "blockNumber": 26189837,
+    "blockHash": "0x1af6fd57729aee73a5b29b48570346ed4e4e8d1469f83f7ba988381980399053",
+    "note": "Contract accounting value per whole receipt/share; not exchange price or a guarantee of immediate withdrawal."
+  },
+  "components": {
+    "totalSupply": "708155194732741099653",
+    "totalAssets": "1417112440",
+    "accruedFeeAssets": "5747321",
+    "accruedFeeShares": "2883729497080027958",
+    "virtualShares": "1000000000000"
+  },
+  "links": {
+    "tokenExplorer": "https://etherscan.io/token/0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+    "contractExplorer": "https://etherscan.io/address/0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507#readContract",
+    "officialSource": "https://docs.morpho.org/developers/api/morpho-vaults/",
+    "verifiedSource": "https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=contract&action=getsourcecode&address=0x9646ebd6346c8c3a9f3d408f71c312eb0cbe8507"
+  },
+  "evidence": {
+    "rpcEndpoint": "https://ethereum-rpc.publicnode.com",
+    "blockTag": "0x18fa00d",
+    "blockNumber": 26189837,
+    "blockHash": "0x1af6fd57729aee73a5b29b48570346ed4e4e8d1469f83f7ba988381980399053",
+    "blockTimestamp": "2026-10-14T09:27:11+00:00",
+    "calls": [
+      {
+        "key": "asset",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "asset()",
+        "data": "0x38d52e0f",
+        "blockTag": "0x18fa00d",
+        "result": "0x000000000000000000000000dac17f958d2ee523a2206206994597c13d831ec7"
+      },
+      {
+        "key": "assetDecimals",
+        "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "function": "decimals()",
+        "data": "0x313ce567",
+        "blockTag": "0x18fa00d",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000006"
+      },
+      {
+        "key": "shareDecimals",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "decimals()",
+        "data": "0x313ce567",
+        "blockTag": "0x18fa00d",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000012"
+      },
+      {
+        "key": "supply",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "totalSupply()",
+        "data": "0x18160ddd",
+        "blockTag": "0x18fa00d",
+        "result": "0x00000000000000000000000000000000000000000000002663a0a5a4749b8085"
+      },
+      {
+        "key": "assets",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "totalAssets()",
+        "data": "0x01e1d114",
+        "blockTag": "0x18fa00d",
+        "result": "0x0000000000000000000000000000000000000000000000000000000054776b78"
+      },
+      {
+        "key": "lastAssets",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "lastTotalAssets()",
+        "data": "0x568efc07",
+        "blockTag": "0x18fa00d",
+        "result": "0x00000000000000000000000000000000000000000000000000000000510a72b7"
+      },
+      {
+        "key": "fee",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "fee()",
+        "data": "0xddca3f43",
+        "blockTag": "0x18fa00d",
+        "result": "0x000000000000000000000000000000000000000000000000016345785d8a0000"
+      },
+      {
+        "key": "offset",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "DECIMALS_OFFSET()",
+        "data": "0xaea70acc",
+        "blockTag": "0x18fa00d",
+        "result": "0x000000000000000000000000000000000000000000000000000000000000000c"
+      },
+      {
+        "key": "owner()",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "owner()",
+        "data": "0x8da5cb5b",
+        "blockTag": "0x18fa00d",
+        "result": "0x000000000000000000000000dd84a24eedde63f10ec3e928f1c8302a47538b6b"
+      },
+      {
+        "key": "pendingOwner()",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "pendingOwner()",
+        "data": "0xe30c3978",
+        "blockTag": "0x18fa00d",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "curator()",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "curator()",
+        "data": "0xe66f53b7",
+        "blockTag": "0x18fa00d",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "guardian()",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "guardian()",
+        "data": "0x452a9320",
+        "blockTag": "0x18fa00d",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "timelock()",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "timelock()",
+        "data": "0xd33219b4",
+        "blockTag": "0x18fa00d",
+        "result": "0x000000000000000000000000000000000000000000000000000000000003f480"
+      },
+      {
+        "key": "feeRecipient()",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "feeRecipient()",
+        "data": "0x46904840",
+        "blockTag": "0x18fa00d",
+        "result": "0x0000000000000000000000009ce1c5271b26978bc95bfa180e6b3d0507523d9c"
+      },
+      {
+        "key": "skimRecipient()",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "skimRecipient()",
+        "data": "0x388af5b5",
+        "blockTag": "0x18fa00d",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "pendingGuardian",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "pendingGuardian()",
+        "data": "0x762c31ba",
+        "blockTag": "0x18fa00d",
+        "result": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "pendingTimelock",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "pendingTimelock()",
+        "data": "0x7cc4d9a1",
+        "blockTag": "0x18fa00d",
+        "result": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "supplyQueueLength",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "supplyQueueLength()",
+        "data": "0xa17b3130",
+        "blockTag": "0x18fa00d",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000006"
+      },
+      {
+        "key": "withdrawQueueLength",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "withdrawQueueLength()",
+        "data": "0x33f91ebb",
+        "blockTag": "0x18fa00d",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000009"
+      },
+      {
+        "key": "market0",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "withdrawQueue(uint256)",
+        "data": "0x62518ddf0000000000000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fa00d",
+        "result": "0x5c6aaf2dfecf6b2d60ef4ee8192b83c53ade0b35cb8e7f763a83a30db10502d1"
+      },
+      {
+        "key": "config0",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "config(bytes32)",
+        "data": "0xcc718f765c6aaf2dfecf6b2d60ef4ee8192b83c53ade0b35cb8e7f763a83a30db10502d1",
+        "blockTag": "0x18fa00d",
+        "result": "0x0000000000000000000000000000000000000000000000000de0b6b3a764000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "market1",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "withdrawQueue(uint256)",
+        "data": "0x62518ddf0000000000000000000000000000000000000000000000000000000000000001",
+        "blockTag": "0x18fa00d",
+        "result": "0xfd2e0d55ed4fcc26fec66f2bb890a8eeb985e456ac236b29127c75db3e1e23c8"
+      },
+      {
+        "key": "config1",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "config(bytes32)",
+        "data": "0xcc718f76fd2e0d55ed4fcc26fec66f2bb890a8eeb985e456ac236b29127c75db3e1e23c8",
+        "blockTag": "0x18fa00d",
+        "result": "0x00000000000000000000000000000000000000000000000000001fd51291300000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "market2",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "withdrawQueue(uint256)",
+        "data": "0x62518ddf0000000000000000000000000000000000000000000000000000000000000002",
+        "blockTag": "0x18fa00d",
+        "result": "0xfc238b7b39e0febab89433ab0380f2988b13671c1884d7ebb2f3eba4627261f0"
+      },
+      {
+        "key": "config2",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "config(bytes32)",
+        "data": "0xcc718f76fc238b7b39e0febab89433ab0380f2988b13671c1884d7ebb2f3eba4627261f0",
+        "blockTag": "0x18fa00d",
+        "result": "0x00000000000000000000000000000000000000000000000000000da475abf00000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "market3",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "withdrawQueue(uint256)",
+        "data": "0x62518ddf0000000000000000000000000000000000000000000000000000000000000003",
+        "blockTag": "0x18fa00d",
+        "result": "0x134c6d598a8314a53b15d5fa5005f8bb16ba97dee6350d4a317d09b7af4dab6f"
+      },
+      {
+        "key": "config3",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "config(bytes32)",
+        "data": "0xcc718f76134c6d598a8314a53b15d5fa5005f8bb16ba97dee6350d4a317d09b7af4dab6f",
+        "blockTag": "0x18fa00d",
+        "result": "0x0000000000000000000000000000000000000000000000000000048c2739500000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "market4",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "withdrawQueue(uint256)",
+        "data": "0x62518ddf0000000000000000000000000000000000000000000000000000000000000004",
+        "blockTag": "0x18fa00d",
+        "result": "0xf42b0dd39d1f852412283354dcb10eb7a39238832608f030d5163411e4197d43"
+      },
+      {
+        "key": "config4",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "config(bytes32)",
+        "data": "0xcc718f76f42b0dd39d1f852412283354dcb10eb7a39238832608f030d5163411e4197d43",
+        "blockTag": "0x18fa00d",
+        "result": "0x000000000000000000000000000000000000000000000000000009184e72a00000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "market5",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "withdrawQueue(uint256)",
+        "data": "0x62518ddf0000000000000000000000000000000000000000000000000000000000000005",
+        "blockTag": "0x18fa00d",
+        "result": "0x9a33209eee9e93f5f7aed04085f9f5e0ce9a7a103c476f5c30a0e5ca03c3d540"
+      },
+      {
+        "key": "config5",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "config(bytes32)",
+        "data": "0xcc718f769a33209eee9e93f5f7aed04085f9f5e0ce9a7a103c476f5c30a0e5ca03c3d540",
+        "blockTag": "0x18fa00d",
+        "result": "0x00000000000000000000000000000000000000000000000000000da475abf00000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "market6",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "withdrawQueue(uint256)",
+        "data": "0x62518ddf0000000000000000000000000000000000000000000000000000000000000006",
+        "blockTag": "0x18fa00d",
+        "result": "0xe09be287c4f6583dfef6aa61d71f6cc76062aa1294e79b5c7c0a69d69bc1dd72"
+      },
+      {
+        "key": "config6",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "config(bytes32)",
+        "data": "0xcc718f76e09be287c4f6583dfef6aa61d71f6cc76062aa1294e79b5c7c0a69d69bc1dd72",
+        "blockTag": "0x18fa00d",
+        "result": "0x0000000000000000000000000000000000000000000000000000048c2739500000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "market7",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "withdrawQueue(uint256)",
+        "data": "0x62518ddf0000000000000000000000000000000000000000000000000000000000000007",
+        "blockTag": "0x18fa00d",
+        "result": "0x2545c16bb6edadc9ad720f8d0a705d7637d1d0d8deb50b79b829a2795ef2cf74"
+      },
+      {
+        "key": "config7",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "config(bytes32)",
+        "data": "0xcc718f762545c16bb6edadc9ad720f8d0a705d7637d1d0d8deb50b79b829a2795ef2cf74",
+        "blockTag": "0x18fa00d",
+        "result": "0x0000000000000000000000000000000000000000000000000000048c2739500000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "market8",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "withdrawQueue(uint256)",
+        "data": "0x62518ddf0000000000000000000000000000000000000000000000000000000000000008",
+        "blockTag": "0x18fa00d",
+        "result": "0x6f252f8726c705af2caa40b97a1b0458db0dd84722a3405c55379fc809c3bd6c"
+      },
+      {
+        "key": "config8",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "config(bytes32)",
+        "data": "0xcc718f766f252f8726c705af2caa40b97a1b0458db0dd84722a3405c55379fc809c3bd6c",
+        "blockTag": "0x18fa00d",
+        "result": "0x0000000000000000000000000000000000000000000000000000048c2739500000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "maxDeposit",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "maxDeposit(address)",
+        "data": "0x402d267d0000000000000000000000000000000000000000000000000000000000000000",
+        "blockTag": "0x18fa00d",
+        "result": "0x0000000000000000000000000000000000000000000000000de0ff75da1e790f"
+      },
+      {
+        "key": "price",
+        "to": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "function": "convertToAssets(uint256)",
+        "data": "0x07a2d13a0000000000000000000000000000000000000000000000000de0b6b3a7640000",
+        "blockTag": "0x18fa00d",
+        "result": "0x00000000000000000000000000000000000000000000000000000000001e6938"
+      },
+      {
+        "key": "assetPaused",
+        "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "function": "paused()",
+        "data": "0x5c975abb",
+        "blockTag": "0x18fa00d",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "key": "assetBlacklisted",
+        "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "function": "isBlackListed(address)",
+        "data": "0xe47d60600000000000000000000000009646ebd6346c8c3a9f3d408f71c312eb0cbe8507",
+        "blockTag": "0x18fa00d",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ],
+    "codeChecks": [
+      {
+        "address": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+        "keccak256": "0x21c149eab6d9b8234e8bbc390a8d2747f6ef9bc2c9f8ef8b44448ca80c2f5d75",
+        "sha256": "1ef6d5a8c22c145e5abf031d60c4ee20e521cf01c5fb43af4e186ef4c9f313a9"
+      },
+      {
+        "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "keccak256": "0xb44fb4e949d0f78f87f79ee46428f23a2a5713ce6fc6e0beb3dda78c2ac1ea55",
+        "sha256": "6d967f98f2f3843065688dc2065248e3686b56fc0b6ddfa82007df016148becb"
+      }
+    ],
+    "storageChecks": [],
+    "verifiedSources": [
+      {
+        "provider": "Routescan verified source API",
+        "match": "EXPLORER_VERIFIED_SOURCE",
+        "path": "research/sources/1_0x9646ebd6346c8c3a9f3d408f71c312eb0cbe8507_routescan.json",
+        "url": "https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=contract&action=getsourcecode&address=0x9646ebd6346c8c3a9f3d408f71c312eb0cbe8507"
+      }
+    ],
+    "formulaCheck": {
+      "calculatedRaw": "1993016",
+      "observedRaw": "1993016",
+      "exactMatch": true
+    },
+    "recentActivity": {
+      "fromBlock": 26179837,
+      "toBlock": 26189837,
+      "eventCount": 0,
+      "lastEvent": null,
+      "rpcLogError": "HTTP Error 403: Forbidden",
+      "note": "Supplementary activity; approval uses operational getters, not arbitrary recent event frequency."
+    },
+    "administrativeRPC": "https://eth.drpc.org",
+    "recentOperationalActivity": {
+      "id": "morpho_1_9646ebd6",
+      "status": "RECENT_DEPOSIT_OR_WITHDRAWAL_VERIFIED",
+      "receiptRPC": "https://eth.drpc.org",
+      "signature": "Deposit(address,address,uint256,uint256)",
+      "fromBlock": 25989837,
+      "toBlock": 26189837,
+      "indexURL": "https://api.routescan.io/v2/network/mainnet/evm/1/etherscan/api?module=logs&action=getLogs&address=0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507&fromBlock=25989837&toBlock=26189837&topic0=0xdcbc1c05240f31ff3ad067ef1ee35ce4997762752e3a095284754544f4c709d7&offset=1000&page=1",
+      "eventCountObserved": 3,
+      "blockTimestampUTC": "2026-10-08T13:53:35+00:00",
+      "transactionHash": "0x32d080ce4189318c9a16e5c446820e007911d93515afb677088bed23ac0ccdee",
+      "transactionReceipt": {
+        "blockHash": "0x877e0696e2ad2dd99c2e7a222f4c700dd9541c271d4a1daa9e5023fb838b7e70",
+        "blockNumber": "0x18efd0b",
+        "transactionHash": "0x32d080ce4189318c9a16e5c446820e007911d93515afb677088bed23ac0ccdee",
+        "transactionIndex": "0x118",
+        "from": "0xbaef17f7a9c511532938e91db689f34ab651064e",
+        "to": "0x9646ebd6346c8c3a9f3d408f71c312eb0cbe8507",
+        "type": "0x2",
+        "gasUsed": "0x747ad",
+        "cumulativeGasUsed": "0x1fca5b1",
+        "contractAddress": null,
+        "logs": [
+          {
+            "address": "0x9646ebd6346c8c3a9f3d408f71c312eb0cbe8507",
+            "topics": [
+              "0x15c027cc4fd826d986cad358803439f7326d3aa4ed969ff90dbee4bc150f68e9"
+            ],
+            "data": "0x0000000000000000000000000000000000000000000000000000000050fb3077",
+            "blockNumber": "0x18efd0b",
+            "transactionHash": "0x32d080ce4189318c9a16e5c446820e007911d93515afb677088bed23ac0ccdee",
+            "transactionIndex": "0x118",
+            "blockHash": "0x877e0696e2ad2dd99c2e7a222f4c700dd9541c271d4a1daa9e5023fb838b7e70",
+            "logIndex": "0x371",
+            "removed": false,
+            "blockTimestamp": "0x6ac7a05f"
+          },
+          {
+            "address": "0x9646ebd6346c8c3a9f3d408f71c312eb0cbe8507",
+            "topics": [
+              "0x548669ea9bcc24888e6d74a69c9865fa98d795686853b8aa3eb87814261bbb71"
+            ],
+            "data": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "blockNumber": "0x18efd0b",
+            "transactionHash": "0x32d080ce4189318c9a16e5c446820e007911d93515afb677088bed23ac0ccdee",
+            "transactionIndex": "0x118",
+            "blockHash": "0x877e0696e2ad2dd99c2e7a222f4c700dd9541c271d4a1daa9e5023fb838b7e70",
+            "logIndex": "0x372",
+            "removed": false,
+            "blockTimestamp": "0x6ac7a05f"
+          },
+          {
+            "address": "0x9646ebd6346c8c3a9f3d408f71c312eb0cbe8507",
+            "topics": [
+              "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+              "0x0000000000000000000000000000000000000000000000000000000000000000",
+              "0x0000000000000000000000009ce1c5271b26978bc95bfa180e6b3d0507523d9c"
+            ],
+            "data": "0x0000000000000000000000000000000000000000000000000ba22ed14a8ecce8",
+            "blockNumber": "0x18efd0b",
+            "transactionHash": "0x32d080ce4189318c9a16e5c446820e007911d93515afb677088bed23ac0ccdee",
+            "transactionIndex": "0x118",
+            "blockHash": "0x877e0696e2ad2dd99c2e7a222f4c700dd9541c271d4a1daa9e5023fb838b7e70",
+            "logIndex": "0x373",
+            "removed": false,
+            "blockTimestamp": "0x6ac7a05f"
+          },
+          {
+            "address": "0x9646ebd6346c8c3a9f3d408f71c312eb0cbe8507",
+            "topics": [
+              "0xf66f28b40975dbb933913542c7e6a0f50a1d0f20aa74ea6e0efe65ab616323ec"
+            ],
+            "data": "0x0000000000000000000000000000000000000000000000000000000050fb30770000000000000000000000000000000000000000000000000ba22ed14a8ecce8",
+            "blockNumber": "0x18efd0b",
+            "transactionHash": "0x32d080ce4189318c9a16e5c446820e007911d93515afb677088bed23ac0ccdee",
+            "transactionIndex": "0x118",
+            "blockHash": "0x877e0696e2ad2dd99c2e7a222f4c700dd9541c271d4a1daa9e5023fb838b7e70",
+            "logIndex": "0x374",
+            "removed": false,
+            "blockTimestamp": "0x6ac7a05f"
+          },
+          {
+            "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+            "topics": [
+              "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+              "0x000000000000000000000000baef17f7a9c511532938e91db689f34ab651064e",
+              "0x0000000000000000000000009646ebd6346c8c3a9f3d408f71c312eb0cbe8507"
+            ],
+            "data": "0x00000000000000000000000000000000000000000000000000000000000f4240",
+            "blockNumber": "0x18efd0b",
+            "transactionHash": "0x32d080ce4189318c9a16e5c446820e007911d93515afb677088bed23ac0ccdee",
+            "transactionIndex": "0x118",
+            "blockHash": "0x877e0696e2ad2dd99c2e7a222f4c700dd9541c271d4a1daa9e5023fb838b7e70",
+            "logIndex": "0x375",
+            "removed": false,
+            "blockTimestamp": "0x6ac7a05f"
+          },
+          {
+            "address": "0x9646ebd6346c8c3a9f3d408f71c312eb0cbe8507",
+            "topics": [
+              "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+              "0x0000000000000000000000000000000000000000000000000000000000000000",
+              "0x000000000000000000000000baef17f7a9c511532938e91db689f34ab651064e"
+            ],
+            "data": "0x000000000000000000000000000000000000000000000000073a65b0b4d887df",
+            "blockNumber": "0x18efd0b",
+            "transactionHash": "0x32d080ce4189318c9a16e5c446820e007911d93515afb677088bed23ac0ccdee",
+            "transactionIndex": "0x118",
+            "blockHash": "0x877e0696e2ad2dd99c2e7a222f4c700dd9541c271d4a1daa9e5023fb838b7e70",
+            "logIndex": "0x376",
+            "removed": false,
+            "blockTimestamp": "0x6ac7a05f"
+          },
+          {
+            "address": "0x9646ebd6346c8c3a9f3d408f71c312eb0cbe8507",
+            "topics": [
+              "0xdcbc1c05240f31ff3ad067ef1ee35ce4997762752e3a095284754544f4c709d7",
+              "0x000000000000000000000000baef17f7a9c511532938e91db689f34ab651064e",
+              "0x000000000000000000000000baef17f7a9c511532938e91db689f34ab651064e"
+            ],
+            "data": "0x00000000000000000000000000000000000000000000000000000000000f4240000000000000000000000000000000000000000000000000073a65b0b4d887df",
+            "blockNumber": "0x18efd0b",
+            "transactionHash": "0x32d080ce4189318c9a16e5c446820e007911d93515afb677088bed23ac0ccdee",
+            "transactionIndex": "0x118",
+            "blockHash": "0x877e0696e2ad2dd99c2e7a222f4c700dd9541c271d4a1daa9e5023fb838b7e70",
+            "logIndex": "0x377",
+            "removed": false,
+            "blockTimestamp": "0x6ac7a05f"
+          },
+          {
+            "address": "0x870ac11d48b15db9a138cf899d20f13f79ba00bc",
+            "topics": [
+              "0x7120161a7b3d31251e01294ab351ef15a41b91659a36032e4641bb89b121e321",
+              "0xfd2e0d55ed4fcc26fec66f2bb890a8eeb985e456ac236b29127c75db3e1e23c8"
+            ],
+            "data": "0x00000000000000000000000000000000000000000000000000000000010bfd5f0000000000000000000000000000000000000000000000000000000003a7656a",
+            "blockNumber": "0x18efd0b",
+            "transactionHash": "0x32d080ce4189318c9a16e5c446820e007911d93515afb677088bed23ac0ccdee",
+            "transactionIndex": "0x118",
+            "blockHash": "0x877e0696e2ad2dd99c2e7a222f4c700dd9541c271d4a1daa9e5023fb838b7e70",
+            "logIndex": "0x378",
+            "removed": false,
+            "blockTimestamp": "0x6ac7a05f"
+          },
+          {
+            "address": "0xbbbbbbbbbb9cc5e90e3b3af64bdaf62c37eeffcb",
+            "topics": [
+              "0x9d9bd501d0657d7dfe415f779a620a62b78bc508ddc0891fbbd8b7ac0f8fce87",
+              "0xfd2e0d55ed4fcc26fec66f2bb890a8eeb985e456ac236b29127c75db3e1e23c8"
+            ],
+            "data": "0x00000000000000000000000000000000000000000000000000000000010bfd5f00000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000",
+            "blockNumber": "0x18efd0b",
+            "transactionHash": "0x32d080ce4189318c9a16e5c446820e007911d93515afb677088bed23ac0ccdee",
+            "transactionIndex": "0x118",
+            "blockHash": "0x877e0696e2ad2dd99c2e7a222f4c700dd9541c271d4a1daa9e5023fb838b7e70",
+            "logIndex": "0x379",
+            "removed": false,
+            "blockTimestamp": "0x6ac7a05f"
+          },
+          {
+            "address": "0xbbbbbbbbbb9cc5e90e3b3af64bdaf62c37eeffcb",
+            "topics": [
+              "0xedf8870433c83823eb071d3df1caa8d008f12f6440918c20d75a3602cda30fe0",
+              "0xfd2e0d55ed4fcc26fec66f2bb890a8eeb985e456ac236b29127c75db3e1e23c8",
+              "0x0000000000000000000000009646ebd6346c8c3a9f3d408f71c312eb0cbe8507",
+              "0x0000000000000000000000009646ebd6346c8c3a9f3d408f71c312eb0cbe8507"
+            ],
+            "data": "0x00000000000000000000000000000000000000000000000000000000000f42400000000000000000000000000000000000000000000000000000005b3d923958",
+            "blockNumber": "0x18efd0b",
+            "transactionHash": "0x32d080ce4189318c9a16e5c446820e007911d93515afb677088bed23ac0ccdee",
+            "transactionIndex": "0x118",
+            "blockHash": "0x877e0696e2ad2dd99c2e7a222f4c700dd9541c271d4a1daa9e5023fb838b7e70",
+            "logIndex": "0x37a",
+            "removed": false,
+            "blockTimestamp": "0x6ac7a05f"
+          },
+          {
+            "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+            "topics": [
+              "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+              "0x0000000000000000000000009646ebd6346c8c3a9f3d408f71c312eb0cbe8507",
+              "0x000000000000000000000000bbbbbbbbbb9cc5e90e3b3af64bdaf62c37eeffcb"
+            ],
+            "data": "0x00000000000000000000000000000000000000000000000000000000000f4240",
+            "blockNumber": "0x18efd0b",
+            "transactionHash": "0x32d080ce4189318c9a16e5c446820e007911d93515afb677088bed23ac0ccdee",
+            "transactionIndex": "0x118",
+            "blockHash": "0x877e0696e2ad2dd99c2e7a222f4c700dd9541c271d4a1daa9e5023fb838b7e70",
+            "logIndex": "0x37b",
+            "removed": false,
+            "blockTimestamp": "0x6ac7a05f"
+          },
+          {
+            "address": "0x9646ebd6346c8c3a9f3d408f71c312eb0cbe8507",
+            "topics": [
+              "0x15c027cc4fd826d986cad358803439f7326d3aa4ed969ff90dbee4bc150f68e9"
+            ],
+            "data": "0x00000000000000000000000000000000000000000000000000000000510a72b7",
+            "blockNumber": "0x18efd0b",
+            "transactionHash": "0x32d080ce4189318c9a16e5c446820e007911d93515afb677088bed23ac0ccdee",
+            "transactionIndex": "0x118",
+            "blockHash": "0x877e0696e2ad2dd99c2e7a222f4c700dd9541c271d4a1daa9e5023fb838b7e70",
+            "logIndex": "0x37c",
+            "removed": false,
+            "blockTimestamp": "0x6ac7a05f"
+          }
+        ],
+        "logsBloom": "0x20000000000020000000000000000080000002000020000000000000000000000000400020000000000000000000010000000000000000000000000020844000000000400010000000000008801008000000000800200000000000080000000000000000020000000000000000000800000000000004000000000010000000020008000040000008000000000000010000000000000000000020000000100400000000000020000000000880000000000000100004800000000000000000000020000002000000000001000000000008080000000008000000000000000020404000000001000000001000200001080000000000000000000000000000080000",
+        "effectiveGasPrice": "0x9a7fd7db",
+        "status": "0x1"
+      },
+      "event": {
+        "address": "0x9646ebd6346c8c3a9f3d408f71c312eb0cbe8507",
+        "topics": [
+          "0xdcbc1c05240f31ff3ad067ef1ee35ce4997762752e3a095284754544f4c709d7",
+          "0x000000000000000000000000baef17f7a9c511532938e91db689f34ab651064e",
+          "0x000000000000000000000000baef17f7a9c511532938e91db689f34ab651064e"
+        ],
+        "data": "0x00000000000000000000000000000000000000000000000000000000000f4240000000000000000000000000000000000000000000000000073a65b0b4d887df",
+        "blockNumber": "0x18efd0b",
+        "blockHash": "0x877e0696e2ad2dd99c2e7a222f4c700dd9541c271d4a1daa9e5023fb838b7e70",
+        "timeStamp": "0x6ac7a05f",
+        "gasPrice": "0x9a7fd7db",
+        "gasUsed": "0x747ad",
+        "logIndex": "0x377",
+        "transactionHash": "0x32d080ce4189318c9a16e5c446820e007911d93515afb677088bed23ac0ccdee",
+        "transactionIndex": "0x118"
+      },
+      "assetsRaw": "1000000",
+      "sharesRaw": "520840516537452511",
+      "ageSecondsAtValidation": 502416,
+      "paginationLimit": 1000,
+      "completenessClaim": false
+    },
+    "browserRead": {
+      "cells": [
+        "penUSDT (penUSDT)",
+        "LIVE",
+        "1.999587 USDT",
+        "26193443"
+      ],
+      "id": "morpho_1_9646ebd6"
+    }
+  },
+  "validation": {
+    "status": "APPROVED",
+    "criteria": {
+      "C01": {
+        "status": "PASS",
+        "evidence": "Positive supply/assets; successful recent nonzero Deposit/Withdraw confirmed by direct RPC receipt. V1 capacity positive; V2 open gates and source-defined unsupported maxDeposit convention verified."
+      },
+      "C02": {
+        "status": "PASS"
+      },
+      "C03": {
+        "status": "PASS"
+      },
+      "C04": {
+        "status": "PASS"
+      },
+      "C05": {
+        "status": "PASS",
+        "evidence": "Official deployment metadata + verified-source ABI + pinned runtime identity; Sourcify runtime compared where available."
+      },
+      "C06": {
+        "status": "PASS"
+      },
+      "C07": {
+        "status": "PASS"
+      },
+      "C08": {
+        "status": "PASS"
+      },
+      "C09": {
+        "status": "PASS"
+      },
+      "C10": {
+        "status": "PASS"
+      },
+      "C11": {
+        "status": "PASS",
+        "evidence": "Actual browser LIVE at block 26193443; exact calculation, RPC outage, code/administrative changes and price mismatch fixture tests passed."
+      },
+      "C12": {
+        "status": "PASS",
+        "evidence": "Administrative permissions reviewed in source; code, proxy slots, authority/config getters and change-event watches recorded. Upgradeable contracts allowed, changes require revalidation."
+      },
+      "C13": {
+        "status": "PASS",
+        "evidence": "Independent integer calculation from separate same-block accounting calls equals native method exactly."
+      },
+      "C14": {
+        "status": "PASS",
+        "evidence": "Public admission gates completed; snapshot approval only."
+      }
+    },
+    "checks": {
+      "sourceVerified": true,
+      "positiveSupply": true,
+      "underlyingIsUSDT": true,
+      "formulaExactMatch": true,
+      "operational": true,
+      "usdtOperationalControls": true
+    },
+    "missing": [],
+    "errors": []
+  },
+  "capitalization": {
+    "enabled": true,
+    "quoteAsset": "USDT",
+    "label": "CapitalizaÃ§Ã£o interna â€” USDT",
+    "supplyContract": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+    "supplyFunction": "totalSupply()",
+    "supplySelector": "0x18160ddd",
+    "supplyDecimals": 18,
+    "supplyBasis": "TOKEN_TOTAL_SUPPLY",
+    "requireSameBlock": true,
+    "referenceSnapshot": {
+      "rawProduct": "1411364633585468735466023448",
+      "productDecimals": 24,
+      "normalized": "1411.364633585468735466023448",
+      "supplyRaw": "708155194732741099653",
+      "supplyNormalized": "708.155194732741099653",
+      "supplyDecimals": 18,
+      "valueRaw": "1993016",
+      "valueNormalized": "1.993016",
+      "valueDecimals": 6,
+      "quoteAsset": "USDT",
+      "status": "REFERENCE_SNAPSHOT",
+      "observedAt": "2026-10-14T09:27:11+00:00",
+      "blockNumber": 26189837,
+      "blockHash": "0x1af6fd57729aee73a5b29b48570346ed4e4e8d1469f83f7ba988381980399053",
+      "note": "Scope: registered receipt/share token only; includes receivables and is not total protocol market capitalization or immediately available cash."
+    }
+  },
+  "search": {
+    "aliases": [
+      "Pendlend USDT",
+      "batch20-20261014"
+    ]
+  },
+  "eligibility": {
+    "status": "DIRECT_USDT_RELATION",
+    "quoteAsset": "USDT",
+    "perTokenAmount": "1",
+    "publicAdmission": "APPROVED"
+  },
+  "integration": {
+    "module": "assets/validated-usdt-reader.js",
+    "refreshIntervalSeconds": 60,
+    "displayRule": "APPROVED_AND_CURRENT_RPC_VERIFIED_ONLY",
+    "onReadFailure": "HIDE_VALUE_AND_SHOW_UNAVAILABLE_COUNT",
+    "onAdministrativeChange": "SUSPEND_AND_HIDE"
+  },
+  "admissionChecks": {
+    "duplicate": "ABSENT_FROM_PREVIOUS_PUBLIC_CATALOG",
+    "activeSourceEquivalence": "EXPLORER_VERIFIED_SOURCE_AND_PINNED_CODE_HASH",
+    "administrativeBaseline": "VALIDATED_AND_MONITORED"
+  }
+}

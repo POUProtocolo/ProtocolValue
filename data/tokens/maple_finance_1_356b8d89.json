@@ -1,0 +1,313 @@
+{
+  "schemaVersion": "2.0",
+  "approval": {
+    "status": "PENDING_VALIDATION",
+    "approvedAt": null,
+    "scope": "PUBLIC_PRICE_EVIDENCE_ONLY",
+    "note": "Price listing based solely on public, reproducible on-chain internal-value evidence; no security, operational, or investment certification."
+  },
+  "identity": {
+    "id": "maple_finance_1_356b8d89",
+    "protocol": "Maple Finance",
+    "asset": "syrup USDT Pool",
+    "symbol": "syrupUSDT",
+    "onChainName": "Syrup USDT",
+    "network": "Ethereum",
+    "chainId": 1
+  },
+  "contracts": {
+    "token": "0x356B8d89c1e1239Cbbb9dE4815c39A1474d5BA7D",
+    "protocol": "0x356B8d89c1e1239Cbbb9dE4815c39A1474d5BA7D",
+    "underlying": "0xdac17f958d2ee523a2206206994597c13d831ec7"
+  },
+  "valuation": {
+    "valueType": "Vault Share Value",
+    "quoteAsset": "USDT",
+    "sourceFunction": "convertToAssets(uint256)",
+    "selector": "0x07a2d13a",
+    "normalizedInput": "1000000",
+    "callData": "0x07a2d13a00000000000000000000000000000000000000000000000000000000000f4240",
+    "formula": "floor(10^shareDecimals * (totalAssets() - unrealizedLosses()) / totalSupply()) / 10^USDTDecimals",
+    "methodology": "Direct native USDT value per one share. All components read at a single pinned block and checked with independent integer arithmetic.",
+    "internalValueExists": true,
+    "economicMechanism": "MAPLE_INTERNAL_USDT_SHARE_VALUE",
+    "evidenceStatus": "PINNED_RPC_EXACT_RECONSTRUCTION",
+    "economicUnit": "USDT/share",
+    "perTokenAmount": "1",
+    "usdtRelation": "DIRECT_UNDERLYING_ASSET",
+    "inputParameters": [
+      "1000000"
+    ],
+    "sourceOutputIsPerTokenValue": true,
+    "calculationInput": {
+      "shareAmountRaw": "1000000",
+      "shareDecimals": 6,
+      "underlyingDecimals": 6,
+      "outputDecimals": 6,
+      "virtualAssets": "",
+      "virtualShares": "",
+      "rounding": ""
+    },
+    "limitations": [
+      "Research snapshot; no publication approval.",
+      "Exclusive pricing and aggregator marginalization not established.",
+      "Full administrative state, withdrawals and source equivalence not established."
+    ]
+  },
+  "value": {
+    "raw": "1147875",
+    "normalized": "1.147875",
+    "display": "1.147875 USDT",
+    "status": "BLOCK_PINNED_RESEARCH_OBSERVATION",
+    "observedAt": "2026-10-14T03:30:11+00:00",
+    "blockNumber": 26188059,
+    "blockHash": "0x9beaa185fc64544949d7aaafde296906de6386093bb74572bc3007abe95e9433",
+    "note": "Internal value snapshot; not LIVE or a guaranteed redemption amount."
+  },
+  "referenceSnapshot": {
+    "raw": "1147875",
+    "normalized": "1.147875",
+    "display": "1.147875 USDT",
+    "status": "BLOCK_PINNED_RESEARCH_OBSERVATION",
+    "observedAt": "2026-10-14T03:30:11+00:00",
+    "blockNumber": 26188059,
+    "blockHash": "0x9beaa185fc64544949d7aaafde296906de6386093bb74572bc3007abe95e9433",
+    "note": "Internal value snapshot; not LIVE or a guaranteed redemption amount."
+  },
+  "components": {
+    "totalSupply": "278826251179320",
+    "totalAssets": "320057734723891",
+    "virtualAssets": "",
+    "virtualShares": "",
+    "cash": "",
+    "totalBorrows": ""
+  },
+  "search": {
+    "aliases": [
+      "syrup USDT Pool",
+      "Syrup USDT",
+      "syrupUSDT",
+      "Maple Finance"
+    ]
+  },
+  "links": {
+    "tokenExplorer": "https://etherscan.io/token/0x356B8d89c1e1239Cbbb9dE4815c39A1474d5BA7D",
+    "contractExplorer": "https://etherscan.io/address/0x356B8d89c1e1239Cbbb9dE4815c39A1474d5BA7D#readContract",
+    "underlyingExplorer": "https://etherscan.io/token/0xdac17f958d2ee523a2206206994597c13d831ec7",
+    "referenceBlock": "https://etherscan.io/block/26188059",
+    "officialSource": "https://github.com/maple-labs/pool-v2",
+    "officialContracts": "https://github.com/maple-labs/address-registry/blob/main/contracts/MapleAddressRegistryETH.sol",
+    "conversionHelper": "",
+    "recordedProofJson": "data/proofs/maple_finance_1_356b8d89.json"
+  },
+  "runtime": {
+    "enabled": true,
+    "autoUpdate": true,
+    "readMode": "ETH_CALL_UINT256",
+    "outputDecimals": 6,
+    "displayUnit": "USDT",
+    "cacheSeconds": 60,
+    "blockTagPolicy": "PINNED_CURRENT_BLOCK",
+    "compatibleWithCurrentLiveReader": true,
+    "note": "Public internal-value method: live only after same-block RPC succeeds; historical snapshot otherwise.",
+    "runtimeNote": "Block-pinned historical proof reproduced; live quotes require current RPC and on-chain USDT/decimals checks."
+  },
+  "monitoring": {
+    "publishEnabled": true,
+    "requiresRevalidation": true,
+    "adminBaselineStatus": "NOT_VALIDATED",
+    "baselineBlockNumber": null,
+    "baselineBlockHash": "",
+    "baseline": {
+      "governorAdmin()": ""
+    },
+    "watch": [],
+    "onAdministrativeChange": "SUSPEND_AND_HIDE",
+    "enforcementStatus": "PRICE_EVIDENCE_ONLY; not an administrative-control audit."
+  },
+  "evidence": {
+    "rpcEndpoint": "https://eth.drpc.org",
+    "chainIdRaw": "0x1",
+    "blockTag": "0x18f991b",
+    "blockNumber": 26188059,
+    "blockHash": "0x9beaa185fc64544949d7aaafde296906de6386093bb74572bc3007abe95e9433",
+    "blockTimestamp": "2026-10-14T03:30:11+00:00",
+    "calls": [
+      {
+        "to": "0x356B8d89c1e1239Cbbb9dE4815c39A1474d5BA7D",
+        "function": "asset()",
+        "data": "0x38d52e0f",
+        "parameters": [],
+        "blockTag": "0x18f991b",
+        "result": "0x000000000000000000000000dac17f958d2ee523a2206206994597c13d831ec7"
+      },
+      {
+        "to": "0x356B8d89c1e1239Cbbb9dE4815c39A1474d5BA7D",
+        "function": "decimals()",
+        "data": "0x313ce567",
+        "parameters": [],
+        "blockTag": "0x18f991b",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000006"
+      },
+      {
+        "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "function": "decimals()",
+        "data": "0x313ce567",
+        "parameters": [],
+        "blockTag": "0x18f991b",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000006"
+      },
+      {
+        "to": "0x356B8d89c1e1239Cbbb9dE4815c39A1474d5BA7D",
+        "function": "totalSupply()",
+        "data": "0x18160ddd",
+        "parameters": [],
+        "blockTag": "0x18f991b",
+        "result": "0x0000000000000000000000000000000000000000000000000000fd974ba7d538"
+      },
+      {
+        "to": "0x356B8d89c1e1239Cbbb9dE4815c39A1474d5BA7D",
+        "function": "totalAssets()",
+        "data": "0x01e1d114",
+        "parameters": [],
+        "blockTag": "0x18f991b",
+        "result": "0x000000000000000000000000000000000000000000000000000123173f95f933"
+      },
+      {
+        "to": "0x356B8d89c1e1239Cbbb9dE4815c39A1474d5BA7D",
+        "function": "unrealizedLosses()",
+        "data": "0x67e2ba23",
+        "parameters": [],
+        "blockTag": "0x18f991b",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "to": "0x356B8d89c1e1239Cbbb9dE4815c39A1474d5BA7D",
+        "function": "convertToAssets(uint256)",
+        "data": "0x07a2d13a00000000000000000000000000000000000000000000000000000000000f4240",
+        "parameters": [
+          "1000000"
+        ],
+        "blockTag": "0x18f991b",
+        "result": "0x00000000000000000000000000000000000000000000000000000000001183e3"
+      },
+      {
+        "to": "0x356B8d89c1e1239Cbbb9dE4815c39A1474d5BA7D",
+        "function": "name()",
+        "data": "0x06fdde03",
+        "parameters": [],
+        "blockTag": "0x18f991b",
+        "result": "0x0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000a5379727570205553445400000000000000000000000000000000000000000000"
+      },
+      {
+        "to": "0x356B8d89c1e1239Cbbb9dE4815c39A1474d5BA7D",
+        "function": "symbol()",
+        "data": "0x95d89b41",
+        "parameters": [],
+        "blockTag": "0x18f991b",
+        "result": "0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000097379727570555344540000000000000000000000000000000000000000000000"
+      }
+    ],
+    "formulaCheck": {
+      "observedRaw": "1147875",
+      "calculatedRaw": "1147875",
+      "difference": "0",
+      "components": {
+        "unrealizedLosses": "0"
+      }
+    },
+    "sourceReview": "Official source formula used; active bytecode-source equivalence pending."
+  },
+  "admissionChecks": {
+    "duplicate": "ABSENT_FROM_ZIP_AND_ALL_PREVIOUS_RECORDS",
+    "chainId": "PASS",
+    "underlying": "PASS_NATIVE_USDT",
+    "nativeAccounting": "PASS_POSITIVE_ASSETS_AND_SUPPLY",
+    "integerFormula": "PASS_EXACT_MATCH",
+    "usdtEligibility": "PASS_DIRECT_USDT",
+    "activeSourceEquivalence": "NOT_ESTABLISHED",
+    "administrativeBaseline": "NOT_VALIDATED"
+  },
+  "presentation": {
+    "unit": "USDT",
+    "perTokenAmount": "1",
+    "valueLabel": "Internal value",
+    "showApprovalBadge": false
+  },
+  "eligibility": {
+    "status": "PUBLIC_REPRODUCIBLE_ONCHAIN_INTERNAL_PRICE",
+    "quoteAsset": "USDT",
+    "perTokenAmount": "1",
+    "proofBasis": "BLOCK_PINNED_RPC_METHOD_AND_EXACT_INTEGER_RECONSTRUCTION",
+    "securityAudit": "NOT_PERFORMED",
+    "currentRpcRecheckedInThisBuild": false,
+    "marketPriceSubstitution": false
+  },
+  "unitPolicy": {
+    "targetAsset": "USDT",
+    "targetAssetContract": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+    "perTokenAmount": "1",
+    "missingConversionAction": "EXCLUDE_FROM_PUBLIC_CATALOG",
+    "unverifiedPegAssumptionsAllowed": false
+  },
+  "lifecycle": {
+    "status": "OFFICIAL_LISTED_CANDIDATE",
+    "source": "https://github.com/maple-labs/address-registry/blob/main/contracts/MapleAddressRegistryETH.sol",
+    "activeProductConfirmed": false,
+    "note": "Official listing does not replace validation of deposit/redemption permissions.",
+    "productId": "syrup USDT Pool",
+    "entity": "Maple Finance",
+    "markedDeprecatedInOfficialLabels": false
+  },
+  "capitalization": {
+    "enabled": false,
+    "quoteAsset": "USDT",
+    "label": "Capitalização interna — USDT",
+    "supplyContract": "0x356B8d89c1e1239Cbbb9dE4815c39A1474d5BA7D",
+    "supplyFunction": "totalSupply()",
+    "supplySelector": "0x18160ddd",
+    "supplyDecimals": 6,
+    "supplyBasis": "TOKEN_TOTAL_SUPPLY",
+    "requireSameBlock": true,
+    "referenceSnapshot": {
+      "rawProduct": "320057683072461945000",
+      "productDecimals": 12,
+      "normalized": "320057683.072461945",
+      "quoteAsset": "USDT",
+      "status": "REFERENCE_SNAPSHOT",
+      "observedAt": "2026-10-14T03:30:11+00:00",
+      "blockNumber": 26188059,
+      "blockHash": "0x9beaa185fc64544949d7aaafde296906de6386093bb74572bc3007abe95e9433",
+      "valueRaw": "1147875",
+      "valueDecimals": 6,
+      "valueNormalized": "1.147875",
+      "supplyRaw": "278826251179320",
+      "supplyDecimals": 6,
+      "supplyNormalized": "278826251.17932",
+      "supplyBasis": "TOKEN_TOTAL_SUPPLY",
+      "formula": "internal USDT value per share × corresponding supply",
+      "note": "Registered vault capitalization, not capitalization of the whole protocol."
+    }
+  },
+  "priceProof": {
+    "type": "MAPLE",
+    "status": "PINNED_ACCOUNTING_VALUE_VERIFIED",
+    "independentCurrentRPCVerified": true,
+    "method": "Separate contract value and integer reconstruction",
+    "chainId": 1,
+    "contract": "0x356B8d89c1e1239Cbbb9dE4815c39A1474d5BA7D",
+    "underlying": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+    "blockNumber": 26188059,
+    "blockHash": "0x9beaa185fc64544949d7aaafde296906de6386093bb74572bc3007abe95e9433",
+    "callData": "0x07a2d13a00000000000000000000000000000000000000000000000000000000000f4240",
+    "function": "convertToAssets(uint256)",
+    "raw": "1147875",
+    "outputDecimals": 6,
+    "normalized": "1.147875",
+    "unit": "USDT/share",
+    "formula": "floor(10^shareDecimals * (totalAssets() - unrealizedLosses()) / totalSupply()) / 10^USDTDecimals",
+    "onchainSource": "https://etherscan.io/address/0x356B8d89c1e1239Cbbb9dE4815c39A1474d5BA7D#readContract",
+    "evidenceProvenance": "New direct RPC observations on 2026-10-14",
+    "note": "No market quotation used. Approval and exclusive-price classification remain pending."
+  }
+}
