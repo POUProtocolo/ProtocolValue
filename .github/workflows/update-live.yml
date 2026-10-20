@@ -1,0 +1,38 @@
+name: ProtocolValue shared on-chain feed
+on:
+  workflow_dispatch:
+  schedule:
+    # GitHub minimum is 5 min. Runs may be delayed or dropped.
+    - cron: '2/5 * * * *'
+permissions:
+  contents: read
+concurrency:
+  group: pv-shared-feed
+  cancel-in-progress: false
+jobs:
+  collect-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - name: Checkout private collector repository
+        uses: actions/checkout@v4
+      - name: Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Offline catalog integrity check
+        run: node scripts/update_live_snapshot.mjs --check
+      - name: Collect block-pinned RPC observations
+        run: node scripts/update_live_snapshot.mjs --publish
+      - name: Refuse stale or invalid feed
+        run: node scripts/validate_live_feed.mjs
+      - name: Install FTPS uploader
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+      - name: Publish only current.json to Porkbun
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_REMOTE_DIR: ${{ secrets.FTP_REMOTE_DIR }}
+          FTP_PORT: '21'
+        run: bash scripts/publish_ftp_ftps.sh
