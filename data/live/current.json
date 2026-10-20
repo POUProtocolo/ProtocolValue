@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "catalogHash": "e6f3a262bf5dce78395d34dfb3dc711ad6abe4195b1be8d311c94e73ad8da7b0",
+  "generatedAt": null,
+  "records": {},
+  "status": "NOT_CONFIGURED",
+  "note": "O site não apresenta snapshots históricos como dados LIVE. Configure o coletor programado para publicar leituras atuais verificadas."
+}
